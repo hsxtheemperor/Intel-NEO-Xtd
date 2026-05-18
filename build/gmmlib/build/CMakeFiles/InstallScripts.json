@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/harshit9745/SFXFolder/Workspace-Code/build/gmmlib/build/cmake_install.cmake",
-		"/home/harshit9745/SFXFolder/Workspace-Code/build/gmmlib/build/Source/GmmLib/cmake_install.cmake",
-		"/home/harshit9745/SFXFolder/Workspace-Code/build/gmmlib/build/Source/GmmLib/ULT/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
