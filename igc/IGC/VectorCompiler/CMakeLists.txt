@@ -1,0 +1,80 @@
+#=========================== begin_copyright_notice ============================
+#
+# Copyright (C) 2020-2021 Intel Corporation
+#
+# SPDX-License-Identifier: MIT
+#
+#============================ end_copyright_notice =============================
+
+
+
+# CMake Settings:
+# - VC_INTRINSICS_SRC
+set(IGC_BUILD__PROJ__VectorCompiler "${IGC_BUILD__PROJ_NAME_PREFIX}VectorCompiler")
+set(IGC_BUILD__PROJ__VectorCompiler "${IGC_BUILD__PROJ__VectorCompiler}" PARENT_SCOPE)
+# Ordering matters here.
+# FIXME: set proper dependencies for VCCodeGen and others.
+set(IGC_BUILD__PROJ_VC_LIBS_TO_LINK VCIGCDeps PARENT_SCOPE)
+
+set(IGC_BUILD__PROJ_LABEL__VectorCompiler "${IGC_BUILD__PROJ__VectorCompiler}")
+
+message(STATUS "+++ Source/IGC/VectorCompiler +++")
+message(STATUS "[VC] Build proj: ${IGC_BUILD__PROJ__VectorCompiler}")
+
+# --- Options ---
+
+if(LLVM_ON_WIN32)
+  # disable 32/64 warnings
+  add_compile_options(/wd4244)
+
+  #  disable unary minus to unsigned type warning
+  add_compile_options(/wd4146)
+
+  # disable implicitly deleted dtor warning
+  add_compile_options(/wd4624)
+
+  # Disable double-inline warning coming from StringRef.h:898
+  # For some reason it is not filtered by /external:I option
+  add_compile_options(/wd4141)
+endif()
+
+# --- VC platforms ---
+include(cmake/supported_platforms_list.cmake)
+
+# --- VC Intrinsics ---
+# Compatibility hook for System LLVM 22 builds missing Intel downstream macros
+if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../../external/llvm/llvm_utils.cmake")
+    message(STATUS "[VC Custom Port] Defining dummy fallback macros for standalone LLVM 22")
+    
+    # Mock the missing setup macro so handle_vc_intrinsics.cmake doesn't crash
+    macro(llvm_define_mode_variable)
+        if(NOT DEFINED LLVM_ENABLE_MODULES)
+            set(LLVM_ENABLE_MODULES OFF)
+        endif()
+    endmacro()
+    
+    # Create a mock file target or skip if needed by handle_vc_intrinsics
+    set(LLVM_UTILS_PROVIDED_BY_SYSTEM TRUE)
+endif()
+
+# Now it is safe to call the original script
+include(cmake/handle_vc_intrinsics.cmake)
+
+# --- VC Opt ---
+
+add_subdirectory(include)
+add_subdirectory(lib)
+
+# Common utilities that depend on other IGC components.
+# These have to be separated because of circular dependencies between
+# some components in IGC.
+add_subdirectory(igcdeps)
+
+if(IGC_BUILD__CMLIT_ENABLE)
+  add_subdirectory(test)
+endif()
+
+add_subdirectory(utils)
+
+# --- CMCL  ---
+add_subdirectory(CMCL)
