@@ -1,0 +1,332 @@
+CMake Deprecation Warning at IGC/MDAutogen/CMakeLists.txt:9 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at IGC/MDAutogen/CMakeLists.txt:9 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Warning at IGC/cmake/igc_flags_utils.cmake:308 (message):
+  Named group "TreatWarnAsError" referenced in "TreatWarnAsErrorDisabled"
+  alias does not exist yet.
+Call Stack (most recent call first):
+  IGC/CMakeLists.txt:538 (igc_flag_register_settings)
+
+
+CMake Warning at IGC/cmake/igc_flags_utils.cmake:308 (message):
+  Named group "TreatWarnAsError" referenced in "TreatWarnAsErrorDisabled"
+  alias does not exist yet.
+Call Stack (most recent call first):
+  IGC/CMakeLists.txt:538 (igc_flag_register_settings)
+
+
+CMake Warning at IGC/cmake/igc_find_protobuf.cmake:25 (message):
+  Cannot find Protoc program or library for Protobuf, please visit
+  https://github.com/protocolbuffers/protobuf/releases and install - disable
+  of IGC Metrics
+Call Stack (most recent call first):
+  IGC/CMakeLists.txt:1485 (include)
+
+CMake Warning at IGC/cmake/igc_find_protobuf.cmake:25 (message):
+  Cannot find Protoc program or library for Protobuf, please visit
+  https://github.com/protocolbuffers/protobuf/releases and install - disable
+  of IGC Metrics
+Call Stack (most recent call first):
+  IGC/CMakeLists.txt:1485 (include)
+
+
+
+CMake Deprecation Warning at external/SPIRV-Tools/CMakeLists.txt:9 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  IGC/CMakeLists.txt:1490 (include)
+
+CMake Deprecation Warning at external/SPIRV-Tools/CMakeLists.txt:9 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  IGC/CMakeLists.txt:1490 (include)
+
+
+
+ >>/home/harshit9745/Workspace-Code/build/igc/build/IGC/VectorCompiler/lib/GenXCodeGen/Utils/../<<  ->  /home/harshit9745/Workspace-Code/build/igc/build/IGC/VectorCompiler/lib/GenXCodeGen/Utils >>/home/harshit9745/Workspace-Code/build/igc/build/IGC/VectorCompiler/lib/GenXCodeGen/Utils/../<<  ->  /home/harshit9745/Workspace-Code/build/igc/build/IGC/VectorCompiler/lib/GenXCodeGen/Utils
+
+ COMMAND ->  /usr/bin/python3 /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/GenXCodeGen/Utils/cisa_gen_intrinsics.py /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/GenXCodeGen/Utils/cisa_gen_intrinsics.json /home/harshit9745/Workspace-Code/build/igc/build/IGC/VectorCompiler/lib/GenXCodeGen/Utils/../ <- COMMAND ->  /usr/bin/python3 /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/GenXCodeGen/Utils/cisa_gen_intrinsics.py /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/GenXCodeGen/Utils/cisa_gen_intrinsics.json /home/harshit9745/Workspace-Code/build/igc/build/IGC/VectorCompiler/lib/GenXCodeGen/Utils/../ <-
+
+ /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/GenXCodeGen/Utils /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/GenXCodeGen/Utils
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_FLAGS keyword was followed by an empty string or no value at all.
+  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_FLAGS variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:15 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_FLAGS keyword was followed by an empty string or no value at all.
+  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_FLAGS variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:15 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_INCLUDES keyword was followed by an empty string or no value at
+  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_INCLUDES variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:15 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_INCLUDES keyword was followed by an empty string or no value at
+  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_INCLUDES variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:15 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+vc_build_bif - VCBiFPrintfOCL32 has extra dependencies: /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/BiF/Print/common.h
+vc_build_bif - VCBiFPrintfOCL32 has extra dependencies: /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/BiF/Print/common.h
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_FLAGS keyword was followed by an empty string or no value at all.
+  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_FLAGS variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:16 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_FLAGS keyword was followed by an empty string or no value at all.
+  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_FLAGS variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:16 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_INCLUDES keyword was followed by an empty string or no value at
+  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_INCLUDES variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:16 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_INCLUDES keyword was followed by an empty string or no value at
+  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_INCLUDES variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:16 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+vc_build_bif - VCBiFPrintfOCL64 has extra dependencies: /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/BiF/Print/common.h
+vc_build_bif - VCBiFPrintfOCL64 has extra dependencies: /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/BiF/Print/common.h
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_FLAGS keyword was followed by an empty string or no value at all.
+  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_FLAGS variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:17 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_FLAGS keyword was followed by an empty string or no value at all.
+  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_FLAGS variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:17 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_INCLUDES keyword was followed by an empty string or no value at
+  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_INCLUDES variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:17 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_INCLUDES keyword was followed by an empty string or no value at
+  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_INCLUDES variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:17 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+vc_build_bif - VCBiFPrintfZE32 has extra dependencies: /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/BiF/Print/common.h
+vc_build_bif - VCBiFPrintfZE32 has extra dependencies: /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/BiF/Print/common.h
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_FLAGS keyword was followed by an empty string or no value at all.
+  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_FLAGS variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:18 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_FLAGS keyword was followed by an empty string or no value at all.
+  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_FLAGS variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:18 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_INCLUDES keyword was followed by an empty string or no value at
+  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_INCLUDES variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:18 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:43 (cmake_parse_arguments):
+  The CLANG_INCLUDES keyword was followed by an empty string or no value at
+  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  EXTRA_CLANG_INCLUDES variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake:203 (vc_build_bif)
+  IGC/VectorCompiler/lib/BiF/CMakeLists.txt:18 (vc_embed_bif)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+vc_build_bif - VCBiFPrintfZE64 has extra dependencies: /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/BiF/Print/common.h
+vc_build_bif - VCBiFPrintfZE64 has extra dependencies: /home/harshit9745/Workspace-Code/build/igc/IGC/VectorCompiler/lib/BiF/Print/common.h
+CMake Warning (dev) at IGC/VectorCompiler/CMCL/lib/Support/CMakeLists.txt:36 (add_custom_command):
+  COMMENT requires exactly one argument, but multiple values or COMMENT
+  keywords have been given.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at IGC/VectorCompiler/CMCL/lib/Support/CMakeLists.txt:36 (add_custom_command):
+  COMMENT requires exactly one argument, but multiple values or COMMENT
+  keywords have been given.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+[IGC\BiFModuleCache] - IGC_BUILD__BIF_ROOT_DIR: /home/harshit9745/SFXFolder/Workspace-Code/build/igc/build/IGC/Release/bif/
+[IGC\BiFModuleCache] - Looking for files inside /usr/bin/../lib/clang/20/include/opencl-c.h
+[IGC\BiFModuleCache] - IGC_BUILD__BIF_ROOT_DIR: /home/harshit9745/SFXFolder/Workspace-Code/build/igc/build/IGC/Release/bif/
+[IGC\BiFModuleCache] - Looking for files inside /usr/bin/../lib/clang/20/include/opencl-c.h
+[IGC\BiFModuleCache] - BiFModule_SRC: /home/harshit9745/Workspace-Code/build/igc/IGC/BiFModule/cmake/../
+[IGC\BiFModuleCache] - BiFModule_SRC: /home/harshit9745/Workspace-Code/build/igc/IGC/BiFModule/cmake/../
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+-- Configuring Intel Gen Assembler (IGA) Component-- Configuring Intel Gen Assembler (IGA) Component
+
+--  - GED_BRANCH:           GED_external--  - GED_BRANCH:           GED_external
+--  - CMAKE_CXX_COMPILER:   /usr/bin/c++
+CMake Deprecation Warning at visa/iga/GEDLibrary/GED_external/CMakeLists.txt:13 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+
+--  - CMAKE_CXX_COMPILER:   /usr/bin/c++
+CMake Deprecation Warning at visa/iga/GEDLibrary/GED_external/CMakeLists.txt:13 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+--  - IGA_VERSION_SUFFIX:    --  - IGA_VERSION_SUFFIX:    
+
+CMake Deprecation Warning at visa/CMakeLists.txt:81 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at visa/CMakeLists.txt:81 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Warning (dev) at CMakeLists.txt:21 (set):
+  Cannot set "IGC__IGC_TARGETS": current scope has no parent.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:21 (set):
+  Cannot set "IGC__IGC_TARGETS": current scope has no parent.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:22 (set):
+  Cannot set "IGC_LIBRARY_NAME": current scope has no parent.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:23 (set):
+  Cannot set "FCL_LIBRARY_NAME": current scope has no parent.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:22 (set):
+  Cannot set "IGC_LIBRARY_NAME": current scope has no parent.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:23 (set):
+  Cannot set "FCL_LIBRARY_NAME": current scope has no parent.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+

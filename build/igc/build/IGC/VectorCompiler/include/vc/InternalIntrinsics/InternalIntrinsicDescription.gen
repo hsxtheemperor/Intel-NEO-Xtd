@@ -1,0 +1,900 @@
+// VisualStudio defines setjmp as _setjmp
+#if defined(_MSC_VER) && defined(setjmp) && \
+                         !defined(setjmp_undefined_for_msvc)
+#  pragma push_macro("setjmp")
+#  undef setjmp
+#  define setjmp_undefined_for_msvc
+#endif
+
+// Target mapping
+#ifdef GET_INTRINSIC_TARGET_DATA
+struct IntrinsicTargetInfo {
+  llvm::StringLiteral Name;
+  size_t Offset;
+  size_t Count;
+};
+static constexpr IntrinsicTargetInfo TargetInfos[] = {
+  {llvm::StringLiteral(""), 0, 0},
+  {llvm::StringLiteral("vc.internal"), 0, 56},
+};
+#endif
+
+// Enum values for Intrinsics.h
+#ifdef GET_INTRINSIC_ENUM_VALUES
+assert_buffer,                           // llvm.vc.internal.assert.buffer
+atomic_fmax,                             // llvm.vc.internal.atomic.fmax
+atomic_fmin,                             // llvm.vc.internal.atomic.fmin
+cast_from_bf16,                          // llvm.vc.internal.cast.from.bf16
+cast_to_bf16,                            // llvm.vc.internal.cast.to.bf16
+cast_to_ptr_explicit,                    // llvm.vc.internal.cast.to.ptr.explicit
+jump_table,                              // llvm.vc.internal.jump.table
+logical_thread_id,                       // llvm.vc.internal.logical.thread.id
+lsc_atomic_bss,                          // llvm.vc.internal.lsc.atomic.bss
+lsc_atomic_bti,                          // llvm.vc.internal.lsc.atomic.bti
+lsc_atomic_slm,                          // llvm.vc.internal.lsc.atomic.slm
+lsc_atomic_ugm,                          // llvm.vc.internal.lsc.atomic.ugm
+lsc_load_2d_tgm_bti,                     // llvm.vc.internal.lsc.load.2d.tgm.bti
+lsc_load_2d_ugm_desc,                    // llvm.vc.internal.lsc.load.2d.ugm.desc
+lsc_load_2d_ugm_desc_transpose,          // llvm.vc.internal.lsc.load.2d.ugm.desc.transpose
+lsc_load_2d_ugm_desc_vnni,               // llvm.vc.internal.lsc.load.2d.ugm.desc.vnni
+lsc_load_block_2d_ugm,                   // llvm.vc.internal.lsc.load.block.2d.ugm
+lsc_load_block_2d_ugm_transposed,        // llvm.vc.internal.lsc.load.block.2d.ugm.transposed
+lsc_load_block_2d_ugm_vnni,              // llvm.vc.internal.lsc.load.block.2d.ugm.vnni
+lsc_load_bss,                            // llvm.vc.internal.lsc.load.bss
+lsc_load_bti,                            // llvm.vc.internal.lsc.load.bti
+lsc_load_quad_bss,                       // llvm.vc.internal.lsc.load.quad.bss
+lsc_load_quad_bti,                       // llvm.vc.internal.lsc.load.quad.bti
+lsc_load_quad_slm,                       // llvm.vc.internal.lsc.load.quad.slm
+lsc_load_quad_tgm,                       // llvm.vc.internal.lsc.load.quad.tgm
+lsc_load_quad_ugm,                       // llvm.vc.internal.lsc.load.quad.ugm
+lsc_load_slm,                            // llvm.vc.internal.lsc.load.slm
+lsc_load_ugm,                            // llvm.vc.internal.lsc.load.ugm
+lsc_prefetch_2d_ugm_desc,                // llvm.vc.internal.lsc.prefetch.2d.ugm.desc
+lsc_prefetch_block_2d_ugm,               // llvm.vc.internal.lsc.prefetch.block.2d.ugm
+lsc_prefetch_bss,                        // llvm.vc.internal.lsc.prefetch.bss
+lsc_prefetch_bti,                        // llvm.vc.internal.lsc.prefetch.bti
+lsc_prefetch_quad_bss,                   // llvm.vc.internal.lsc.prefetch.quad.bss
+lsc_prefetch_quad_bti,                   // llvm.vc.internal.lsc.prefetch.quad.bti
+lsc_prefetch_quad_tgm,                   // llvm.vc.internal.lsc.prefetch.quad.tgm
+lsc_prefetch_quad_ugm,                   // llvm.vc.internal.lsc.prefetch.quad.ugm
+lsc_prefetch_ugm,                        // llvm.vc.internal.lsc.prefetch.ugm
+lsc_store_2d_tgm_bti,                    // llvm.vc.internal.lsc.store.2d.tgm.bti
+lsc_store_2d_ugm_desc,                   // llvm.vc.internal.lsc.store.2d.ugm.desc
+lsc_store_block_2d_ugm,                  // llvm.vc.internal.lsc.store.block.2d.ugm
+lsc_store_bss,                           // llvm.vc.internal.lsc.store.bss
+lsc_store_bti,                           // llvm.vc.internal.lsc.store.bti
+lsc_store_quad_bss,                      // llvm.vc.internal.lsc.store.quad.bss
+lsc_store_quad_bti,                      // llvm.vc.internal.lsc.store.quad.bti
+lsc_store_quad_slm,                      // llvm.vc.internal.lsc.store.quad.slm
+lsc_store_quad_tgm,                      // llvm.vc.internal.lsc.store.quad.tgm
+lsc_store_quad_ugm,                      // llvm.vc.internal.lsc.store.quad.ugm
+lsc_store_slm,                           // llvm.vc.internal.lsc.store.slm
+lsc_store_ugm,                           // llvm.vc.internal.lsc.store.ugm
+print_buffer,                            // llvm.vc.internal.print.buffer
+print_format_index,                      // llvm.vc.internal.print.format.index
+read_variable_region,                    // llvm.vc.internal.read.variable.region
+round_to_tf32,                           // llvm.vc.internal.round.to.tf32
+stochastic_round_to_f16,                 // llvm.vc.internal.stochastic.round.to.f16
+sync_buffer,                             // llvm.vc.internal.sync.buffer
+write_variable_region,                   // llvm.vc.internal.write.variable.region
+#endif
+
+// Intrinsic ID to name table
+#ifdef GET_INTRINSIC_NAME_TABLE
+  ("llvm.vc.internal.assert.buffer"),
+  ("llvm.vc.internal.atomic.fmax"),
+  ("llvm.vc.internal.atomic.fmin"),
+  ("llvm.vc.internal.cast.from.bf16"),
+  ("llvm.vc.internal.cast.to.bf16"),
+  ("llvm.vc.internal.cast.to.ptr.explicit"),
+  ("llvm.vc.internal.jump.table"),
+  ("llvm.vc.internal.logical.thread.id"),
+  ("llvm.vc.internal.lsc.atomic.bss"),
+  ("llvm.vc.internal.lsc.atomic.bti"),
+  ("llvm.vc.internal.lsc.atomic.slm"),
+  ("llvm.vc.internal.lsc.atomic.ugm"),
+  ("llvm.vc.internal.lsc.load.2d.tgm.bti"),
+  ("llvm.vc.internal.lsc.load.2d.ugm.desc"),
+  ("llvm.vc.internal.lsc.load.2d.ugm.desc.transpose"),
+  ("llvm.vc.internal.lsc.load.2d.ugm.desc.vnni"),
+  ("llvm.vc.internal.lsc.load.block.2d.ugm"),
+  ("llvm.vc.internal.lsc.load.block.2d.ugm.transposed"),
+  ("llvm.vc.internal.lsc.load.block.2d.ugm.vnni"),
+  ("llvm.vc.internal.lsc.load.bss"),
+  ("llvm.vc.internal.lsc.load.bti"),
+  ("llvm.vc.internal.lsc.load.quad.bss"),
+  ("llvm.vc.internal.lsc.load.quad.bti"),
+  ("llvm.vc.internal.lsc.load.quad.slm"),
+  ("llvm.vc.internal.lsc.load.quad.tgm"),
+  ("llvm.vc.internal.lsc.load.quad.ugm"),
+  ("llvm.vc.internal.lsc.load.slm"),
+  ("llvm.vc.internal.lsc.load.ugm"),
+  ("llvm.vc.internal.lsc.prefetch.2d.ugm.desc"),
+  ("llvm.vc.internal.lsc.prefetch.block.2d.ugm"),
+  ("llvm.vc.internal.lsc.prefetch.bss"),
+  ("llvm.vc.internal.lsc.prefetch.bti"),
+  ("llvm.vc.internal.lsc.prefetch.quad.bss"),
+  ("llvm.vc.internal.lsc.prefetch.quad.bti"),
+  ("llvm.vc.internal.lsc.prefetch.quad.tgm"),
+  ("llvm.vc.internal.lsc.prefetch.quad.ugm"),
+  ("llvm.vc.internal.lsc.prefetch.ugm"),
+  ("llvm.vc.internal.lsc.store.2d.tgm.bti"),
+  ("llvm.vc.internal.lsc.store.2d.ugm.desc"),
+  ("llvm.vc.internal.lsc.store.block.2d.ugm"),
+  ("llvm.vc.internal.lsc.store.bss"),
+  ("llvm.vc.internal.lsc.store.bti"),
+  ("llvm.vc.internal.lsc.store.quad.bss"),
+  ("llvm.vc.internal.lsc.store.quad.bti"),
+  ("llvm.vc.internal.lsc.store.quad.slm"),
+  ("llvm.vc.internal.lsc.store.quad.tgm"),
+  ("llvm.vc.internal.lsc.store.quad.ugm"),
+  ("llvm.vc.internal.lsc.store.slm"),
+  ("llvm.vc.internal.lsc.store.ugm"),
+  ("llvm.vc.internal.print.buffer"),
+  ("llvm.vc.internal.print.format.index"),
+  ("llvm.vc.internal.read.variable.region"),
+  ("llvm.vc.internal.round.to.tf32"),
+  ("llvm.vc.internal.stochastic.round.to.f16"),
+  ("llvm.vc.internal.sync.buffer"),
+  ("llvm.vc.internal.write.variable.region"),
+#endif
+
+// Intrinsic ID to overload bitset
+#ifdef GET_INTRINSIC_OVERLOAD_TABLE
+static const uint8_t OTable[] = {
+  0 | (1U<<2) | (1U<<3) | (1U<<4) | (1U<<5) | (1U<<6) | (1U<<7),
+  0 | (1U<<1) | (1U<<2) | (1U<<3) | (1U<<4) | (1U<<5) | (1U<<6) | (1U<<7),
+  0 | (1U<<0) | (1U<<1) | (1U<<2) | (1U<<3) | (1U<<4) | (1U<<5) | (1U<<6) | (1U<<7),
+  0 | (1U<<0) | (1U<<1) | (1U<<2) | (1U<<3) | (1U<<4) | (1U<<5) | (1U<<6) | (1U<<7),
+  0 | (1U<<0) | (1U<<1) | (1U<<2) | (1U<<3) | (1U<<4) | (1U<<5) | (1U<<6) | (1U<<7),
+  0 | (1U<<0) | (1U<<1) | (1U<<2) | (1U<<3) | (1U<<4) | (1U<<5) | (1U<<6) | (1U<<7),
+  0 | (1U<<0) | (1U<<1) | (1U<<3) | (1U<<4) | (1U<<5) | (1U<<6),
+  0 | (1U<<0)
+};
+
+IGC_ASSERT( ((id / 8) < (sizeof(OTable) / sizeof(OTable[0]))) && "Overload Table index overflow");
+return (OTable[id/8] & (1 << (id%8))) != 0;
+#endif
+
+// Is arg overloaded
+#ifdef GET_INTRINSIC_OVERLOAD_ARGS_TABLE
+switch(IntrinID) {
+default: IGC_ASSERT_EXIT_MESSAGE(0, "Unknown intrinsic ID");
+case InternalIntrinsic::assert_buffer: 
+   return false;
+case InternalIntrinsic::atomic_fmax: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 3: return true;
+   }
+}
+case InternalIntrinsic::atomic_fmin: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 3: return true;
+   }
+}
+case InternalIntrinsic::cast_from_bf16: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   }
+}
+case InternalIntrinsic::cast_to_bf16: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   }
+}
+case InternalIntrinsic::cast_to_ptr_explicit: 
+   return false;
+case InternalIntrinsic::jump_table: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   }
+}
+case InternalIntrinsic::logical_thread_id: 
+   return false;
+case InternalIntrinsic::lsc_atomic_bss: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_atomic_bti: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_atomic_slm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_atomic_ugm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_2d_tgm_bti: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_2d_ugm_desc: {
+    switch(ArgNum) {
+   default: return false;
+   case 1: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_2d_ugm_desc_transpose: {
+    switch(ArgNum) {
+   default: return false;
+   case 1: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_2d_ugm_desc_vnni: {
+    switch(ArgNum) {
+   default: return false;
+   case 1: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_block_2d_ugm: {
+    switch(ArgNum) {
+   default: return false;
+   case 2: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_block_2d_ugm_transposed: {
+    switch(ArgNum) {
+   default: return false;
+   case 2: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_block_2d_ugm_vnni: {
+    switch(ArgNum) {
+   default: return false;
+   case 2: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_bss: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_bti: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_quad_bss: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_quad_bti: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_quad_slm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_quad_tgm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 1: return true;
+   case 4: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_quad_ugm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_slm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_load_ugm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_prefetch_2d_ugm_desc: {
+    switch(ArgNum) {
+   default: return false;
+   case 1: return true;
+   case 8: return true;
+   }
+}
+case InternalIntrinsic::lsc_prefetch_block_2d_ugm: {
+    switch(ArgNum) {
+   default: return false;
+   case 2: return true;
+   }
+}
+case InternalIntrinsic::lsc_prefetch_bss: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_prefetch_bti: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_prefetch_quad_bss: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_prefetch_quad_bti: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_prefetch_quad_tgm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 1: return true;
+   case 4: return true;
+   }
+}
+case InternalIntrinsic::lsc_prefetch_quad_ugm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_prefetch_ugm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_2d_tgm_bti: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 6: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_2d_ugm_desc: {
+    switch(ArgNum) {
+   default: return false;
+   case 1: return true;
+   case 8: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_block_2d_ugm: {
+    switch(ArgNum) {
+   default: return false;
+   case 2: return true;
+   case 14: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_bss: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   case 9: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_bti: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   case 9: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_quad_bss: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   case 9: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_quad_bti: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   case 9: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_quad_slm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   case 9: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_quad_tgm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 1: return true;
+   case 4: return true;
+   case 8: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_quad_ugm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   case 9: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_slm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   case 9: return true;
+   }
+}
+case InternalIntrinsic::lsc_store_ugm: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 4: return true;
+   case 6: return true;
+   case 9: return true;
+   }
+}
+case InternalIntrinsic::print_buffer: 
+   return false;
+case InternalIntrinsic::print_format_index: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   }
+}
+case InternalIntrinsic::read_variable_region: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   }
+}
+case InternalIntrinsic::round_to_tf32: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   }
+}
+case InternalIntrinsic::stochastic_round_to_f16: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 1: return true;
+   }
+}
+case InternalIntrinsic::sync_buffer: 
+   return false;
+case InternalIntrinsic::write_variable_region: {
+    switch(ArgNum) {
+   default: return false;
+   case 0: return true;
+   case 1: return true;
+   case 4: return true;
+   }
+}
+}
+#endif
+
+// Is ret overloaded
+#ifdef GET_INTRINSIC_OVERLOAD_RET_TABLE
+switch(IntrinID) {
+default:
+  return false;
+case InternalIntrinsic::atomic_fmax:
+case InternalIntrinsic::atomic_fmin:
+case InternalIntrinsic::cast_from_bf16:
+case InternalIntrinsic::cast_to_bf16:
+case InternalIntrinsic::cast_to_ptr_explicit:
+case InternalIntrinsic::jump_table:
+case InternalIntrinsic::lsc_atomic_bss:
+case InternalIntrinsic::lsc_atomic_bti:
+case InternalIntrinsic::lsc_atomic_slm:
+case InternalIntrinsic::lsc_atomic_ugm:
+case InternalIntrinsic::lsc_load_2d_tgm_bti:
+case InternalIntrinsic::lsc_load_2d_ugm_desc:
+case InternalIntrinsic::lsc_load_2d_ugm_desc_transpose:
+case InternalIntrinsic::lsc_load_2d_ugm_desc_vnni:
+case InternalIntrinsic::lsc_load_block_2d_ugm:
+case InternalIntrinsic::lsc_load_block_2d_ugm_transposed:
+case InternalIntrinsic::lsc_load_block_2d_ugm_vnni:
+case InternalIntrinsic::lsc_load_bss:
+case InternalIntrinsic::lsc_load_bti:
+case InternalIntrinsic::lsc_load_quad_bss:
+case InternalIntrinsic::lsc_load_quad_bti:
+case InternalIntrinsic::lsc_load_quad_slm:
+case InternalIntrinsic::lsc_load_quad_tgm:
+case InternalIntrinsic::lsc_load_quad_ugm:
+case InternalIntrinsic::lsc_load_slm:
+case InternalIntrinsic::lsc_load_ugm:
+case InternalIntrinsic::read_variable_region:
+case InternalIntrinsic::round_to_tf32:
+case InternalIntrinsic::stochastic_round_to_f16:
+  return true;
+}
+#endif
+
+// Global intrinsic function declaration type table.
+#ifdef GET_INTRINSIC_GENERATOR_GLOBAL
+static const unsigned IIT_Table[] = {
+  0x5, (1U<<31) | 0, (1U<<31) | 9, 0x9F2F, 0xAF1F, (1U<<31) | 18, (1U<<31) | 24, 0x4, 
+  (1U<<31) | 30, (1U<<31) | 51, (1U<<31) | 72, (1U<<31) | 93, (1U<<31) | 114, (1U<<31) | 124, (1U<<31) | 139, (1U<<31) | 154, 
+  (1U<<31) | 169, (1U<<31) | 189, (1U<<31) | 209, (1U<<31) | 229, (1U<<31) | 246, (1U<<31) | 263, (1U<<31) | 280, (1U<<31) | 297, 
+  (1U<<31) | 314, (1U<<31) | 333, (1U<<31) | 350, (1U<<31) | 367, (1U<<31) | 384, (1U<<31) | 398, (1U<<31) | 415, (1U<<31) | 429, 
+  (1U<<31) | 443, (1U<<31) | 457, (1U<<31) | 471, (1U<<31) | 487, (1U<<31) | 501, (1U<<31) | 515, (1U<<31) | 526, (1U<<31) | 540, 
+  (1U<<31) | 559, (1U<<31) | 575, (1U<<31) | 591, (1U<<31) | 607, (1U<<31) | 623, (1U<<31) | 639, (1U<<31) | 657, (1U<<31) | 673, 
+  (1U<<31) | 689, 0x5, 0x4F4, 0x4444CF0F, 0x9F2F, (1U<<31) | 705, 0x5, (1U<<31) | 712, 
+  
+};
+
+static const unsigned char IIT_LongEncodingTable[] = {
+  /* 0 */ 15, 2, 15, 12, 4, 4, 15, 18, 0, 
+  /* 9 */ 15, 2, 15, 12, 4, 4, 15, 18, 0, 
+  /* 18 */ 15, 4, 27, 4, 2, 0, 
+  /* 24 */ 15, 4, 15, 9, 29, 0, 
+  /* 30 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 4, 15, 25, 3, 4, 15, 3, 15, 3, 15, 3, 0, 
+  /* 51 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 4, 15, 25, 3, 4, 15, 3, 15, 3, 15, 3, 0, 
+  /* 72 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 4, 15, 25, 3, 4, 15, 3, 15, 3, 15, 3, 0, 
+  /* 93 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 5, 15, 25, 3, 4, 15, 3, 15, 3, 15, 3, 0, 
+  /* 114 */ 15, 3, 15, 11, 4, 4, 4, 4, 4, 0, 
+  /* 124 */ 15, 3, 1, 15, 11, 2, 3, 3, 12, 4, 4, 4, 15, 3, 0, 
+  /* 139 */ 15, 3, 1, 15, 11, 2, 3, 3, 12, 4, 4, 4, 15, 3, 0, 
+  /* 154 */ 15, 3, 1, 15, 11, 2, 3, 3, 12, 4, 4, 4, 15, 3, 0, 
+  /* 169 */ 15, 3, 1, 2, 15, 9, 2, 3, 3, 5, 4, 4, 4, 4, 4, 4, 4, 15, 3, 0, 
+  /* 189 */ 15, 3, 1, 2, 15, 9, 2, 3, 3, 5, 4, 4, 4, 4, 4, 4, 4, 15, 3, 0, 
+  /* 209 */ 15, 3, 1, 2, 15, 9, 2, 3, 3, 5, 4, 4, 4, 4, 4, 4, 4, 15, 3, 0, 
+  /* 229 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 4, 15, 25, 3, 4, 15, 3, 0, 
+  /* 246 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 4, 15, 25, 3, 4, 15, 3, 0, 
+  /* 263 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 4, 15, 25, 3, 4, 15, 3, 0, 
+  /* 280 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 4, 15, 25, 3, 4, 15, 3, 0, 
+  /* 297 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 4, 15, 25, 3, 4, 15, 3, 0, 
+  /* 314 */ 15, 3, 15, 9, 15, 19, 2, 4, 15, 25, 15, 25, 15, 25, 15, 25, 15, 3, 0, 
+  /* 333 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 5, 15, 25, 3, 4, 15, 3, 0, 
+  /* 350 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 4, 15, 25, 3, 4, 15, 3, 0, 
+  /* 367 */ 15, 3, 15, 9, 2, 2, 2, 15, 17, 5, 15, 25, 3, 4, 15, 3, 0, 
+  /* 384 */ 0, 1, 15, 3, 2, 3, 3, 12, 4, 4, 4, 15, 11, 0, 
+  /* 398 */ 0, 1, 2, 15, 1, 2, 3, 3, 5, 4, 4, 4, 4, 4, 4, 4, 0, 
+  /* 415 */ 0, 15, 1, 2, 2, 2, 15, 9, 4, 15, 17, 3, 4, 0, 
+  /* 429 */ 0, 15, 1, 2, 2, 2, 15, 9, 4, 15, 17, 3, 4, 0, 
+  /* 443 */ 0, 15, 1, 2, 2, 2, 15, 9, 4, 15, 17, 3, 4, 0, 
+  /* 457 */ 0, 15, 1, 2, 2, 2, 15, 9, 4, 15, 17, 3, 4, 0, 
+  /* 471 */ 0, 15, 1, 15, 11, 2, 4, 15, 17, 15, 17, 15, 17, 15, 17, 0, 
+  /* 487 */ 0, 15, 1, 2, 2, 2, 15, 9, 5, 15, 17, 3, 4, 0, 
+  /* 501 */ 0, 15, 1, 2, 2, 2, 15, 9, 5, 15, 17, 3, 4, 0, 
+  /* 515 */ 0, 15, 3, 4, 4, 4, 4, 4, 15, 11, 0, 
+  /* 526 */ 0, 1, 15, 3, 2, 3, 3, 12, 4, 4, 4, 15, 11, 0, 
+  /* 540 */ 0, 1, 2, 15, 1, 2, 3, 3, 5, 4, 4, 4, 4, 4, 4, 4, 15, 11, 0, 
+  /* 559 */ 0, 15, 1, 2, 2, 2, 15, 9, 4, 15, 17, 3, 4, 15, 27, 0, 
+  /* 575 */ 0, 15, 1, 2, 2, 2, 15, 9, 4, 15, 17, 3, 4, 15, 27, 0, 
+  /* 591 */ 0, 15, 1, 2, 2, 2, 15, 9, 4, 15, 17, 3, 4, 15, 27, 0, 
+  /* 607 */ 0, 15, 1, 2, 2, 2, 15, 9, 4, 15, 17, 3, 4, 15, 27, 0, 
+  /* 623 */ 0, 15, 1, 2, 2, 2, 15, 9, 4, 15, 17, 3, 4, 15, 27, 0, 
+  /* 639 */ 0, 15, 1, 15, 11, 2, 4, 15, 17, 15, 17, 15, 17, 15, 17, 15, 27, 0, 
+  /* 657 */ 0, 15, 1, 2, 2, 2, 15, 9, 5, 15, 17, 3, 4, 15, 27, 0, 
+  /* 673 */ 0, 15, 1, 2, 2, 2, 15, 9, 4, 15, 17, 3, 4, 15, 27, 0, 
+  /* 689 */ 0, 15, 1, 2, 2, 2, 15, 9, 5, 15, 17, 3, 4, 15, 27, 0, 
+  /* 705 */ 15, 2, 15, 10, 15, 17, 0, 
+  /* 712 */ 0, 15, 4, 15, 8, 4, 4, 15, 17, 0, 
+  255
+};
+
+#endif
+
+// Add parameter attributes that are not common to all intrinsics.
+#ifdef GET_INTRINSIC_ATTRIBUTES
+AttributeList InternalIntrinsic::getAttributes(LLVMContext &C, InternalIntrinsic::ID id) {
+  static const uint8_t IntrinsicsToAttributesMap[] = {
+    1, // llvm.vc.internal.assert.buffer
+    2, // llvm.vc.internal.atomic.fmax
+    2, // llvm.vc.internal.atomic.fmin
+    3, // llvm.vc.internal.cast.from.bf16
+    3, // llvm.vc.internal.cast.to.bf16
+    3, // llvm.vc.internal.cast.to.ptr.explicit
+    3, // llvm.vc.internal.jump.table
+    3, // llvm.vc.internal.logical.thread.id
+    2, // llvm.vc.internal.lsc.atomic.bss
+    2, // llvm.vc.internal.lsc.atomic.bti
+    2, // llvm.vc.internal.lsc.atomic.slm
+    2, // llvm.vc.internal.lsc.atomic.ugm
+    1, // llvm.vc.internal.lsc.load.2d.tgm.bti
+    1, // llvm.vc.internal.lsc.load.2d.ugm.desc
+    1, // llvm.vc.internal.lsc.load.2d.ugm.desc.transpose
+    1, // llvm.vc.internal.lsc.load.2d.ugm.desc.vnni
+    1, // llvm.vc.internal.lsc.load.block.2d.ugm
+    1, // llvm.vc.internal.lsc.load.block.2d.ugm.transposed
+    1, // llvm.vc.internal.lsc.load.block.2d.ugm.vnni
+    1, // llvm.vc.internal.lsc.load.bss
+    1, // llvm.vc.internal.lsc.load.bti
+    1, // llvm.vc.internal.lsc.load.quad.bss
+    1, // llvm.vc.internal.lsc.load.quad.bti
+    1, // llvm.vc.internal.lsc.load.quad.slm
+    1, // llvm.vc.internal.lsc.load.quad.tgm
+    1, // llvm.vc.internal.lsc.load.quad.ugm
+    1, // llvm.vc.internal.lsc.load.slm
+    1, // llvm.vc.internal.lsc.load.ugm
+    2, // llvm.vc.internal.lsc.prefetch.2d.ugm.desc
+    2, // llvm.vc.internal.lsc.prefetch.block.2d.ugm
+    2, // llvm.vc.internal.lsc.prefetch.bss
+    2, // llvm.vc.internal.lsc.prefetch.bti
+    2, // llvm.vc.internal.lsc.prefetch.quad.bss
+    2, // llvm.vc.internal.lsc.prefetch.quad.bti
+    2, // llvm.vc.internal.lsc.prefetch.quad.tgm
+    2, // llvm.vc.internal.lsc.prefetch.quad.ugm
+    2, // llvm.vc.internal.lsc.prefetch.ugm
+    4, // llvm.vc.internal.lsc.store.2d.tgm.bti
+    4, // llvm.vc.internal.lsc.store.2d.ugm.desc
+    4, // llvm.vc.internal.lsc.store.block.2d.ugm
+    4, // llvm.vc.internal.lsc.store.bss
+    4, // llvm.vc.internal.lsc.store.bti
+    4, // llvm.vc.internal.lsc.store.quad.bss
+    4, // llvm.vc.internal.lsc.store.quad.bti
+    4, // llvm.vc.internal.lsc.store.quad.slm
+    4, // llvm.vc.internal.lsc.store.quad.tgm
+    4, // llvm.vc.internal.lsc.store.quad.ugm
+    4, // llvm.vc.internal.lsc.store.slm
+    4, // llvm.vc.internal.lsc.store.ugm
+    1, // llvm.vc.internal.print.buffer
+    3, // llvm.vc.internal.print.format.index
+    1, // llvm.vc.internal.read.variable.region
+    3, // llvm.vc.internal.round.to.tf32
+    3, // llvm.vc.internal.stochastic.round.to.f16
+    1, // llvm.vc.internal.sync.buffer
+    4, // llvm.vc.internal.write.variable.region
+  };
+
+  unsigned AttrIdx = id - 1 - InternalIntrinsic::not_internal_intrinsic;
+  #ifndef NDEBUG
+  const size_t AttrMapNum = sizeof(IntrinsicsToAttributesMap)/sizeof(IntrinsicsToAttributesMap[0]);
+  IGC_ASSERT(AttrIdx < AttrMapNum && "invalid attribute index");
+  #endif // NDEBUG
+  AttributeList AS[1];
+  unsigned NumAttrs = 0;
+  if (id != 0) {
+    switch(IntrinsicsToAttributesMap[AttrIdx]) {
+    default: IGC_ASSERT_EXIT_MESSAGE(0, "Invalid attribute number");
+    case 1: {
+      const Attribute::AttrKind Atts[] = {Attribute::NoUnwind,Attribute::ReadOnly};
+      AS[0] = AttributeList::get(C, AttributeList::FunctionIndex, Atts);
+      NumAttrs = 1;
+      break;
+      }
+    case 2: {
+      const Attribute::AttrKind Atts[] = {Attribute::NoUnwind};
+      AS[0] = AttributeList::get(C, AttributeList::FunctionIndex, Atts);
+      NumAttrs = 1;
+      break;
+      }
+    case 3: {
+      const Attribute::AttrKind Atts[] = {Attribute::NoUnwind,Attribute::ReadNone};
+      AS[0] = AttributeList::get(C, AttributeList::FunctionIndex, Atts);
+      NumAttrs = 1;
+      break;
+      }
+    case 4: {
+      const Attribute::AttrKind Atts[] = {Attribute::NoUnwind,Attribute::WriteOnly};
+      AS[0] = AttributeList::get(C, AttributeList::FunctionIndex, Atts);
+      NumAttrs = 1;
+      break;
+      }
+    }
+  }
+  return AttributeList::get(C, ArrayRef(AS, NumAttrs));
+}
+#endif // GET_INTRINSIC_ATTRIBUTES
+
+// Platform table
+#ifdef GET_INTRINSIC_TARGET_FEATURE_TABLE
+static const uint8_t RequiredTargetFeatures[] = {
+  0x0, // llvm.vc.internal.assert.buffer
+  0x0, // llvm.vc.internal.atomic.fmax
+  0x0, // llvm.vc.internal.atomic.fmin
+  0x0, // llvm.vc.internal.cast.from.bf16
+  0x0, // llvm.vc.internal.cast.to.bf16
+  0x0, // llvm.vc.internal.cast.to.ptr.explicit
+  0x0, // llvm.vc.internal.jump.table
+  0x0, // llvm.vc.internal.logical.thread.id
+  0x1, // llvm.vc.internal.lsc.atomic.bss
+  0x1, // llvm.vc.internal.lsc.atomic.bti
+  0x1, // llvm.vc.internal.lsc.atomic.slm
+  0x1, // llvm.vc.internal.lsc.atomic.ugm
+  0x3, // llvm.vc.internal.lsc.load.2d.tgm.bti
+  0x1, // llvm.vc.internal.lsc.load.2d.ugm.desc
+  0x1, // llvm.vc.internal.lsc.load.2d.ugm.desc.transpose
+  0x1, // llvm.vc.internal.lsc.load.2d.ugm.desc.vnni
+  0x1, // llvm.vc.internal.lsc.load.block.2d.ugm
+  0x1, // llvm.vc.internal.lsc.load.block.2d.ugm.transposed
+  0x1, // llvm.vc.internal.lsc.load.block.2d.ugm.vnni
+  0x1, // llvm.vc.internal.lsc.load.bss
+  0x1, // llvm.vc.internal.lsc.load.bti
+  0x1, // llvm.vc.internal.lsc.load.quad.bss
+  0x1, // llvm.vc.internal.lsc.load.quad.bti
+  0x1, // llvm.vc.internal.lsc.load.quad.slm
+  0x3, // llvm.vc.internal.lsc.load.quad.tgm
+  0x1, // llvm.vc.internal.lsc.load.quad.ugm
+  0x1, // llvm.vc.internal.lsc.load.slm
+  0x1, // llvm.vc.internal.lsc.load.ugm
+  0x1, // llvm.vc.internal.lsc.prefetch.2d.ugm.desc
+  0x1, // llvm.vc.internal.lsc.prefetch.block.2d.ugm
+  0x1, // llvm.vc.internal.lsc.prefetch.bss
+  0x1, // llvm.vc.internal.lsc.prefetch.bti
+  0x1, // llvm.vc.internal.lsc.prefetch.quad.bss
+  0x1, // llvm.vc.internal.lsc.prefetch.quad.bti
+  0x3, // llvm.vc.internal.lsc.prefetch.quad.tgm
+  0x1, // llvm.vc.internal.lsc.prefetch.quad.ugm
+  0x1, // llvm.vc.internal.lsc.prefetch.ugm
+  0x3, // llvm.vc.internal.lsc.store.2d.tgm.bti
+  0x1, // llvm.vc.internal.lsc.store.2d.ugm.desc
+  0x1, // llvm.vc.internal.lsc.store.block.2d.ugm
+  0x1, // llvm.vc.internal.lsc.store.bss
+  0x1, // llvm.vc.internal.lsc.store.bti
+  0x1, // llvm.vc.internal.lsc.store.quad.bss
+  0x1, // llvm.vc.internal.lsc.store.quad.bti
+  0x1, // llvm.vc.internal.lsc.store.quad.slm
+  0x3, // llvm.vc.internal.lsc.store.quad.tgm
+  0x1, // llvm.vc.internal.lsc.store.quad.ugm
+  0x1, // llvm.vc.internal.lsc.store.slm
+  0x1, // llvm.vc.internal.lsc.store.ugm
+  0x0, // llvm.vc.internal.print.buffer
+  0x0, // llvm.vc.internal.print.format.index
+  0x0, // llvm.vc.internal.read.variable.region
+  0x0, // llvm.vc.internal.round.to.tf32
+  0x0, // llvm.vc.internal.stochastic.round.to.f16
+  0x0, // llvm.vc.internal.sync.buffer
+  0x0, // llvm.vc.internal.write.variable.region
+};
+static const uint8_t ForbiddenTargetFeatures[] = {
+  0x0, // llvm.vc.internal.assert.buffer
+  0x0, // llvm.vc.internal.atomic.fmax
+  0x0, // llvm.vc.internal.atomic.fmin
+  0x0, // llvm.vc.internal.cast.from.bf16
+  0x0, // llvm.vc.internal.cast.to.bf16
+  0x0, // llvm.vc.internal.cast.to.ptr.explicit
+  0x0, // llvm.vc.internal.jump.table
+  0x0, // llvm.vc.internal.logical.thread.id
+  0x0, // llvm.vc.internal.lsc.atomic.bss
+  0x0, // llvm.vc.internal.lsc.atomic.bti
+  0x0, // llvm.vc.internal.lsc.atomic.slm
+  0x0, // llvm.vc.internal.lsc.atomic.ugm
+  0x0, // llvm.vc.internal.lsc.load.2d.tgm.bti
+  0x0, // llvm.vc.internal.lsc.load.2d.ugm.desc
+  0x0, // llvm.vc.internal.lsc.load.2d.ugm.desc.transpose
+  0x0, // llvm.vc.internal.lsc.load.2d.ugm.desc.vnni
+  0x0, // llvm.vc.internal.lsc.load.block.2d.ugm
+  0x0, // llvm.vc.internal.lsc.load.block.2d.ugm.transposed
+  0x0, // llvm.vc.internal.lsc.load.block.2d.ugm.vnni
+  0x0, // llvm.vc.internal.lsc.load.bss
+  0x0, // llvm.vc.internal.lsc.load.bti
+  0x0, // llvm.vc.internal.lsc.load.quad.bss
+  0x0, // llvm.vc.internal.lsc.load.quad.bti
+  0x0, // llvm.vc.internal.lsc.load.quad.slm
+  0x0, // llvm.vc.internal.lsc.load.quad.tgm
+  0x0, // llvm.vc.internal.lsc.load.quad.ugm
+  0x0, // llvm.vc.internal.lsc.load.slm
+  0x0, // llvm.vc.internal.lsc.load.ugm
+  0x0, // llvm.vc.internal.lsc.prefetch.2d.ugm.desc
+  0x0, // llvm.vc.internal.lsc.prefetch.block.2d.ugm
+  0x0, // llvm.vc.internal.lsc.prefetch.bss
+  0x0, // llvm.vc.internal.lsc.prefetch.bti
+  0x0, // llvm.vc.internal.lsc.prefetch.quad.bss
+  0x0, // llvm.vc.internal.lsc.prefetch.quad.bti
+  0x0, // llvm.vc.internal.lsc.prefetch.quad.tgm
+  0x0, // llvm.vc.internal.lsc.prefetch.quad.ugm
+  0x0, // llvm.vc.internal.lsc.prefetch.ugm
+  0x0, // llvm.vc.internal.lsc.store.2d.tgm.bti
+  0x0, // llvm.vc.internal.lsc.store.2d.ugm.desc
+  0x0, // llvm.vc.internal.lsc.store.block.2d.ugm
+  0x0, // llvm.vc.internal.lsc.store.bss
+  0x0, // llvm.vc.internal.lsc.store.bti
+  0x0, // llvm.vc.internal.lsc.store.quad.bss
+  0x0, // llvm.vc.internal.lsc.store.quad.bti
+  0x0, // llvm.vc.internal.lsc.store.quad.slm
+  0x0, // llvm.vc.internal.lsc.store.quad.tgm
+  0x0, // llvm.vc.internal.lsc.store.quad.ugm
+  0x0, // llvm.vc.internal.lsc.store.slm
+  0x0, // llvm.vc.internal.lsc.store.ugm
+  0x0, // llvm.vc.internal.print.buffer
+  0x0, // llvm.vc.internal.print.format.index
+  0x0, // llvm.vc.internal.read.variable.region
+  0x0, // llvm.vc.internal.round.to.tf32
+  0x0, // llvm.vc.internal.stochastic.round.to.f16
+  0x0, // llvm.vc.internal.sync.buffer
+  0x0, // llvm.vc.internal.write.variable.region
+};
+#endif // GET_INTRINSIC_TARGET_FEATURE_TABLE
+
+// Checker for platform features
+#ifdef GET_INTRINSIC_TARGET_FEATURE_CHECKER
+unsigned Index = ID - 1 - vc::InternalIntrinsic::not_internal_intrinsic;
+auto MaskRequired = RequiredTargetFeatures[Index];
+auto MaskForbidden = ForbiddenTargetFeatures[Index];
+if ((MaskRequired & 1) && !hasLSCMessages()) return false;
+if ((MaskForbidden & 1) && hasLSCMessages()) return false;
+if ((MaskRequired & 2) && !hasLSCTypedMessages()) return false;
+if ((MaskForbidden & 2) && hasLSCTypedMessages()) return false;
+#endif // GET_INTRINSIC_TARGET_FEATURE_CHECKER
+
+#if defined(_MSC_VER) && defined(setjmp_undefined_for_msvc)
+// let's return it to _setjmp state
+#  pragma pop_macro("setjmp")
+#  undef setjmp_undefined_for_msvc
+#endif
+
