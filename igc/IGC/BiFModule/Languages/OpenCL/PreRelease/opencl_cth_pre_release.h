@@ -229,6 +229,8 @@ float __attribute__((overloadable)) atomic_cmpxchg(volatile __local float *p, fl
 
 // ... Types ...
 
+#ifndef __intel_sub_group_avc_ime_payload_t_defined
+#define __intel_sub_group_avc_ime_payload_t_defined
 struct intel_sub_group_avc_mce_payload_t;
 typedef __private struct intel_sub_group_avc_mce_payload_t* intel_sub_group_avc_mce_payload_t;
 
@@ -267,6 +269,7 @@ typedef __private struct intel_sub_group_avc_ref_result_t* intel_sub_group_avc_r
 
 struct intel_sub_group_avc_sic_result_t;
 typedef __private struct intel_sub_group_avc_sic_result_t* intel_sub_group_avc_sic_result_t;
+#endif
 #endif // !__VME_TYPES_DEFINED__
 
 // ... Common VME operations ...

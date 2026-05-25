@@ -1,0 +1,41 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library"
+		],
+		"files" : 
+		[
+			"igc/IGC/BiFModule/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 646,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "IGCSPIRVHeaders::@a519a5f49ddf66ff9aa9",
+	"name" : "IGCSPIRVHeaders",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/BiFModule",
+		"source" : "igc/IGC/BiFModule"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

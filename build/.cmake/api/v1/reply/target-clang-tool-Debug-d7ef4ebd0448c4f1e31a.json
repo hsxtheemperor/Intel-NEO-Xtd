@@ -1,0 +1,61 @@
+{
+	"abstract" : true,
+	"artifacts" : 
+	[
+		{
+			"path" : "/usr/bin/clang-22"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"include"
+		],
+		"files" : 
+		[
+			"igc/IGC/cmake/igc_find_opencl_clang.cmake",
+			"igc/IGC/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1531,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 118,
+				"parent" : 2
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "clang-tool::@47b1f9daa1a3b48292ff",
+	"imported" : true,
+	"name" : "clang-tool",
+	"nameOnDisk" : "clang-22",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC",
+		"source" : "igc/IGC"
+	},
+	"sources" : [],
+	"type" : "EXECUTABLE"
+}

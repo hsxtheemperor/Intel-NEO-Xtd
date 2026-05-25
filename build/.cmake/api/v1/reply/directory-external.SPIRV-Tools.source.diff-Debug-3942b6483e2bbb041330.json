@@ -1,0 +1,90 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"SPIRV-Tools/source/diff/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 64,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib64",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/source/diff/libSPIRV-Tools-diff.a"
+			],
+			"targetId" : "SPIRV-Tools-diff::@986e94a415d9cf9c7455",
+			"targetIndex" : 32,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib64/cmake/SPIRV-Tools-diff",
+			"exportName" : "SPIRV-Tools-diffTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "SPIRV-Tools-diff::@986e94a415d9cf9c7455",
+					"index" : 32
+				}
+			],
+			"paths" : 
+			[
+				"external/SPIRV-Tools/source/diff/CMakeFiles/Export/66b2e012ca3067f55ad27eeaaed341d0/SPIRV-Tools-diffTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib64/cmake/SPIRV-Tools-diff",
+			"paths" : 
+			[
+				"build/SPIRV-Tools-diffConfig.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/SPIRV-Tools/source/diff",
+		"source" : "SPIRV-Tools/source/diff"
+	}
+}

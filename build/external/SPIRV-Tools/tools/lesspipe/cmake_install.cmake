@@ -1,4 +1,4 @@
-# Install script for directory: /home/harshit9745/Workspace-Code/SPIRV-Tools/tools/lesspipe
+# Install script for directory: /home/harshit9745/SFXFolder/Workspace-Code/SPIRV-Tools/tools/lesspipe
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,16 +39,16 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES "/home/harshit9745/Workspace-Code/SPIRV-Tools/tools/lesspipe/spirv-lesspipe.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES "/home/harshit9745/SFXFolder/Workspace-Code/SPIRV-Tools/tools/lesspipe/spirv-lesspipe.sh")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/lesspipe/install_local_manifest.txt"
+  file(WRITE "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/lesspipe/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

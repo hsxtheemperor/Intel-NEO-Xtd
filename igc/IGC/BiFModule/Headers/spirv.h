@@ -41,6 +41,20 @@ SPDX-License-Identifier: MIT
  *
  ******/
 
+#if defined(__clang__) && (__clang_major__ >= 17)
+#define IGC_SAFE_ASTYPE(VAL, TYPE) \
+    ({ \
+        TYPE __dst; \
+        __builtin_memcpy(&__dst, &(VAL), sizeof(__dst) < sizeof(VAL) ? sizeof(__dst) : sizeof(VAL)); \
+        __asm__ volatile ("" : "+m" (__dst) : : "memory"); \
+        __dst; \
+    })
+#else
+#define IGC_SAFE_ASTYPE(VAL, TYPE) __builtin_astype((VAL), (TYPE))
+#endif
+
+#include "igc_bridge_builtins.h"
+
 typedef enum
 {
     None = 0x0,
@@ -157,7 +171,11 @@ typedef char __bool8 __attribute__((ext_vector_type(8)));
 typedef char __bool16 __attribute__((ext_vector_type(16)));
 
 #define INTEL_PIPE_RESERVE_ID_VALID_BIT (1U << 30)
-#define CLK_NULL_RESERVE_ID (__builtin_astype(((void*)(~INTEL_PIPE_RESERVE_ID_VALID_BIT)), __spirv_ReserveId))
+#define CLK_NULL_RESERVE_ID \
+    ({ uintptr_t __raw = (uintptr_t)(~INTEL_PIPE_RESERVE_ID_VALID_BIT); \
+       __spirv_ReserveId __res; \
+       __builtin_memcpy(&__res, &__raw, sizeof(__spirv_ReserveId)); \
+       __res; })
 
 #define IMAGETYPE_SAMPLED_SHIFT 62
 #define IMAGETYPE_DIM_SHIFT 59
@@ -5164,6 +5182,25 @@ uint SPIRV_OVERLOADABLE SPIRV_BUILTIN(GetMaxPipePackets, _Pipe_wo_i32, )(__spirv
 
 __spirv_ReserveId SPIRV_OVERLOADABLE SPIRV_BUILTIN(GroupReserveReadPipePackets, _i32_Pipe_ro_i32_i32, )(int Execution, __spirv_Pipe_ro Pipe, int NumPackets, int PacketSize/*, int PacketAlignment*/);
 __spirv_ReserveId SPIRV_OVERLOADABLE SPIRV_BUILTIN(GroupReserveWritePipePackets, _i32_Pipe_wo_i32_i32, )(int Execution, __spirv_Pipe_wo Pipe, int NumPackets, int PacketSize/*, int PacketAlignment*/);
+
+// Native pipe type overloads for Clang 22+ compatibility
+int SPIRV_OVERLOADABLE SPIRV_BUILTIN(ReadPipe, _Pipe_ro_p4i8_i32, )(__read_only pipe int Pipe, __generic char* Pointer, int PacketSize);
+int SPIRV_OVERLOADABLE SPIRV_BUILTIN(WritePipe, _Pipe_wo_p4i8_i32, )(__write_only pipe int Pipe, __generic char* Pointer, int PacketSize);
+__spirv_ReserveId SPIRV_OVERLOADABLE SPIRV_BUILTIN(ReserveReadPipePackets, _Pipe_ro_i32_i32, )(__read_only pipe int Pipe, int NumPackets, int PacketSize);
+__spirv_ReserveId SPIRV_OVERLOADABLE SPIRV_BUILTIN(ReserveWritePipePackets, _Pipe_wo_i32_i32, )(__write_only pipe int Pipe, int NumPackets, int PacketSize);
+void SPIRV_OVERLOADABLE SPIRV_BUILTIN(CommitReadPipe, _Pipe_ro_ReserveId_i32, )(__read_only pipe int Pipe, __spirv_ReserveId ReserveId, int PacketSize);
+void SPIRV_OVERLOADABLE SPIRV_BUILTIN(CommitWritePipe, _Pipe_wo_ReserveId_i32, )(__write_only pipe int Pipe, __spirv_ReserveId ReserveId, int PacketSize);
+uint SPIRV_OVERLOADABLE SPIRV_BUILTIN(GetNumPipePackets, _Pipe_ro_i32, )(__read_only pipe int Pipe, int PacketSize);
+uint SPIRV_OVERLOADABLE SPIRV_BUILTIN(GetNumPipePackets, _Pipe_wo_i32, )(__write_only pipe int Pipe, int PacketSize);
+__spirv_ReserveId SPIRV_OVERLOADABLE SPIRV_BUILTIN(GroupReserveReadPipePackets, _i32_Pipe_ro_i32_i32, )(int Execution, __read_only pipe int Pipe, int NumPackets, int PacketSize);
+__spirv_ReserveId SPIRV_OVERLOADABLE SPIRV_BUILTIN(GroupReserveWritePipePackets, _i32_Pipe_wo_i32_i32, )(int Execution, __write_only pipe int Pipe, int NumPackets, int PacketSize);
+
+int SPIRV_OVERLOADABLE SPIRV_BUILTIN(ReservedReadPipe, _Pipe_ro_ReserveId_i32_p4i8_i32, )(__read_only pipe int Pipe, __spirv_ReserveId ReserveId, int Index, __generic char* Pointer, int PacketSize);
+int SPIRV_OVERLOADABLE SPIRV_BUILTIN(ReservedWritePipe, _Pipe_wo_ReserveId_i32_p4i8_i32, )(__write_only pipe int Pipe, __spirv_ReserveId ReserveId, int Index, __generic char* Pointer, int PacketSize);
+uint SPIRV_OVERLOADABLE SPIRV_BUILTIN(GetMaxPipePackets, _Pipe_ro_i32, )(__read_only pipe int Pipe, int PacketSize);
+uint SPIRV_OVERLOADABLE SPIRV_BUILTIN(GetMaxPipePackets, _Pipe_wo_i32, )(__write_only pipe int Pipe, int PacketSize);
+void SPIRV_OVERLOADABLE SPIRV_BUILTIN(GroupCommitReadPipe, _i32_Pipe_ro_ReserveId_i32, )(int Execution, __read_only pipe int Pipe, __spirv_ReserveId ReserveId, int PacketSize);
+void SPIRV_OVERLOADABLE SPIRV_BUILTIN(GroupCommitWritePipe, _i32_Pipe_wo_ReserveId_i32, )(int Execution, __write_only pipe int Pipe, __spirv_ReserveId ReserveId, int PacketSize);
 
 void SPIRV_OVERLOADABLE SPIRV_BUILTIN(GroupCommitReadPipe, _i32_Pipe_ro_ReserveId_i32, )(int Execution, __spirv_Pipe_ro Pipe, __spirv_ReserveId ReserveId, int PacketSize/*, int PacketAlignment*/);
 void SPIRV_OVERLOADABLE SPIRV_BUILTIN(GroupCommitWritePipe, _i32_Pipe_wo_ReserveId_i32, )(int Execution, __spirv_Pipe_wo Pipe, __spirv_ReserveId ReserveId, int PacketSize/*, int PacketAlignment*/);

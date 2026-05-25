@@ -1,0 +1,1151 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/libiga_s64.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_compile_options",
+			"set_property",
+			"set_target_properties",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"igc/visa/iga/IGALibrary/CMakeLists.txt",
+			"igc/IGC/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 228,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 106,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 109,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 243,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 1377,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 1381,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 1414,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 1417,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 1432,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 1434,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 1504,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 1505,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 48,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 50,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fexceptions -O0 -pipe -fmessage-length=0 -march=corei7 -mstackrealign -fms-extensions -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wwrite-strings -Wno-long-long -Wswitch -Wno-sign-compare -Wno-unused-result -Wno-enum-compare -Wno-type-limits -Wno-ignored-qualifiers -Wno-shadow -Wformat -Wformat-security -Wno-extra -Wno-write-strings -finline -fno-strict-aliasing -msse -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -Wno-unknown-pragmas -fPIC -Bsymbolic -finline-functions -fbracket-depth=512 -fno-rtti -fvisibility=hidden -fvisibility-inlines-hidden -g -std=gnu++17   -D_GNU_SOURCE -D_GLIBCXX_USE_CXX11_ABI=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wno-logical-op-parentheses"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-Wmissing-declarations"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-fexceptions"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "CL_KHR_FP64_EXT"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "COMPILE_DEFINITIONS"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "ENABLE_REGISTRY_READ"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "GED_external"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "GHAL3D=USC"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "GIT_COMMIT_HASH=\"041e8246416f559b4fcafd4465993dcb7b430286\""
+				},
+				{
+					"backtrace" : 4,
+					"define" : "ICBE_LINUX"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "IGA_BUILDING_LIB"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "IGA_VERSION_SUFFIX=\"-041e8246+\""
+				},
+				{
+					"backtrace" : 4,
+					"define" : "IGC_CMAKE"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "IGC_EXPORTS=1"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "IGC_SPIRV_ENABLED"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "IGC_SPIRV_TOOLS_ENABLED"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "IGC_VC_ENABLED"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "INSIDE_PLUGIN"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "ISTDLIB_UMD"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "LINUX"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "NOMINMAX"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "STD_CALL"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "USC_DXX"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "USC_EXPORTS=1"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "USE_MMX"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "USE_SSE"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "USE_SSE2"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "USE_SSE3"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "USE_SSSE3"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "_AMD64_"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "_COMPILER_DLL_"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "_CONSOLE"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "_DEBUG"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "_HAS_EXCEPTIONS=1"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "_IGC_"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "_LIB"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "_SCL_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "__STDC_CONSTANT_MACROS"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 7,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/WrapperLLVM/include"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/autogen"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/common"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/.."
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../Common"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../3d/common"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common/Compiler"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common/Compiler/API"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../visa/include"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/Release"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/AdaptorOCL/ocl_igc_shared/executable_format"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/AdaptorOCL"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/AdaptorOCL/ocl_igc_interface/impl"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/Options"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/Options/include"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/Options/include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common/Compiler/common"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/AdaptorOCL/cif/cif/.."
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/ZEBinWriter/zebin/source"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/ZEBinWriter/zebin/source/autogen"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/../SPIRV-Tools/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../SPIRV-Headers/include"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/visa/iga/IGALibrary/../GEDLibrary/GED_external/build/autogen-intel64"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/visa/iga/IGALibrary/../GEDLibrary/GED_external/Source/common"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/visa/iga/IGALibrary/../../../inc"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				92,
+				93
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "GEDLibrary::@a2c978b46b815ec635f2"
+		},
+		{
+			"id" : "IGA_OLIB::@778a449af29eb0e05611"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "Libraries/IGAProjs"
+	},
+	"id" : "IGA_SLIB::@778a449af29eb0e05611",
+	"name" : "IGA_SLIB",
+	"nameOnDisk" : "libiga_s64.a",
+	"objectDependencies" : 
+	[
+		{
+			"backtrace" : 1,
+			"id" : "GEDLibrary::@a2c978b46b815ec635f2"
+		},
+		{
+			"backtrace" : 1,
+			"id" : "IGA_OLIB::@778a449af29eb0e05611"
+		}
+	],
+	"orderDependencies" : 
+	[
+		{
+			"id" : "GEDLibrary::@a2c978b46b815ec635f2"
+		},
+		{
+			"id" : "IGA_OLIB::@778a449af29eb0e05611"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/visa/iga/IGALibrary",
+		"source" : "igc/visa/iga/IGALibrary"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91
+			]
+		},
+		{
+			"name" : "API",
+			"sourceIndexes" : 
+			[
+				92,
+				93
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/ged/xcoder/ged_ins.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/ged/xcoder/ged_interpreters.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/ged/xcoder/ged_restrictions_handler.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_basic_types.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_compact_mapping_table.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_enum_types_internal.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_ins_decoding_table.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_ins_encoding_masks.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_ins_position_fragment.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_ins_restrictions.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_interpreter_types.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_int_utils.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_option_parser.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_string_utils.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_types_internal.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/Source/common/ged_validation_utils.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_api.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_collectors_tables.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_compaction_tables.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_decoding_tables.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_encoding_masks_tables.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_enumerations.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_enum_interpreters.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_enum_tables.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_fragments.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_ins_field.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_mapping_fragments.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_mapping_tables.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_10.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_11.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_7.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_7_5.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_8.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_8_1.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_9.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_none.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_tgl.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_xe2.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_xe_hp.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_xe_hpc.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_xe_hpc_a.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_xe_hpg.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_model_xe_lpg_md.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/ged_restrictions.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/CMakeFiles/GEDLibrary.dir/build/autogen-intel64/version.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/api/iga_bxml_enums.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/api/iga_types_swsb.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/BitProcessor.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/GED/Encoder.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/GED/GEDBitProcessor.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/GED/GEDUtil.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/GED/Interface.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/GED/Decoder.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/Messages/MessageDecoder.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/Messages/MessageDecoderHDC.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/Messages/MessageDecoderLSC.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/Messages/MessageDecoderOther.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/Native/InstCompactor.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/Native/InstEncoder.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Backend/Native/Interface.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Frontend/Floats.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Frontend/Formatter.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Frontend/FormatterJSON.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Frontend/FormatterJSON2.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Frontend/IRToString.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Frontend/SendDescriptorDecoding.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Frontend/KernelParser.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Frontend/Parser.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Frontend/lex.yy.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/Block.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/DUAnalysis.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/ImmVal.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/Instruction.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/Kernel.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/Messages.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/Operand.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/RegDeps.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/RegSet.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/SWSBSetter.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/Traversals.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/Types.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/IR/Checker/IRChecker.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/MemManager/Arena.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/MemManager/MemManager.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/ColoredIO.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/InstDiff.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/asserts.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/strings.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/system.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Models/Models.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Models/OpSpec.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/visa/iga/IGALibrary/CMakeFiles/IGA_OLIB.dir/Timer/Timer.cpp.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "igc/visa/iga/IGALibrary/api/iga.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "igc/visa/iga/IGALibrary/api/kv.cpp",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

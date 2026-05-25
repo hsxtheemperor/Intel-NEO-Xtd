@@ -1,0 +1,32 @@
+➜  archive git:(main) ✗ grep -r "hasSetOpaquePointersValue\|getOpaquePointers\|setOpaquePointers\|TypedPointer\|getPointerElementType\|PointerType::get(" \
+    /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/ \
+    --include="*.cpp" --include="*.h" -l | wc -l
+19
+➜  archive git:(main) ✗ grep -rn "hasSetOpaquePointersValue\|getOpaquePointers\|setOpaquePointers\|TypedPointer\|getPointerElementType\|PointerType::get(" \
+    /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/ \
+    --include="*.cpp" --include="*.h" | \
+    grep -oP "IGC/[^:]+\.(?:cpp|h)" | sort -u
+IGC/AdaptorOCL/LowerInvokeSIMD.cpp
+IGC/AdaptorOCL/preprocess_spvir/PromoteBools.cpp
+IGC/AdaptorOCL/SPIRV/libSPIRV/SPIRVInstruction.h
+IGC/AdaptorOCL/SPIRV/libSPIRV/SPIRVType.cpp
+IGC/AdaptorOCL/SPIRV/libSPIRV/SPIRVType.h
+IGC/AdaptorOCL/SPIRV/SPIRVReader.cpp
+IGC/Compiler/CISACodeGen/MemOpt.cpp
+IGC/Compiler/CISACodeGen/PrepareLoadsStoresUtils.cpp
+IGC/Compiler/CodeGenContext.cpp
+IGC/Compiler/CustomSafeOptPass.cpp
+IGC/Compiler/Optimizer/OpenCLPasses/JointMatrixFuncsResolutionPass/JointMatrixFuncsResolutionPass.cpp
+IGC/VectorCompiler/CMCL/lib/Support/BuiltinTranslator.cpp
+IGC/VectorCompiler/lib/GenXOpts/CMPacketize/GenXPacketize.cpp
+IGC/VectorCompiler/lib/GenXOpts/CMTrans/GenXPrintfResolution.cpp
+IGC/VectorCompiler/lib/InternalIntrinsics/InternalIntrinsics.cpp
+IGC/VectorCompiler/lib/Utils/GenX/ImplicitArgsBuffer.cpp
+IGC/WrapperLLVM/include/llvmWrapper/IR/DerivedTypes.h
+IGC/WrapperLLVM/include/llvmWrapper/IR/IRBuilder.h
+IGC/WrapperLLVM/include/llvmWrapper/IR/LLVMContext.h
+➜  archive git:(main) ✗ grep -rn "getPointerElementType" \
+    /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/ \
+    --include="*.cpp" --include="*.h" | wc -l
+28
+➜  archive git:(main) ✗     

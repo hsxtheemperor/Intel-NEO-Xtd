@@ -10,6 +10,6 @@ SPDX-License-Identifier: MIT
 #ifndef IGC_VERSION_H
 #define IGC_VERSION_H
 
-#define IGC_REVISION "794c89858f26c2a217b5fb72db142a2ab6aa7642"
+#define IGC_REVISION "041e8246416f559b4fcafd4465993dcb7b430286"
 
 #endif

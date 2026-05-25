@@ -1,0 +1,109 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"generate_bif_prebuild_pack"
+		],
+		"files" : 
+		[
+			"igc/IGC/BiFModule/cmake/BiFModuleCache.cmake",
+			"igc/IGC/BiFModule/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 641,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 92,
+				"parent" : 1
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "BiFModuleOcl::@a519a5f49ddf66ff9aa9"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "Misc/BiF"
+	},
+	"id" : "BiFModuleCache::@a519a5f49ddf66ff9aa9",
+	"name" : "BiFModuleCache",
+	"orderDependencies" : 
+	[
+		{
+			"id" : "BiFModuleOcl::@a519a5f49ddf66ff9aa9"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/BiFModule",
+		"source" : "igc/IGC/BiFModule"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/BiFModule/CMakeFiles/BiFModuleCache",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/BiFModule/CMakeFiles/BiFModuleCache.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/Release/bif/prebuild/BiFModule_PREB.sha.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/Release/bif/BiFModule_SRC.sha.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

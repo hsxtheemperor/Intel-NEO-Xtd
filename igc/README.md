@@ -17,7 +17,6 @@ OpenCL&trade; targeting Intel&reg; graphics hardware architecture.
 
 Please visit the compute Intel&reg; Graphics Compute Runtime repository for more information about the Intel&reg; open-source compute stack: https://github.com/intel/compute-runtime
 
-
 ## License
 
 The Intel&reg; Graphics Compute Runtime for OpenCL&trade; is distributed under the MIT License.
@@ -26,7 +25,6 @@ For detailed terms, you can access the full License at:
 
 https://opensource.org/licenses/MIT
 
-
 ## Dependencies
 
 * LLVM Project -  https://github.com/llvm/llvm-project
@@ -34,14 +32,12 @@ https://opensource.org/licenses/MIT
 * SPIRV-LLVM Translator - https://github.com/KhronosGroup/SPIRV-LLVM-Translator
 * VC Intrinsics - https://github.com/intel/vc-intrinsics
 
-
 ## Supported Linux versions
 
 IGC is continuously built and tested on the following 64-bit Linux operating systems:
 
 * Ubuntu 22.04
 * Ubuntu 20.04
-
 
 ## Documentation
 
@@ -51,7 +47,6 @@ IGC is continuously built and tested on the following 64-bit Linux operating sys
 
 More documentation is available in the [documentation](./documentation) directory.
 
-
 ## Supported Platforms
 
 * Intel&reg; Xe2
@@ -60,13 +55,11 @@ More documentation is available in the [documentation](./documentation) director
 * Intel&reg; Gen11 graphics
 * Intel&reg; Gen9 graphics
 
-
 ## How to provide feedback
 
 If you have any feedback or questions, please open an issue through the native github.com interface: https://github.com/intel/intel-graphics-compiler/issues.
 
-
 ## How to contribute
 
-Create a pull request on github.com with your changes. Ensure that your modifications build without errors. 
+Create a pull request on github.com with your changes. Ensure that your modifications build without errors.
 A maintainer will get in touch with you if there are any inquiries or concerns.

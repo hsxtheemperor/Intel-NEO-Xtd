@@ -1,0 +1,160 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"igc/IGC/GenISAIntrinsics/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"folder" : 
+	{
+		"name" : "Misc/CommonGenerators"
+	},
+	"id" : "IntrinsicDefintionGenerator::@ed10272a224697609429",
+	"name" : "IntrinsicDefintionGenerator",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/GenISAIntrinsics",
+		"source" : "igc/IGC/GenISAIntrinsics"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				11
+			]
+		},
+		{
+			"name" : "generator",
+			"sourceIndexes" : 
+			[
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"name" : "generator\\templates",
+			"sourceIndexes" : 
+			[
+				6,
+				7,
+				8,
+				9,
+				10
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				12,
+				13
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/Intrinsic_definitions.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/generator/input/Intrinsic_definitions.yml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/generator/Intrinsic_definition_objects.py",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/generator/Intrinsic_definition_translation.py",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/generator/Intrinsic_generator.py",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/generator/Intrinsic_utils.py",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/generator/templates/GenIntrinsicDescription.h.mako",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/generator/templates/GenIntrinsicDefinition.cpp.mako",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/generator/templates/GenIntrinsicDefinition.h.mako",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/generator/templates/GenIntrinsicEnum.h.mako",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "igc/IGC/GenISAIntrinsics/generator/templates/GenIntrinsicLookupTable.h.mako",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/GenISAIntrinsics/CMakeFiles/IntrinsicDefintionGenerator",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/GenISAIntrinsics/CMakeFiles/IntrinsicDefintionGenerator.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/Release/GenIntrinsicDescription.h.rule",
+			"sourceGroupIndex" : 3
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,4 +1,4 @@
-# Install script for directory: /home/harshit9745/Workspace-Code/SPIRV-Tools/source/reduce
+# Install script for directory: /home/harshit9745/SFXFolder/Workspace-Code/SPIRV-Tools/source/reduce
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,18 +39,18 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/reduce/libSPIRV-Tools-reduce.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/reduce/libSPIRV-Tools-reduce.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools-reduce/SPIRV-Tools-reduceTarget.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools-reduce/SPIRV-Tools-reduceTarget.cmake"
-         "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/reduce/CMakeFiles/Export/9ebfb042b989ee25d4cc278f11280597/SPIRV-Tools-reduceTarget.cmake")
+         "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/reduce/CMakeFiles/Export/9ebfb042b989ee25d4cc278f11280597/SPIRV-Tools-reduceTarget.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools-reduce/SPIRV-Tools-reduceTarget-*.cmake")
       if(_cmake_old_config_files)
@@ -63,19 +63,19 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools-reduce" TYPE FILE FILES "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/reduce/CMakeFiles/Export/9ebfb042b989ee25d4cc278f11280597/SPIRV-Tools-reduceTarget.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools-reduce" TYPE FILE FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/reduce/CMakeFiles/Export/9ebfb042b989ee25d4cc278f11280597/SPIRV-Tools-reduceTarget.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools-reduce" TYPE FILE FILES "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/reduce/CMakeFiles/Export/9ebfb042b989ee25d4cc278f11280597/SPIRV-Tools-reduceTarget-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools-reduce" TYPE FILE FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/reduce/CMakeFiles/Export/9ebfb042b989ee25d4cc278f11280597/SPIRV-Tools-reduceTarget-debug.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools-reduce" TYPE FILE FILES "/home/harshit9745/Workspace-Code/build/SPIRV-Tools-reduceConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools-reduce" TYPE FILE FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/SPIRV-Tools-reduceConfig.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/reduce/install_local_manifest.txt"
+  file(WRITE "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/reduce/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

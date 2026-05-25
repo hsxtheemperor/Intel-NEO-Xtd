@@ -1,4 +1,4 @@
-# Install script for directory: /home/harshit9745/Workspace-Code/igc/IGC/ElfPackager
+# Install script for directory: /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/ElfPackager
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -39,18 +39,18 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/harshit9745/Workspace-Code/build/intel-graphics-compiler/IGC/ElfPackager/linux/cmake_install.cmake")
+  include("/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/ElfPackager/linux/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/harshit9745/Workspace-Code/build/intel-graphics-compiler/IGC/ElfPackager/install_local_manifest.txt"
+  file(WRITE "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/ElfPackager/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -1,0 +1,234 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"SPIRV-Tools/tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 109,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 118,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/spirv-as"
+			],
+			"targetId" : "spirv-as::@0d48aa6451d35b4d2c5b",
+			"targetIndex" : 90,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/spirv-dis"
+			],
+			"targetId" : "spirv-dis::@0d48aa6451d35b4d2c5b",
+			"targetIndex" : 93,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/spirv-val"
+			],
+			"targetId" : "spirv-val::@0d48aa6451d35b4d2c5b",
+			"targetIndex" : 107,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/spirv-opt"
+			],
+			"targetId" : "spirv-opt::@0d48aa6451d35b4d2c5b",
+			"targetIndex" : 97,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/spirv-cfg"
+			],
+			"targetId" : "spirv-cfg::@0d48aa6451d35b4d2c5b",
+			"targetIndex" : 91,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/spirv-link"
+			],
+			"targetId" : "spirv-link::@0d48aa6451d35b4d2c5b",
+			"targetIndex" : 94,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/spirv-lint"
+			],
+			"targetId" : "spirv-lint::@0d48aa6451d35b4d2c5b",
+			"targetIndex" : 95,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/spirv-diff"
+			],
+			"targetId" : "spirv-diff::@0d48aa6451d35b4d2c5b",
+			"targetIndex" : 92,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/spirv-objdump"
+			],
+			"targetId" : "spirv-objdump::@0d48aa6451d35b4d2c5b",
+			"targetIndex" : 96,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/spirv-reduce"
+			],
+			"targetId" : "spirv-reduce::@0d48aa6451d35b4d2c5b",
+			"targetIndex" : 98,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib64/cmake/SPIRV-Tools-tools",
+			"exportName" : "SPIRV-Tools-toolsTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "spirv-as::@0d48aa6451d35b4d2c5b",
+					"index" : 90
+				},
+				{
+					"id" : "spirv-dis::@0d48aa6451d35b4d2c5b",
+					"index" : 93
+				},
+				{
+					"id" : "spirv-val::@0d48aa6451d35b4d2c5b",
+					"index" : 107
+				},
+				{
+					"id" : "spirv-opt::@0d48aa6451d35b4d2c5b",
+					"index" : 97
+				},
+				{
+					"id" : "spirv-cfg::@0d48aa6451d35b4d2c5b",
+					"index" : 91
+				},
+				{
+					"id" : "spirv-link::@0d48aa6451d35b4d2c5b",
+					"index" : 94
+				},
+				{
+					"id" : "spirv-lint::@0d48aa6451d35b4d2c5b",
+					"index" : 95
+				},
+				{
+					"id" : "spirv-diff::@0d48aa6451d35b4d2c5b",
+					"index" : 92
+				},
+				{
+					"id" : "spirv-objdump::@0d48aa6451d35b4d2c5b",
+					"index" : 96
+				},
+				{
+					"id" : "spirv-reduce::@0d48aa6451d35b4d2c5b",
+					"index" : 98
+				}
+			],
+			"paths" : 
+			[
+				"external/SPIRV-Tools/tools/CMakeFiles/Export/1f3cf4e2b5ad0c66557d0be87c066649/SPIRV-Tools-toolsTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib64/cmake/SPIRV-Tools-tools",
+			"paths" : 
+			[
+				"build/SPIRV-Tools-toolsConfig.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/SPIRV-Tools/tools",
+		"source" : "SPIRV-Tools/tools"
+	}
+}

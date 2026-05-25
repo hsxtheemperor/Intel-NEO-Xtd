@@ -337,7 +337,7 @@ inline typename std::enable_if<
     static_assert(std::is_integral<TDst>::value,
         "int_cast<>() should be used only for conversions between integer types.");
 
-    IGC_ASSERT(value.getFixed() <= std::numeric_limits<TDst>::max());
+    IGC_ASSERT(value.getFixedValue() <= std::numeric_limits<TDst>::max());
     return static_cast<TDst>(value.getFixedValue());
 }
 
@@ -349,7 +349,7 @@ inline typename std::enable_if<
     static_assert(std::is_integral<TDst>::value,
         "int_cast<>() should be used only for conversions between integer types.");
 
-    IGC_ASSERT(value.getFixed() <= static_cast<typename std::make_unsigned<TDst>::type>(std::numeric_limits<TDst>::max()));
+    IGC_ASSERT(value.getFixedValue() <= static_cast<typename std::make_unsigned<TDst>::type>(std::numeric_limits<TDst>::max()));
     return static_cast<TDst>(value.getFixedValue());
 }
 

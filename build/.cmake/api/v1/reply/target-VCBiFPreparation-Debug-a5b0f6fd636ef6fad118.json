@@ -1,0 +1,113 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"igc/IGC/VectorCompiler/lib/BiF/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 61,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "VCBiFPrintfOCL32::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfOCL64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfZE32::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfZE64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCSPIRVBuiltins64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBuiltins64::@826efced416e9ae1b400"
+		}
+	],
+	"id" : "VCBiFPreparation::@826efced416e9ae1b400",
+	"name" : "VCBiFPreparation",
+	"orderDependencies" : 
+	[
+		{
+			"id" : "VCBiFPrintfOCL32::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfOCL64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfZE32::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfZE64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCSPIRVBuiltins64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBuiltins64::@826efced416e9ae1b400"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/lib/BiF",
+		"source" : "igc/IGC/VectorCompiler/lib/BiF"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCBiFPreparation",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCBiFPreparation.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

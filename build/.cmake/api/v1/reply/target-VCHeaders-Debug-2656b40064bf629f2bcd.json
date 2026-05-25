@@ -1,0 +1,59 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"igc/IGC/VectorCompiler/include/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "VCHeaders::@d86d745eee544a58c8a5",
+	"name" : "VCHeaders",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "intrinsics_gen::@47b1f9daa1a3b48292ff"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "VCInternalIntrinsicsGen::@c577bb8a2c4399b02ff3"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/include",
+		"source" : "igc/IGC/VectorCompiler/include"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

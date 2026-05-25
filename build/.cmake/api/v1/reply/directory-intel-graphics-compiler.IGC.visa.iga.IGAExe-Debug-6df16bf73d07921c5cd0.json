@@ -1,0 +1,50 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"igc/visa/iga/IGAExe/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 114,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "igc-media",
+			"destination" : "/usr/local/bin",
+			"paths" : 
+			[
+				"bin/iga64"
+			],
+			"targetId" : "IGA_EXE::@967ea522dcb897a4f5b4",
+			"targetIndex" : 23,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/visa/iga/IGAExe",
+		"source" : "igc/visa/iga/IGAExe"
+	}
+}

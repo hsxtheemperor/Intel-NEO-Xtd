@@ -1,0 +1,68 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"SPIRV-Tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 364,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 415,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include/spirv-tools",
+			"paths" : 
+			[
+				"SPIRV-Tools/include/spirv-tools/libspirv.h",
+				"SPIRV-Tools/include/spirv-tools/libspirv.hpp",
+				"SPIRV-Tools/include/spirv-tools/optimizer.hpp",
+				"SPIRV-Tools/include/spirv-tools/linker.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib64/pkgconfig",
+			"paths" : 
+			[
+				"build/external/SPIRV-Tools/SPIRV-Tools.pc",
+				"build/external/SPIRV-Tools/SPIRV-Tools-shared.pc"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/SPIRV-Tools",
+		"source" : "SPIRV-Tools"
+	}
+}

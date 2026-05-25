@@ -56,8 +56,8 @@ typedef struct _tag_pipe_control_intel_t
     char base[1];
 } pipe_control_intel_t;
 
-#define rtos(r) ((uint)(__builtin_astype((r), void*)))
-#define stor(s) (__builtin_astype(((void*)(size_t)(s)), __spirv_ReserveId))
+#define rtos(r) ((uint)(uintptr_t)intel_bridge_to_handle(r))
+#define stor(s) (intel_bridge_from_handle_spirv_reserve_id((uintptr_t)(size_t)(s)))
 
 
 static void OVERLOADABLE copy_data( __generic void *dst, __generic const void *src, uint numBytes )

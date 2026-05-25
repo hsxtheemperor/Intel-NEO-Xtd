@@ -1,0 +1,50 @@
+{
+	"abstract" : true,
+	"artifacts" : 
+	[
+		{
+			"path" : "IGC_TARGET__TOOLS_RESOURCE_LINKER-NOTFOUND"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable"
+		],
+		"files" : 
+		[
+			"igc/IGC/OCLFE/embedder/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "IGC_TARGET__TOOLS_RESOURCE_LINKER::@bc21eb3a3fb93bad1e4f",
+	"imported" : true,
+	"local" : true,
+	"name" : "IGC_TARGET__TOOLS_RESOURCE_LINKER",
+	"nameOnDisk" : "IGC_TARGET__TOOLS_RESOURCE_LINKER-NOTFOUND",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/OCLFE/embedder",
+		"source" : "igc/IGC/OCLFE/embedder"
+	},
+	"sources" : [],
+	"type" : "EXECUTABLE"
+}

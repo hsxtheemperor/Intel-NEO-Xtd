@@ -1,0 +1,83 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"igc/IGC/VectorCompiler/lib/GenXCodeGen/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "GenXCommonTableGen::@facd490f0e611d12c77e"
+		}
+	],
+	"id" : "GenXCommonTableGen_target::@facd490f0e611d12c77e",
+	"name" : "GenXCommonTableGen_target",
+	"orderDependencies" : 
+	[
+		{
+			"id" : "GenXCommonTableGen::@facd490f0e611d12c77e"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/lib/GenXCodeGen",
+		"source" : "igc/IGC/VectorCompiler/lib/GenXCodeGen"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/GenXCodeGen/CMakeFiles/GenXCommonTableGen_target",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/GenXCodeGen/CMakeFiles/GenXCommonTableGen_target.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

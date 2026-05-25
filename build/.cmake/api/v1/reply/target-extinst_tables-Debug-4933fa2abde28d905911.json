@@ -1,0 +1,89 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"SPIRV-Tools/source/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 131,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "spirv-tools-header-DebugInfo::@1ff997bb6f27c61d214b"
+		},
+		{
+			"id" : "spirv-tools-header-OpenCLDebugInfo100::@1ff997bb6f27c61d214b"
+		}
+	],
+	"id" : "extinst_tables::@1ff997bb6f27c61d214b",
+	"name" : "extinst_tables",
+	"orderDependencies" : 
+	[
+		{
+			"id" : "spirv-tools-header-DebugInfo::@1ff997bb6f27c61d214b"
+		},
+		{
+			"id" : "spirv-tools-header-OpenCLDebugInfo100::@1ff997bb6f27c61d214b"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/SPIRV-Tools/source",
+		"source" : "SPIRV-Tools/source"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/external/SPIRV-Tools/source/CMakeFiles/extinst_tables",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/external/SPIRV-Tools/source/CMakeFiles/extinst_tables.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

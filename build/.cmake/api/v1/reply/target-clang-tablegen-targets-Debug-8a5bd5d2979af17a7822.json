@@ -1,0 +1,64 @@
+{
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"find_package",
+			"include"
+		],
+		"files" : 
+		[
+			"/usr/lib64/cmake/clang/ClangConfig.cmake",
+			"igc/IGC/cmake/igc_llvm.cmake",
+			"igc/IGC/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 1358,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 27,
+				"parent" : 4
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "clang-tablegen-targets::@47b1f9daa1a3b48292ff",
+	"name" : "clang-tablegen-targets",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC",
+		"source" : "igc/IGC"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

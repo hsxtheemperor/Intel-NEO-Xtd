@@ -17,9 +17,9 @@ typedef private struct __spirv_Event*       __spirv_Event;
 typedef private struct __spirv_Queue*       __spirv_Queue;
 
 #define DEF_IMAGE_TYPE(SPIRV_IMAGE_TYPE, SHORT_IMAGE_TYPE)     \
-    typedef struct SPIRV_IMAGE_TYPE##_0 SHORT_IMAGE_TYPE##_ro; \
-    typedef struct SPIRV_IMAGE_TYPE##_1 SHORT_IMAGE_TYPE##_wo; \
-    typedef struct SPIRV_IMAGE_TYPE##_2 SHORT_IMAGE_TYPE##_rw;
+    typedef struct __intel_##SPIRV_IMAGE_TYPE##_0 SHORT_IMAGE_TYPE##_ro; \
+    typedef struct __intel_##SPIRV_IMAGE_TYPE##_1 SHORT_IMAGE_TYPE##_wo; \
+    typedef struct __intel_##SPIRV_IMAGE_TYPE##_2 SHORT_IMAGE_TYPE##_rw;
 
 DEF_IMAGE_TYPE(__spirv_Image__void_0_0_0_0_0_0, Img1d)
 DEF_IMAGE_TYPE(__spirv_Image__void_5_0_0_0_0_0, Img1d_buffer)
@@ -48,7 +48,7 @@ struct __spirv_VmeImageINTEL__void_1_0_0_0_0_0_0;
 typedef global struct __spirv_VmeImageINTEL__void_1_0_0_0_0_0_0* __spirv_VmeImageINTEL__void_1_0_0_0_0_0_0;
 
 typedef constant struct __spirv_Sampler*                 __spirv_Sampler;
-typedef global struct __spirv_Image__void_1_0_0_0_0_0_0* __spirv_Image;
+typedef global struct __intel_spirv_Image__void_1_0_0_0_0_0_0* __spirv_Image;
 
 typedef private struct __spirv_AvcMcePayloadINTEL* __spirv_AvcMcePayloadINTEL;
 typedef private struct __spirv_AvcImePayloadINTEL* __spirv_AvcImePayloadINTEL;

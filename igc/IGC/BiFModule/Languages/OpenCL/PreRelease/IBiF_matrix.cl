@@ -537,7 +537,7 @@ typedef uint   __attribute__((ext_vector_type(32))) uint32;
     INLINE void MANGLE_LOAD_NAME_AS_GENERIC(layout, sg, elem_bitwidth, shape, WI_rows) (__private char *dst, char *mem, long stride, int cacheOpt) { \
         int sg_size = get_sub_group_size(); \
         __builtin_assume((__global char*)mem != 0); \
-        int memIsGlobal = (0 != SPIRV_BUILTIN(GenericCastToPtrExplicit, _p1i8_p4i8_i32, _ToGlobal)(__builtin_astype((mem), __generic char*), StorageWorkgroup)); \
+        int memIsGlobal = (0 != __builtin_spirv_OpGenericCastToPtrExplicit_p1i8_p4i8_i32((__generic char*)intel_bridge_to_handle((__spirv_Image)mem), StorageWorkgroup)); \
         if (memIsGlobal) { \
             DEFINE_LOAD_BLOCK2D_IMPL(layout, sg, element_type, elem_bitwidth, contrib_type, contrib_bitwidth, M, K, shape, _##order, us, WI_rows) \
             DEFINE_LOAD_VECTORS_IMPL(layout, sg, element_type, elem_bitwidth, contrib_type, contrib_bitwidth, M, K, shape, _##order, us, WI_rows, AS_GLOBAL) \
@@ -880,7 +880,7 @@ DEFINE_LOAD(Accumulator_ColumnMajor, _SG16, int, int, 2, 16, COL_MAJOR, , 1)
     INLINE void MANGLE_STORE_NAME(layout, sg, elem_bitwidth, shape, WI_rows, generic) (char *mem, __private char *src, long stride, int cacheOpt) { \
         int sg_size = get_sub_group_size(); \
         __builtin_assume((__global char*)mem != 0); \
-        int memIsGlobal = (0 != SPIRV_BUILTIN(GenericCastToPtrExplicit, _p1i8_p4i8_i32, _ToGlobal)(__builtin_astype((mem), __generic char*), StorageWorkgroup)); \
+        int memIsGlobal = (0 != __builtin_spirv_OpGenericCastToPtrExplicit_p1i8_p4i8_i32((__generic char*)intel_bridge_to_handle((__spirv_Image)mem), StorageWorkgroup)); \
         if (memIsGlobal) { \
             DEFINE_STORE_BLOCK2D_IMPL(sg, element_type, elem_bitwidth, contrib_type, contrib_bitwidth, M, K, _##order, WI_rows) \
             DEFINE_STORE_VECTORS_IMPL(element_type, elem_bitwidth, contrib_type, contrib_bitwidth, M, K, _##order, us, WI_rows, block_opt, AS_GLOBAL) \
@@ -1349,7 +1349,7 @@ DEFINE_LOAD_CHECKED(Accumulator_RowMajor, _SG16, int,   int,   32, 16, ROW_MAJOR
 #define DEFINE_LOAD_LARGE_IMPL_4_AS_GENERIC(layout, elem_type, elem_bitwidth, contrib_type, R, R_orig, shape, WI_rows, WI_rows_per_load) \
     INLINE void MANGLE_LOAD_NAME_AS_GENERIC(layout, _SG16, elem_bitwidth, shape, WI_rows) (__private char *dst, char *mem, long stride, int cacheOpt) { \
         __builtin_assume((__global char*)mem != 0); \
-        int memIsGlobal = (0 != SPIRV_BUILTIN(GenericCastToPtrExplicit, _p1i8_p4i8_i32, _ToGlobal)(__builtin_astype((mem), __generic char*), StorageWorkgroup)); \
+        int memIsGlobal = (0 != __builtin_spirv_OpGenericCastToPtrExplicit_p1i8_p4i8_i32((__generic char*)intel_bridge_to_handle((__spirv_Image)mem), StorageWorkgroup)); \
         if (memIsGlobal) { \
             DEFINE_LOAD_LARGE_IMPL_4_OPTIMIZED_VECTOR_CONT_IMPL(layout, elem_type, contrib_type, R, global) \
             DEFINE_LOAD_LARGE_IMPL_4(layout, elem_type, elem_bitwidth, contrib_type, R_orig, WI_rows_per_load, global) \
@@ -1640,7 +1640,7 @@ DEFINE_STORE_CHECKED_LARGE(Accumulator_RowMajor, int,   int,   32, 64, ROW_MAJOR
 #define DEFINE_LOAD_LARGE_1_IMPL_AS_GENERIC() \
     INLINE void __builtin_spriv_OpJointMatrixLoadINTEL_Accumulator_RowMajor_SG16_1x64_i32_4_generic_v8i8_pi32_i32(__private char *dst, char *mem, long stride, int cacheOpt) { \
         __builtin_assume((__global char*)mem != 0); \
-        int memIsGlobal = (0 != SPIRV_BUILTIN(GenericCastToPtrExplicit, _p1i8_p4i8_i32, _ToGlobal)(__builtin_astype((mem), __generic char*), StorageWorkgroup)); \
+        int memIsGlobal = (0 != __builtin_spirv_OpGenericCastToPtrExplicit_p1i8_p4i8_i32((__generic char*)intel_bridge_to_handle((__spirv_Image)mem), StorageWorkgroup)); \
         if (memIsGlobal) { \
             DEFINE_LOAD_LARGE_BLOCK2D_IMPL_1() \
             DEFINE_LOAD_LARGE_VECTORS_IMPL_1(global) \
@@ -1726,7 +1726,7 @@ DEFINE_LOAD_CHECKED_LARGE_1(Accumulator_RowMajor, 1, 64)
 #define DEFINE_STORE_LARGE_1_IMPL_AS_GENERIC() \
     INLINE void __builtin_spriv_OpJointMatrixStoreINTEL_Accumulator_RowMajor_SG16_1x64_i32_4_generic_pi64_v8i8(char *mem, __private char *src, long stride, int cacheOpt) { \
         __builtin_assume((__global char*)mem != 0); \
-        int memIsGlobal = (0 != SPIRV_BUILTIN(GenericCastToPtrExplicit, _p1i8_p4i8_i32, _ToGlobal)(__builtin_astype((mem), __generic char*), StorageWorkgroup)); \
+        int memIsGlobal = (0 != __builtin_spirv_OpGenericCastToPtrExplicit_p1i8_p4i8_i32((__generic char*)intel_bridge_to_handle((__spirv_Image)mem), StorageWorkgroup)); \
         if (memIsGlobal) { \
             DEFINE_STORE_LARGE_BLOCK2D_IMPL_1() \
             DEFINE_STORE_LARGE_VECTORS_IMPL_1(global) \

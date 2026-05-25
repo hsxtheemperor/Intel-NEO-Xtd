@@ -1,4 +1,4 @@
-# Install script for directory: /home/harshit9745/Workspace-Code/gmmlib/Source/GmmLib
+# Install script for directory: /home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -39,7 +39,7 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gmmlib" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -55,8 +55,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "gmmlib" OR NOT CMAKE_INSTALL_COMPONENT)
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES
-    "/home/harshit9745/Workspace-Code/build/external/gmmlib/Source/GmmLib/libigdgmm.so.12.5.0"
-    "/home/harshit9745/Workspace-Code/build/external/gmmlib/Source/GmmLib/libigdgmm.so.12"
+    "/home/harshit9745/SFXFolder/Workspace-Code/build/external/gmmlib/Source/GmmLib/libigdgmm.so.12.5.0"
+    "/home/harshit9745/SFXFolder/Workspace-Code/build/external/gmmlib/Source/GmmLib/libigdgmm.so.12"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libigdgmm.so.12.5.0"
@@ -65,43 +65,43 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "gmmlib" OR NOT CMAKE_INSTALL_COMPONENT)
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
       if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
+        execute_process(COMMAND "/usr/bin/llvm-strip" "${file}")
       endif()
     endif()
   endforeach()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gmmlib-devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES "/home/harshit9745/Workspace-Code/build/external/gmmlib/Source/GmmLib/libigdgmm.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/external/gmmlib/Source/GmmLib/libigdgmm.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gmmlib-devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/igdgmm" TYPE DIRECTORY FILES "/home/harshit9745/Workspace-Code/gmmlib/Source/GmmLib" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.hpp$" REGEX "/Internal$" EXCLUDE REGEX "/ULT$" EXCLUDE REGEX "/spdlog$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/igdgmm" TYPE DIRECTORY FILES "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.hpp$" REGEX "/Internal$" EXCLUDE REGEX "/ULT$" EXCLUDE REGEX "/spdlog$" EXCLUDE)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gmmlib-devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/igdgmm" TYPE DIRECTORY FILES "/home/harshit9745/Workspace-Code/gmmlib/Source/inc" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.hpp$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/igdgmm" TYPE DIRECTORY FILES "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/inc" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.hpp$")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gmmlib-devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/igdgmm" TYPE DIRECTORY FILES "/home/harshit9745/Workspace-Code/gmmlib/Source/util" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.hpp$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/igdgmm" TYPE DIRECTORY FILES "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/util" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.hpp$")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gmmlib-devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/igdgmm/GmmLib/Utility/CpuSwizzleBlt" TYPE FILE FILES "/home/harshit9745/Workspace-Code/gmmlib/Source/GmmLib/Utility/CpuSwizzleBlt/CpuSwizzleBlt.c")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/igdgmm/GmmLib/Utility/CpuSwizzleBlt" TYPE FILE FILES "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Utility/CpuSwizzleBlt/CpuSwizzleBlt.c")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gmmlib-devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/pkgconfig" TYPE FILE FILES "/home/harshit9745/Workspace-Code/build/igdgmm.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/pkgconfig" TYPE FILE FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/igdgmm.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gmmlib-devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/igdgmm" TYPE FILE FILES "/home/harshit9745/Workspace-Code/build/igdgmm.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/igdgmm" TYPE FILE FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/igdgmm.h")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/harshit9745/Workspace-Code/build/external/gmmlib/Source/GmmLib/install_local_manifest.txt"
+  file(WRITE "/home/harshit9745/SFXFolder/Workspace-Code/build/external/gmmlib/Source/GmmLib/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -49,7 +49,7 @@ SPDX-License-Identifier: MIT
 // 64bit Math Emulation
 //*****************************************************************************/
 #ifdef __IGC_BUILD__
-//#include "IGCBiF_Math_64bitDiv.cl"
+ #include "IGCBiF_Math_64bitDiv.cl"
 #endif
 
 //*****************************************************************************/
@@ -97,23 +97,23 @@ INLINE uint OVERLOADABLE get_work_dim() {
 
 INLINE local void* __to_local(generic void* ptr)
 {
-    return SPIRV_BUILTIN(GenericCastToPtrExplicit, _p3i8_p4i8_i32, _ToLocal)(__builtin_astype((ptr), __generic char*), StorageWorkgroup);
+    return SPIRV_BUILTIN(GenericCastToPtrExplicit, _p3i8_p4i8_i32, _ToLocal)(__builtin_astype_to_generic_char_ptr((ptr)), StorageWorkgroup);
 }
 
 INLINE private void* __to_private(generic void* ptr)
 {
-    return SPIRV_BUILTIN(GenericCastToPtrExplicit, _p0i8_p4i8_i32, _ToPrivate)(__builtin_astype((ptr), __generic char*), StorageFunction);
+    return SPIRV_BUILTIN(GenericCastToPtrExplicit, _p0i8_p4i8_i32, _ToPrivate)(__builtin_astype_to_generic_char_ptr((ptr)), StorageFunction);
 }
 
 INLINE global void* __to_global(generic void* ptr)
 {
-    return SPIRV_BUILTIN(GenericCastToPtrExplicit, _p1i8_p4i8_i32, _ToGlobal)(__builtin_astype((ptr), __generic char*), StorageCrossWorkgroup);
+    return SPIRV_BUILTIN(GenericCastToPtrExplicit, _p1i8_p4i8_i32, _ToGlobal)(__builtin_astype_to_generic_char_ptr((ptr)), StorageCrossWorkgroup);
 }
 
 INLINE cl_mem_fence_flags OVERLOADABLE get_fence(generic void* ptr)
 {
 
-    if(SPIRV_BUILTIN(GenericCastToPtrExplicit, _p3i8_p4i8_i32, _ToLocal)(__builtin_astype((ptr), __generic char*), StorageWorkgroup) != NULL)
+    if(SPIRV_BUILTIN(GenericCastToPtrExplicit, _p3i8_p4i8_i32, _ToLocal)(__builtin_astype_to_generic_char_ptr((ptr)), StorageWorkgroup) != NULL)
     {
         return CLK_LOCAL_MEM_FENCE;
     }
@@ -227,10 +227,10 @@ INLINE int OVERLOADABLE work_group_all(int predicate)
 
 #if (__OPENCL_C_VERSION__ >= CL_VERSION_2_0)
 
-#define     to_spirv_pipe_ro(p)     __builtin_astype(p, __spirv_Pipe_ro)
-#define     to_spirv_pipe_wo(p)     __builtin_astype(p, __spirv_Pipe_wo)
-#define     to_spirv_reserveid(p)   __builtin_astype(p, __spirv_ReserveId)
-#define     to_ocl_reserveid(p)     __builtin_astype(p, reserve_id_t)
+#define     to_spirv_pipe_ro(p)     (p)
+#define     to_spirv_pipe_wo(p)     (p)
+#define     to_spirv_reserveid(p)   intel_bridge_from_handle_spirv_reserve_id(intel_bridge_to_handle(p))
+#define     to_ocl_reserveid(p)     intel_bridge_from_handle_reserve_id(intel_bridge_to_handle(p))
 
 /////////////////////////////////////////////////////////////////////
 // Basic Reads and Writes

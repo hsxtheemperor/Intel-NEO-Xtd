@@ -1,0 +1,61 @@
+{
+	"abstract" : true,
+	"artifacts" : 
+	[
+		{
+			"path" : "/usr/lib64/libopencl-clang.so"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include"
+		],
+		"files" : 
+		[
+			"igc/IGC/cmake/igc_find_opencl_clang.cmake",
+			"igc/IGC/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1531,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 108,
+				"parent" : 2
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "opencl-clang-lib::@47b1f9daa1a3b48292ff",
+	"imported" : true,
+	"name" : "opencl-clang-lib",
+	"nameOnDisk" : "libopencl-clang.so",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC",
+		"source" : "igc/IGC"
+	},
+	"sources" : [],
+	"type" : "SHARED_LIBRARY"
+}

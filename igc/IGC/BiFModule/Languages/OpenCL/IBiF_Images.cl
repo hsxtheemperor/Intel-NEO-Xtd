@@ -30,12 +30,14 @@ SPDX-License-Identifier: MIT
 #ifdef cl_khr_gl_msaa_sharing
 #pragma OPENCL EXTENSION cl_khr_gl_msaa_sharing : enable
 #endif //cl_khr_gl_msaa_sharing
+#include "../Headers/igc_bridge_builtins.h"
+
 
 // get_image_srgb_channel_order()
 // Note : this is to optimize deternimation of SRGB image formats
 #define DECL_GET_IMAGE_CHANNEL_ORDER(NAME, TYPE)\
   INLINE int OVERLOADABLE NAME(write_only TYPE image) {\
-    int id = (int)(size_t)__builtin_astype(image, __global void*);\
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);\
     return __builtin_IB_##NAME(id);\
   }\
 
@@ -130,13 +132,13 @@ DEF_IMAGE_CONV_RGB_TO_OUT_ALL_ELLS(image2d_array_t)
 ///////////////////////////////
 // 2D reads
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_t image, sampler_t sampler, int2 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float2 floatCoords = convert_float2(coords);
     return __builtin_IB_OCL_2d_sample_l(id, __builtin_IB_convert_sampler_to_int(sampler), floatCoords, 0.0f);
 }
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_t image, sampler_t sampler, float2 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -154,7 +156,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image2d_t image, sampler_t sample
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_t image, sampler_t sampler, int2 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ((__builtin_IB_get_address_mode(__builtin_IB_convert_sampler_to_int(sampler)) & 0x07) == CLK_ADDRESS_CLAMP_TO_EDGE)
     {
         float2 floatCoords = convert_float2(coords);
@@ -167,7 +169,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_t image, sampler_t samp
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_t image, sampler_t sampler, float2 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ((__builtin_IB_get_address_mode(__builtin_IB_convert_sampler_to_int(sampler)) & 0x07) == CLK_ADDRESS_CLAMP)
     {
         if( CLK_NORMALIZED_COORDS_TRUE == __builtin_IB_is_normalized_coords(__builtin_IB_convert_sampler_to_int(sampler)))
@@ -187,13 +189,13 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_t image, sampler_t samp
 
 // 3D reads
 INLINE float4 OVERLOADABLE read_imagef(read_only image3d_t image, sampler_t sampler, int4 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float3 floatCoords = convert_float3(coords.xyz);
     return __builtin_IB_OCL_3d_sample_l(id, __builtin_IB_convert_sampler_to_int(sampler), floatCoords, 0.0f);
 }
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image3d_t image, sampler_t sampler, float4 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
 
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
@@ -213,7 +215,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image3d_t image, sampler_t sample
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image3d_t image, sampler_t sampler, int4 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ((__builtin_IB_get_address_mode(__builtin_IB_convert_sampler_to_int(sampler)) & 0x07) == CLK_ADDRESS_CLAMP_TO_EDGE)
     {
         float3 floatCoords = convert_float3(coords.xyz);
@@ -227,7 +229,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image3d_t image, sampler_t samp
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image3d_t image, sampler_t sampler, float4 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ((__builtin_IB_get_address_mode(__builtin_IB_convert_sampler_to_int(sampler)) & 0x07) == CLK_ADDRESS_CLAMP)
     {
         if( CLK_NORMALIZED_COORDS_TRUE == __builtin_IB_is_normalized_coords(__builtin_IB_convert_sampler_to_int(sampler)))
@@ -247,13 +249,13 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image3d_t image, sampler_t samp
 // 1D reads
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_t image, sampler_t sampler, int coords) {
 
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float tmpCoords = (float)coords;
     return __builtin_IB_OCL_1d_sample_l(id, __builtin_IB_convert_sampler_to_int(sampler), tmpCoords, 0.0f);
 }
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_t image, sampler_t sampler, float coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords = ( coords < 0) ? -1.0f :  coords;
@@ -270,7 +272,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image1d_t image, sampler_t sample
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_t image, sampler_t sampler, int coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ((__builtin_IB_get_address_mode(__builtin_IB_convert_sampler_to_int(sampler)) & 0x07) == CLK_ADDRESS_CLAMP_TO_EDGE)
     {
         float floatCoords = (float)coords;
@@ -283,7 +285,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_t image, sampler_t samp
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_t image, sampler_t sampler, float coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ((__builtin_IB_get_address_mode(__builtin_IB_convert_sampler_to_int(sampler)) & 0x07) == CLK_ADDRESS_CLAMP)
     {
         if( CLK_NORMALIZED_COORDS_TRUE == __builtin_IB_is_normalized_coords(__builtin_IB_convert_sampler_to_int(sampler)))
@@ -307,7 +309,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_t image, sampler_t samp
 // 1D reads with mipmap support
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_t image, sampler_t sampler, float coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords = ( coords < 0) ? -1.0f :  coords;
@@ -322,7 +324,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image1d_t image, sampler_t sample
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_t image, sampler_t sampler, float coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords = ( coords < 0) ? -1.0f :  coords;
@@ -333,7 +335,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_t image, sampler_t samp
 // 1D reads with mipmap support using gradients for LOD computation
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_t image, sampler_t sampler, float coords, float gradientX, float gradientY) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords = ( coords < 0) ? -1.0f :  coords;
@@ -354,13 +356,13 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_t image, sampler_t samp
 // 1D Array Reads
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_array_t image_array, sampler_t sampler, int2 coords) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     float2 tmpCoords = convert_float2(coords);
     return __builtin_IB_OCL_1darr_sample_l(id, __builtin_IB_convert_sampler_to_int(sampler), tmpCoords, 0.0f);
 }
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_array_t image_array, sampler_t sampler, float2 coords) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -377,8 +379,8 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image1d_array_t image_array, samp
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_array_t image_array, sampler_t sampler, int2 coords) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
-    int IDimage_array = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
+    int IDimage_array = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     int dt = __builtin_IB_get_image1d_array_size(IDimage_array);
     float layer = clamp(rint((float)coords.y), 0.0f, (float)(--dt));
     if ((__builtin_IB_get_address_mode(__builtin_IB_convert_sampler_to_int(sampler)) & 0x07) == CLK_ADDRESS_CLAMP_TO_EDGE)
@@ -393,8 +395,8 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_array_t image_array, sa
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_array_t image_array, sampler_t sampler, float2 coords) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
-    int IDimage_array = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
+    int IDimage_array = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     int dt = __builtin_IB_get_image1d_array_size(IDimage_array);
     float layer = clamp(rint(coords.y), 0.0f, (float)(--dt));
     if ((__builtin_IB_get_address_mode(__builtin_IB_convert_sampler_to_int(sampler)) & 0x07) == CLK_ADDRESS_CLAMP)
@@ -421,7 +423,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_array_t image_array, sa
 // 1D Array Reads with mipmap support
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_array_t image_array, sampler_t sampler, float2 coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -436,7 +438,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image1d_array_t image_array, samp
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_array_t image_array, sampler_t sampler, float2 coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -447,7 +449,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_array_t image_array, sa
 // 1D Array Reads with mipmap support using gradients for LOD computation
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_array_t image_array, sampler_t sampler, float2 coords, float gradientX, float gradientY) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -462,7 +464,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image1d_array_t image_array, samp
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_array_t image_array, sampler_t sampler, float2 coords, float gradientX, float gradientY) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -473,7 +475,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_array_t image_array, sa
 // 2D reads with mipmap support
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_t image, sampler_t sampler, float2 coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -489,7 +491,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image2d_t image, sampler_t sample
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_t image, sampler_t sampler, float2 coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -501,7 +503,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_t image, sampler_t samp
 // 2D reads with mipmap support using gradients for LOD computation
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_t image, sampler_t sampler, float2 coords, float2 gradientX, float2 gradientY) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -517,7 +519,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image2d_t image, sampler_t sample
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_t image, sampler_t sampler, float2 coords, float2 gradientX, float2 gradientY) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -529,7 +531,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_t image, sampler_t samp
 // 2D depth reads with mipmap support using gradients for LOD computation
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_depth_t image, sampler_t sampler, float2 coords, float2 gradientX, float2 gradientY) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -541,7 +543,7 @@ INLINE float OVERLOADABLE read_imagef(read_only image2d_depth_t image, sampler_t
 // 2D depth reads with mipmap support
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_depth_t image, sampler_t sampler, float2 coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -553,14 +555,14 @@ INLINE float OVERLOADABLE read_imagef(read_only image2d_depth_t image, sampler_t
 // 2D Array Reads
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_array_t image_array, sampler_t sampler, int4 coords) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     float3 tmpCoords = convert_float3(coords.xyz);
     return __builtin_IB_OCL_2darr_sample_l(id, __builtin_IB_convert_sampler_to_int(sampler), tmpCoords, 0.0f);
 
 }
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_array_t image_array, sampler_t sampler, float4 coords) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
 
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
@@ -579,8 +581,8 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image2d_array_t image_array, samp
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_array_t image_array, sampler_t sampler, int4 coords) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
-    int IDimage_array = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
+    int IDimage_array = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     int dt = __builtin_IB_get_image2d_array_size(IDimage_array);
     float layer = clamp(rint((float)coords.z), 0.0f, (float)(--dt));
     if ((__builtin_IB_get_address_mode(__builtin_IB_convert_sampler_to_int(sampler)) & 0x07) == CLK_ADDRESS_CLAMP_TO_EDGE)
@@ -595,8 +597,8 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_array_t image_array, sa
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_array_t image_array, sampler_t sampler, float4 coords) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
-    int IDimage_array = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
+    int IDimage_array = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     int dt = __builtin_IB_get_image2d_array_size(IDimage_array);
     float layer = clamp(rint(coords.z), 0.0f, (float)(--dt));
     if ((__builtin_IB_get_address_mode(__builtin_IB_convert_sampler_to_int(sampler)) & 0x07) == CLK_ADDRESS_CLAMP)
@@ -624,7 +626,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_array_t image_array, sa
 // 2D Array Reads with mipmap support
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_array_t image_array, sampler_t sampler, float4 coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -640,7 +642,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image2d_array_t image_array, samp
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_array_t image_array, sampler_t sampler, float4 coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -652,7 +654,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_array_t image_array, sa
 // 2D Array Reads with mipmap support using gradients for LOD computation
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_array_t image_array, sampler_t sampler, float4 coords, float2 gradientX, float2 gradientY) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -668,7 +670,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image2d_array_t image_array, samp
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_array_t image_array, sampler_t sampler, float4 coords, float2 gradientX, float2 gradientY) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -680,7 +682,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_array_t image_array, sa
 // 2D Depth Array Reads with mipmap support
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_array_depth_t image, sampler_t sampler, float4 coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -692,7 +694,7 @@ INLINE float OVERLOADABLE read_imagef(read_only image2d_array_depth_t image, sam
 // 2D Depth Array Reads with mipmap support using gradients for LOD computation
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_array_depth_t image, sampler_t sampler, float4 coords, float2 gradientX, float2 gradientY) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -704,7 +706,7 @@ INLINE float OVERLOADABLE read_imagef(read_only image2d_array_depth_t image, sam
 // 3D reads with mipmap support
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image3d_t image, sampler_t sampler, float4 coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -721,7 +723,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image3d_t image, sampler_t sample
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image3d_t image, sampler_t sampler, float4 coords, float lod) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -734,7 +736,7 @@ INLINE uint4 OVERLOADABLE read_imageui(read_only image3d_t image, sampler_t samp
 // 3D reads with mipmap support using gradients for LOD computation
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image3d_t image, sampler_t sampler, float4 coords, float4 gradientX, float4 gradientY) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -751,7 +753,7 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image3d_t image, sampler_t sample
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image3d_t image, sampler_t sampler, float4 coords, float4 gradientX, float4 gradientY) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -768,14 +770,14 @@ float4 __flush_denormals(float4 in);
 #endif
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_t image, int coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 res = __builtin_IB_OCL_1d_ld(id, coord, 0);
     return __flush_denormals(res);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE float4 OVERLOADABLE read_imagef(read_write image1d_t image, int coord) {
-    return read_imagef(__builtin_astype(image, read_only image1d_t), coord);
+    return read_imagef(image, coord);
 }
 #endif
 
@@ -785,30 +787,30 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image1d_t image, int coord) {
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int4 OVERLOADABLE read_imagei(read_write image1d_t image, int coord) {
-    return read_imagei(__builtin_astype(image, read_only image1d_t), coord);
+    return read_imagei(image, coord);
 }
 #endif
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_t image, int coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_OCL_1d_ldui(id, coord, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE uint4 OVERLOADABLE read_imageui(read_write image1d_t image, int coord) {
-    return read_imageui(__builtin_astype(image, read_only image1d_t), coord);
+    return read_imageui(image, coord);
 }
 #endif
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_buffer_t image, int coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 res = __builtin_IB_OCL_1d_ld(id, coord, 0);
     return __flush_denormals(res);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE float4 OVERLOADABLE read_imagef(read_write image1d_buffer_t image, int coord) {
-    return read_imagef(__builtin_astype(image, read_only image1d_buffer_t), coord);
+    return read_imagef(image, coord);
 }
 #endif
 
@@ -818,30 +820,30 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image1d_buffer_t image, int coord
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int4 OVERLOADABLE read_imagei(read_write image1d_buffer_t image, int coord) {
-    return read_imagei(__builtin_astype(image, read_only image1d_buffer_t), coord);
+    return read_imagei(image, coord);
 }
 #endif
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_buffer_t image, int coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_OCL_1d_ldui(id, coord, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE uint4 OVERLOADABLE read_imageui(read_write image1d_buffer_t image, int coord) {
-    return read_imageui(__builtin_astype(image, read_only image1d_buffer_t), coord);
+    return read_imageui(image, coord);
 }
 #endif
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image1d_array_t image, int2 coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 res = __builtin_IB_OCL_1darr_ld(id, coord, 0);
     return __flush_denormals(res);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE float4 OVERLOADABLE read_imagef(read_write image1d_array_t image, int2 coord) {
-    return read_imagef(__builtin_astype(image, read_only image1d_array_t), coord);
+    return read_imagef(image, coord);
 }
 #endif
 
@@ -851,18 +853,18 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image1d_array_t image, int2 coord
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int4 OVERLOADABLE read_imagei(read_write image1d_array_t image, int2 coord) {
-    return read_imagei(__builtin_astype(image, read_only image1d_array_t), coord);
+    return read_imagei(image, coord);
 }
 #endif
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image1d_array_t image, int2 coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_OCL_1darr_ldui(id, coord, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE uint4 OVERLOADABLE read_imageui(read_write image1d_array_t image, int2 coord) {
-    return read_imageui(__builtin_astype(image, read_only image1d_array_t), coord);
+    return read_imageui(image, coord);
 }
 #endif
 
@@ -874,13 +876,13 @@ INLINE float4 OVERLOADABLE static __read_imagef_2d(int id, int2 coord) {
 #endif
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_t image, int2 coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __read_imagef_2d(id, coord);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE float4 OVERLOADABLE read_imagef(read_write image2d_t image, int2 coord) {
-    return read_imagef(__builtin_astype(image, read_only image2d_t), coord);
+    return read_imagef(image, coord);
 }
 #endif
 
@@ -890,18 +892,18 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image2d_t image, int2 coord) {
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int4 OVERLOADABLE read_imagei(read_write image2d_t image, int2 coord) {
-    return read_imagei(__builtin_astype(image, read_only image2d_t), coord);
+    return read_imagei(image, coord);
 }
 #endif
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_t image, int2 coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_OCL_2d_ldui(id, coord, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE uint4 OVERLOADABLE read_imageui(read_write image2d_t image, int2 coord) {
-    return read_imageui(__builtin_astype(image, read_only image2d_t), coord);
+    return read_imageui(image, coord);
 }
 #endif
 
@@ -913,14 +915,14 @@ INLINE float4 OVERLOADABLE static __read_imagef_3d(int id, int4 coord) {
 #endif
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_array_t image, int4 coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 res = __builtin_IB_OCL_2darr_ld(id, coord.xyz, 0);
     return __flush_denormals(res);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE float4 OVERLOADABLE read_imagef(read_write image2d_array_t image, int4 coord) {
-    return read_imagef(__builtin_astype(image, read_only image2d_array_t), coord);
+    return read_imagef(image, coord);
 }
 #endif
 
@@ -930,29 +932,29 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image2d_array_t image, int4 coord
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int4 OVERLOADABLE read_imagei(read_write image2d_array_t image, int4 coord) {
-    return read_imagei(__builtin_astype(image, read_only image2d_array_t), coord);
+    return read_imagei(image, coord);
 }
 #endif
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_array_t image, int4 coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_OCL_2darr_ldui(id, coord.xyz, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE uint4 OVERLOADABLE read_imageui(read_write image2d_array_t image, int4 coord) {
-    return read_imageui(__builtin_astype(image, read_only image2d_array_t), coord);
+    return read_imageui(image, coord);
 }
 #endif
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image3d_t image, int4 coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __read_imagef_3d(id, coord);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE float4 OVERLOADABLE read_imagef(read_write image3d_t image, int4 coord) {
-    return read_imagef(__builtin_astype(image, read_only image3d_t), coord);
+    return read_imagef(image, coord);
 }
 #endif
 
@@ -962,25 +964,25 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image3d_t image, int4 coord) {
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int4 OVERLOADABLE read_imagei(read_write image3d_t image, int4 coord) {
-    return read_imagei(__builtin_astype(image, read_only image3d_t), coord);
+    return read_imagei(image, coord);
 }
 #endif
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image3d_t image, int4 coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_OCL_3d_ldui(id, coord.xyz, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE uint4 OVERLOADABLE read_imageui(read_write image3d_t image, int4 coord) {
-    return read_imageui(__builtin_astype(image, read_only image3d_t), coord);
+    return read_imageui(image, coord);
 }
 #endif
 
 // MSAA Reads
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_msaa_t image, int2 coords, int sample) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 mcs = __builtin_IB_OCL_2d_ldmcs(id, coords);
     float4 res = __builtin_IB_OCL_2d_ld2dms(id, coords, sample, mcs);
     return __flush_denormals(res);
@@ -991,20 +993,20 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image2d_msaa_t image, int2 coords
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_msaa_t image, int2 coords, int sample) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 mcs = __builtin_IB_OCL_2d_ldmcs(id, coords);
     return __builtin_IB_OCL_2d_ld2dmsui(id, coords, sample, mcs);
 }
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_msaa_depth_t image, int2 coords, int sample) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 mcs = __builtin_IB_OCL_2d_ldmcs(id, coords);
     float4 res = __builtin_IB_OCL_2d_ld2dms(id, coords, sample, mcs);
     return __flush_denormals(res).x;
 }
 
 INLINE float4 OVERLOADABLE read_imagef(read_only image2d_array_msaa_t image, int4 coords, int sample) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 mcs = __builtin_IB_OCL_2darr_ldmcs(id, coords);
     float4 res = __builtin_IB_OCL_2darr_ld2dms(id, coords, sample, mcs);
     return __flush_denormals(res);
@@ -1015,13 +1017,13 @@ INLINE int4 OVERLOADABLE read_imagei(read_only image2d_array_msaa_t image, int4 
 }
 
 INLINE uint4 OVERLOADABLE read_imageui(read_only image2d_array_msaa_t image, int4 coords, int sample) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 mcs = __builtin_IB_OCL_2darr_ldmcs(id, coords);
     return __builtin_IB_OCL_2darr_ld2dmsui(id, coords, sample, mcs);
 }
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_array_msaa_depth_t image, int4 coords, int sample) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 mcs = __builtin_IB_OCL_2darr_ldmcs(id, coords);
     float4 res = __builtin_IB_OCL_2darr_ld2dms(id, coords, sample, mcs);
     return __flush_denormals(res).x;
@@ -1029,7 +1031,7 @@ INLINE float OVERLOADABLE read_imagef(read_only image2d_array_msaa_depth_t image
 
 // Depth Reads
 INLINE float OVERLOADABLE read_imagef(read_only image2d_depth_t image, sampler_t sampler, float2 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
         coords.x = ( coords.x < 0) ? -1.0f :  coords.x;
@@ -1039,13 +1041,13 @@ INLINE float OVERLOADABLE read_imagef(read_only image2d_depth_t image, sampler_t
 }
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_depth_t image, sampler_t sampler, int2 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float2 floatCoords = convert_float2(coords);
     return __builtin_IB_OCL_2d_sample_l(id, __builtin_IB_convert_sampler_to_int(sampler), floatCoords, 0.0f).x;
 }
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_array_depth_t image, sampler_t sampler, float4 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
 
     if ( 0 != __builtin_IB_get_snap_wa_reqd(__builtin_IB_convert_sampler_to_int(sampler)))
     {
@@ -1056,7 +1058,7 @@ INLINE float OVERLOADABLE read_imagef(read_only image2d_array_depth_t image, sam
 }
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_array_depth_t image, sampler_t sampler, int4 coords) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float3 tmpCoords = convert_float3(coords.xyz);
     return __builtin_IB_OCL_2darr_sample_l(id, __builtin_IB_convert_sampler_to_int(sampler), tmpCoords, 0.0f).x;
 }
@@ -1064,25 +1066,25 @@ INLINE float OVERLOADABLE read_imagef(read_only image2d_array_depth_t image, sam
 // Sampler less Depth reads
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_depth_t image, int2 coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __read_imagef_2d(id, coord).x;
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE float OVERLOADABLE read_imagef(read_write image2d_depth_t image, int2 coord) {
-    return read_imagef(__builtin_astype(image, read_only image2d_depth_t), coord);
+    return read_imagef(image, coord);
 }
 #endif
 
 INLINE float OVERLOADABLE read_imagef(read_only image2d_array_depth_t image, int4 coord) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     float4 res = __builtin_IB_OCL_2darr_ld(id, coord.xyz, 0);
     return __flush_denormals(res).x;
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE float OVERLOADABLE read_imagef(read_write image2d_array_depth_t image, int4 coord) {
-    return read_imagef(__builtin_astype(image, read_only image2d_array_depth_t), coord);
+    return read_imagef(image, coord);
 }
 #endif
 
@@ -1134,7 +1136,7 @@ INLINE half4 OVERLOADABLE read_imageh(read_only image1d_t image, int coord) {
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE half4 OVERLOADABLE read_imageh(read_write image1d_t image, int coord) {
-    return read_imageh(__builtin_astype(image, read_only image1d_t), coord);
+    return read_imageh(image, coord);
 }
 #endif
 
@@ -1144,7 +1146,7 @@ INLINE half4 OVERLOADABLE read_imageh(read_only image2d_t image, int2 coord) {
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE half4 OVERLOADABLE read_imageh(read_write image2d_t image, int2 coord) {
-    return read_imageh(__builtin_astype(image, read_only image2d_t), coord);
+    return read_imageh(image, coord);
 }
 #endif
 
@@ -1154,7 +1156,7 @@ INLINE half4 OVERLOADABLE read_imageh(read_only image3d_t image, int4 coord) {
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE half4 OVERLOADABLE read_imageh(read_write image3d_t image, int4 coord) {
-    return read_imageh(__builtin_astype(image, read_only image3d_t), coord);
+    return read_imageh(image, coord);
 }
 #endif
 
@@ -1164,7 +1166,7 @@ INLINE half4 OVERLOADABLE read_imageh(read_only image1d_array_t image, int2 coor
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE half4 OVERLOADABLE read_imageh(read_write image1d_array_t image, int2 coord) {
-    return read_imageh(__builtin_astype(image, read_only image1d_array_t), coord);
+    return read_imageh(image, coord);
 }
 #endif
 
@@ -1174,7 +1176,7 @@ INLINE half4 OVERLOADABLE read_imageh(read_only image2d_array_t image, int4 coor
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE half4 OVERLOADABLE read_imageh(read_write image2d_array_t image, int4 coord) {
-    return read_imageh(__builtin_astype(image, read_only image2d_array_t), coord);
+    return read_imageh(image, coord);
 }
 #endif
 
@@ -1184,7 +1186,7 @@ INLINE half4 OVERLOADABLE read_imageh(read_only image1d_buffer_t image, int coor
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE half4 OVERLOADABLE read_imageh(read_write image1d_buffer_t image, int coord) {
-    return read_imageh(__builtin_astype(image, read_only image1d_buffer_t), coord);
+    return read_imageh(image, coord);
 }
 #endif
 
@@ -1201,7 +1203,7 @@ INLINE void OVERLOADABLE write_imagef(write_only image2d_t image, int2 coords, f
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagef(read_write image2d_t image, int2 coords, float4 color) {
-    write_imagef(__builtin_astype(image, write_only image2d_t), coords, color);
+    write_imagef(image, coords, color);
 }
 #endif
 
@@ -1211,18 +1213,18 @@ INLINE void OVERLOADABLE write_imagei(write_only image2d_t image, int2 coords, i
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagei(read_write image2d_t image, int2 coords, int4 color) {
-    write_imagei(__builtin_astype(image, write_only image2d_t), coords, color);
+    write_imagei(image, coords, color);
 }
 #endif
 
 INLINE void OVERLOADABLE write_imageui(write_only image2d_t image, int2 coords, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_2d_u4i(id, coords, color, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageui(read_write image2d_t image, int2 coords, uint4 color) {
-    write_imageui(__builtin_astype(image, write_only image2d_t), coords, color);
+    write_imageui(image, coords, color);
 }
 #endif
 
@@ -1234,7 +1236,7 @@ INLINE void OVERLOADABLE write_imagef(write_only image3d_t image, int4 coords, f
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagef(read_write image3d_t image, int4 coords, float4 color) {
-    write_imagef(__builtin_astype(image, write_only image3d_t), coords, color);
+    write_imagef(image, coords, color);
 }
 #endif
 
@@ -1244,18 +1246,18 @@ INLINE void OVERLOADABLE write_imagei(write_only image3d_t image, int4 coords, i
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagei(read_write image3d_t image, int4 coords, int4 color) {
-    write_imagei(__builtin_astype(image, write_only image3d_t), coords, color);
+    write_imagei(image, coords, color);
 }
 #endif
 
 INLINE void OVERLOADABLE write_imageui(write_only image3d_t image, int4 coords, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_3d_u4i(id, coords.xyz, color, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageui(read_write image3d_t image, int4 coords, uint4 color) {
-    write_imageui(__builtin_astype(image, write_only image3d_t), coords, color);
+    write_imageui(image, coords, color);
 }
 #endif
 
@@ -1267,7 +1269,7 @@ INLINE void OVERLOADABLE write_imagef(write_only image1d_t image, int coords, fl
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagef(read_write image1d_t image, int coords, float4 color) {
-    write_imagef(__builtin_astype(image, write_only image1d_t), coords, color);
+    write_imagef(image, coords, color);
 }
 #endif
 
@@ -1277,18 +1279,18 @@ INLINE void OVERLOADABLE write_imagei(write_only image1d_t image, int coords, in
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagei(read_write image1d_t image, int coords, int4 color) {
-    write_imagei(__builtin_astype(image, write_only image1d_t), coords, color);
+    write_imagei(image, coords, color);
 }
 #endif
 
 INLINE void OVERLOADABLE write_imageui(write_only image1d_t image, int coords, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_1d_u4i(id, coords, color, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageui(read_write image1d_t image, int coords, uint4 color) {
-    write_imageui(__builtin_astype(image, write_only image1d_t), coords, color);
+    write_imageui(image, coords, color);
 }
 #endif
 
@@ -1305,7 +1307,7 @@ INLINE void OVERLOADABLE write_imagei(write_only image1d_t image, int coords, in
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE void OVERLOADABLE write_imageui(write_only image1d_t image, int coords, int lod, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_1d_u4i(id, coords, color, lod);
 }
 
@@ -1317,7 +1319,7 @@ INLINE void OVERLOADABLE write_imagef(write_only image1d_buffer_t image, int coo
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagef(read_write image1d_buffer_t image, int coords, float4 color) {
-    write_imagef(__builtin_astype(image, write_only image1d_buffer_t), coords, color);
+    write_imagef(image, coords, color);
 }
 #endif
 
@@ -1327,18 +1329,18 @@ INLINE void OVERLOADABLE write_imagei(write_only image1d_buffer_t image, int coo
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagei(read_write image1d_buffer_t image, int coords, int4 color) {
-    write_imagei(__builtin_astype(image, write_only image1d_buffer_t), coords, color);
+    write_imagei(image, coords, color);
 }
 #endif
 
 INLINE void OVERLOADABLE write_imageui(write_only image1d_buffer_t image, int coords, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_1d_u4i(id, coords, color, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageui(read_write image1d_buffer_t image, int coords, uint4 color) {
-    write_imageui(__builtin_astype(image, write_only image1d_buffer_t), coords, color);
+    write_imageui(image, coords, color);
 }
 #endif
 
@@ -1350,7 +1352,7 @@ INLINE void OVERLOADABLE write_imagef(write_only image1d_array_t image_array, in
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagef(read_write image1d_array_t image_array, int2 coords, float4 color) {
-    write_imagef(__builtin_astype(image_array, write_only image1d_array_t), coords, color);
+    write_imagef(image_array, coords, color);
 }
 #endif
 
@@ -1360,18 +1362,18 @@ INLINE void OVERLOADABLE write_imagei(write_only image1d_array_t image_array, in
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagei(read_write image1d_array_t image_array, int2 coords, int4 color) {
-    write_imagei(__builtin_astype(image_array, write_only image1d_array_t), coords, color);
+    write_imagei(image_array, coords, color);
 }
 #endif
 
 INLINE void OVERLOADABLE write_imageui(write_only image1d_array_t image_array, int2 coords, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     __builtin_IB_write_1darr_u4i(id, coords, color, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageui(read_write image1d_array_t image_array, int2 coords, uint4 color) {
-    write_imageui(__builtin_astype(image_array, write_only image1d_array_t), coords, color);
+    write_imageui(image_array, coords, color);
 }
 #endif
 
@@ -1389,7 +1391,7 @@ INLINE void OVERLOADABLE write_imagei(write_only image1d_array_t image_array, in
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE void OVERLOADABLE write_imageui(write_only image1d_array_t image_array, int2 coords, int lod, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     __builtin_IB_write_1darr_u4i(id, coords, color, lod);
 }
 
@@ -1401,7 +1403,7 @@ INLINE void OVERLOADABLE write_imagef(write_only image2d_array_t image_array, in
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagef(read_write image2d_array_t image_array, int4 coords, float4 color) {
-    write_imagef(__builtin_astype(image_array, write_only image2d_array_t), coords, color);
+    write_imagef(image_array, coords, color);
 }
 #endif
 
@@ -1411,18 +1413,18 @@ INLINE void OVERLOADABLE write_imagei(write_only image2d_array_t image_array, in
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagei(read_write image2d_array_t image_array, int4 coords, int4 color) {
-    write_imagei(__builtin_astype(image_array, write_only image2d_array_t), coords, color);
+    write_imagei(image_array, coords, color);
 }
 #endif
 
 INLINE void OVERLOADABLE write_imageui(write_only image2d_array_t image_array, int4 coords, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     __builtin_IB_write_2darr_u4i(id, coords.xyz, color, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageui(read_write image2d_array_t image_array, int4 coords, uint4 color) {
-    write_imageui(__builtin_astype(image_array, write_only image2d_array_t), coords, color);
+    write_imageui(image_array, coords, color);
 }
 #endif
 
@@ -1439,7 +1441,7 @@ INLINE void OVERLOADABLE write_imagei(write_only image2d_t image, int2 coords, i
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE void OVERLOADABLE write_imageui(write_only image2d_t image, int2 coords, int lod, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_2d_u4i(id, coords, color, lod);
 }
 
@@ -1456,7 +1458,7 @@ INLINE void OVERLOADABLE write_imagei(write_only image2d_array_t image_array, in
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE void OVERLOADABLE write_imageui(write_only image2d_array_t image_array, int4 coords, int lod, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     __builtin_IB_write_2darr_u4i(id, coords.xyz, color, lod);
 }
 
@@ -1473,43 +1475,43 @@ INLINE void OVERLOADABLE write_imagei(write_only image3d_t image, int4 coords, i
 #endif // __OPENCL_C_VERSION__ >= CL_VERSION_2_0
 
 INLINE void OVERLOADABLE write_imageui(write_only image3d_t image, int4 coords, int lod, uint4 color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_3d_u4i(id, coords.xyz, color, lod);
 }
 
 // Depth Writes
 
 INLINE void OVERLOADABLE write_imagef(write_only image2d_depth_t image, int2 coord, float color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_2d_f(id, coord, color, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagef(read_write image2d_depth_t image, int2 coord, float color) {
-    write_imagef(__builtin_astype(image, write_only image2d_depth_t), coord, color);
+    write_imagef(image, coord, color);
 }
 #endif
 
 INLINE void OVERLOADABLE write_imagef(write_only image2d_array_depth_t image, int4 coord, float color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_2darr_f(id, coord, color, 0);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imagef(read_write image2d_array_depth_t image, int4 coord, float color) {
-    write_imagef(__builtin_astype(image, write_only image2d_array_depth_t), coord, color);
+    write_imagef(image, coord, color);
 }
 #endif
 
 // Depth Writes with mipmap support
 
 INLINE void OVERLOADABLE write_imagef(write_only image2d_depth_t image, int2 coord, int lod, float color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_2d_f(id, coord, color, lod);
 }
 
 INLINE void OVERLOADABLE write_imagef(write_only image2d_array_depth_t image, int4 coord, int lod, float color) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     __builtin_IB_write_2darr_f(id, coord, color, lod);
 }
 
@@ -1520,7 +1522,7 @@ INLINE void OVERLOADABLE write_imageh(write_only image1d_t image, int coords, ha
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageh(read_write image1d_t image, int coords, half4 colorH) {
-    write_imageh(__builtin_astype(image, write_only image1d_t), coords, colorH);
+    write_imageh(image, coords, colorH);
 }
 #endif
 
@@ -1530,7 +1532,7 @@ INLINE void OVERLOADABLE write_imageh(write_only image2d_t image, int2 coords, h
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageh(read_write image2d_t image, int2 coords, half4 colorH) {
-    write_imageh(__builtin_astype(image, write_only image2d_t), coords, colorH);
+    write_imageh(image, coords, colorH);
 }
 #endif
 
@@ -1540,7 +1542,7 @@ INLINE void OVERLOADABLE write_imageh(write_only image3d_t image, int4 coords, h
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageh(read_write image3d_t image, int4 coords, half4 colorH) {
-    write_imageh(__builtin_astype(image, write_only image3d_t), coords, colorH);
+    write_imageh(image, coords, colorH);
 }
 #endif
 
@@ -1550,7 +1552,7 @@ INLINE void OVERLOADABLE write_imageh(write_only image1d_array_t image_array, in
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageh(read_write image1d_array_t image_array, int2 coords, half4 colorH) {
-    write_imageh(__builtin_astype(image_array, write_only image1d_array_t), coords, colorH);
+    write_imageh(image_array, coords, colorH);
 }
 #endif
 
@@ -1560,7 +1562,7 @@ INLINE void OVERLOADABLE write_imageh(write_only image2d_array_t image_array, in
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageh(read_write image2d_array_t image_array, int4 coords, half4 colorH) {
-    write_imageh(__builtin_astype(image_array, write_only image2d_array_t), coords, colorH);
+    write_imageh(image_array, coords, colorH);
 }
 #endif
 
@@ -1570,7 +1572,7 @@ INLINE void OVERLOADABLE write_imageh(write_only image1d_buffer_t image, int coo
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE void OVERLOADABLE write_imageh(read_write image1d_buffer_t image, int coords, half4 colorH) {
-    write_imageh(__builtin_astype(image, write_only image1d_buffer_t), coords, colorH);
+    write_imageh(image, coords, colorH);
 }
 #endif
 
@@ -1581,62 +1583,62 @@ INLINE void OVERLOADABLE write_imageh(read_write image1d_buffer_t image, int coo
 ///////////////////////////////
 // Other image functions
 INLINE int OVERLOADABLE get_image_width(read_only image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image1d_buffer_t image_buffer) {
-    int id = (int)(size_t)__builtin_astype(image_buffer, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_buffer);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image1d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image2d_array_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image2d_array_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_only image2d_array_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
@@ -1644,62 +1646,62 @@ INLINE int OVERLOADABLE get_image_width(read_only image2d_array_msaa_depth_t ima
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_width(write_only image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image1d_buffer_t image_buffer) {
-    int id = (int)(size_t)__builtin_astype(image_buffer, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_buffer);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image1d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image2d_array_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image2d_array_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(write_only image2d_array_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -1708,62 +1710,62 @@ INLINE int OVERLOADABLE get_image_width(write_only image2d_array_msaa_depth_t im
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_width(read_write image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image1d_buffer_t image_buffer) {
-    int id = (int)(size_t)__builtin_astype(image_buffer, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_buffer);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image1d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image2d_array_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image2d_array_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 
 INLINE int OVERLOADABLE get_image_width(read_write image2d_array_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_width(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -1775,47 +1777,47 @@ INLINE int OVERLOADABLE get_image_width(read_write image2d_array_msaa_depth_t im
 ///////////////////////////////
 
 INLINE int OVERLOADABLE get_image_height(read_only image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_only image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_only image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_only image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_only image2d_array_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_only image2d_array_msaa_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_only image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_only image2d_array_msaa_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 
@@ -1823,47 +1825,47 @@ INLINE int OVERLOADABLE get_image_height(read_only image2d_array_msaa_depth_t im
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_height(write_only image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(write_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(write_only image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(write_only image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(write_only image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(write_only image2d_array_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(write_only image2d_array_msaa_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(write_only image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(write_only image2d_array_msaa_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -1872,47 +1874,47 @@ INLINE int OVERLOADABLE get_image_height(write_only image2d_array_msaa_depth_t i
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_height(read_write image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_write image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_write image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_write image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_write image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_write image2d_array_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_write image2d_array_msaa_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_write image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_height(id);
 }
 
 INLINE int OVERLOADABLE get_image_height(read_write image2d_array_msaa_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_height(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -1924,18 +1926,18 @@ INLINE int OVERLOADABLE get_image_height(read_write image2d_array_msaa_depth_t i
 ///////////////////////////////
 
 INLINE int OVERLOADABLE get_image_depth(read_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_depth(id);
 }
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_depth(write_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_depth(id);
 }
 
 INLINE int OVERLOADABLE get_image_depth(read_write image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_depth(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -1947,62 +1949,62 @@ INLINE int OVERLOADABLE get_image_depth(read_write image3d_t image) {
 //////////////////////////////////
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image1d_buffer_t image_buffer) {
-    int id = (int)(size_t)__builtin_astype(image_buffer, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_buffer);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image1d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image2d_array_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image2d_array_msaa_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_only image2d_array_msaa_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
@@ -2010,62 +2012,62 @@ INLINE int OVERLOADABLE get_image_channel_data_type(read_only image2d_array_msaa
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image1d_buffer_t image_buffer) {
-    int id = (int)(size_t)__builtin_astype(image_buffer, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_buffer);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image1d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image2d_array_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image2d_array_msaa_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(write_only image2d_array_msaa_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -2074,62 +2076,62 @@ INLINE int OVERLOADABLE get_image_channel_data_type(write_only image2d_array_msa
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image1d_buffer_t image_buffer) {
-    int id = (int)(size_t)__builtin_astype(image_buffer, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_buffer);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image1d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image2d_array_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image2d_array_msaa_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_data_type(read_write image2d_array_msaa_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_data_type(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -2141,62 +2143,62 @@ INLINE int OVERLOADABLE get_image_channel_data_type(read_write image2d_array_msa
 //////////////////////////////////
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image1d_buffer_t image_buffer) {
-    int id = (int)(size_t)__builtin_astype(image_buffer, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_buffer);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image1d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image2d_array_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image2d_array_msaa_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_only image2d_array_msaa_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
@@ -2204,62 +2206,62 @@ INLINE int OVERLOADABLE get_image_channel_order(read_only image2d_array_msaa_dep
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_channel_order(write_only image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image1d_buffer_t image_buffer) {
-    int id = (int)(size_t)__builtin_astype(image_buffer, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_buffer);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image1d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image2d_array_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image2d_array_msaa_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(write_only image2d_array_msaa_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -2268,62 +2270,62 @@ INLINE int OVERLOADABLE get_image_channel_order(write_only image2d_array_msaa_de
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_channel_order(read_write image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image1d_buffer_t image_buffer) {
-    int id = (int)(size_t)__builtin_astype(image_buffer, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_buffer);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image1d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image2d_array_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image2d_array_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image2d_array_msaa_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_channel_order(id);
 }
 
 INLINE int OVERLOADABLE get_image_channel_order(read_write image2d_array_msaa_depth_t image_array) {
-    int id = (int)(size_t)__builtin_astype(image_array, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image_array);
     return __builtin_IB_get_image_channel_order(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -2457,37 +2459,37 @@ INLINE int2 OVERLOADABLE get_image_dim(read_write image2d_array_msaa_depth_t ima
 //////////////////////////////////
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_only image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_only image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_only image1d_array_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_only image2d_array_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_only image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_only image2d_array_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
@@ -2495,37 +2497,37 @@ INLINE int OVERLOADABLE get_image_num_mip_levels(read_only image2d_array_depth_t
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_num_mip_levels(write_only image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(write_only image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(write_only image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(write_only image1d_array_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(write_only image2d_array_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(write_only image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(write_only image2d_array_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -2534,37 +2536,37 @@ INLINE int OVERLOADABLE get_image_num_mip_levels(write_only image2d_array_depth_
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_write image1d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_write image2d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_write image3d_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_write image1d_array_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_write image2d_array_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_write image2d_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_mip_levels(read_write image2d_array_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_mip_levels(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -2579,22 +2581,22 @@ INLINE int OVERLOADABLE get_image_num_mip_levels(read_write image2d_array_depth_
 // MSAA Num Samples
 
 INLINE int OVERLOADABLE get_image_num_samples(read_only image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_samples(read_only image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_samples(read_only image2d_array_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_samples(read_only image2d_array_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 
@@ -2602,21 +2604,21 @@ INLINE int OVERLOADABLE get_image_num_samples(read_only image2d_array_msaa_depth
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_num_samples(write_only image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_samples(write_only image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_samples(write_only image2d_array_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 INLINE int OVERLOADABLE get_image_num_samples(write_only image2d_array_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD
@@ -2625,22 +2627,22 @@ INLINE int OVERLOADABLE get_image_num_samples(write_only image2d_array_msaa_dept
 
 #if SUPPORT_ACCESS_QUAL_OVERLOAD
 INLINE int OVERLOADABLE get_image_num_samples(read_write image2d_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_samples(read_write image2d_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_samples(read_write image2d_array_msaa_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 
 INLINE int OVERLOADABLE get_image_num_samples(read_write image2d_array_msaa_depth_t image) {
-    int id = (int)(size_t)__builtin_astype(image, __global void*);
+    int id = (int)(size_t)__builtin_astype_to_global_void_ptr(image);
     return __builtin_IB_get_image_num_samples(id);
 }
 #endif // SUPPORT_ACCESS_QUAL_OVERLOAD

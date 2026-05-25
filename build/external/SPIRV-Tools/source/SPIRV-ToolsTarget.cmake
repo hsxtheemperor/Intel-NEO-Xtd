@@ -50,7 +50,7 @@ unset(_cmake_expected_targets)
 add_library(SPIRV-Tools-static STATIC IMPORTED)
 
 set_target_properties(SPIRV-Tools-static PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/harshit9745/Workspace-Code/SPIRV-Tools/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/harshit9745/SFXFolder/Workspace-Code/SPIRV-Tools/include"
   INTERFACE_LINK_LIBRARIES "rt"
 )
 
@@ -59,7 +59,7 @@ add_library(SPIRV-Tools-shared SHARED IMPORTED)
 
 set_target_properties(SPIRV-Tools-shared PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SPIRV_TOOLS_SHAREDLIB"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/harshit9745/Workspace-Code/SPIRV-Tools/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/harshit9745/SFXFolder/Workspace-Code/SPIRV-Tools/include"
   INTERFACE_LINK_LIBRARIES "rt"
 )
 
@@ -67,13 +67,13 @@ set_target_properties(SPIRV-Tools-shared PROPERTIES
 set_property(TARGET SPIRV-Tools-static APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(SPIRV-Tools-static PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/libSPIRV-Tools.a"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/libSPIRV-Tools.a"
   )
 
 # Import target "SPIRV-Tools-shared" for configuration "Debug"
 set_property(TARGET SPIRV-Tools-shared APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(SPIRV-Tools-shared PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/libSPIRV-Tools-shared.so"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/libSPIRV-Tools-shared.so"
   IMPORTED_SONAME_DEBUG "libSPIRV-Tools-shared.so"
   )
 

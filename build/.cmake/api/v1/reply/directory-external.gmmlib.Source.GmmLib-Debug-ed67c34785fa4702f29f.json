@@ -1,0 +1,167 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"gmmlib/Source/GmmLib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 566,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 567,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 569,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 576,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 580,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 584,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 587,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 588,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "gmmlib",
+			"destination" : "lib64",
+			"paths" : 
+			[
+				"external/gmmlib/Source/GmmLib/libigdgmm.so.12.5.0",
+				"external/gmmlib/Source/GmmLib/libigdgmm.so.12"
+			],
+			"targetId" : "igfx_gmmumd_dll::@c6562a1d780769ec9b70",
+			"targetIndex" : 87,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "gmmlib-devel",
+			"destination" : "lib64",
+			"paths" : 
+			[
+				"external/gmmlib/Source/GmmLib/libigdgmm.so"
+			],
+			"targetId" : "igfx_gmmumd_dll::@c6562a1d780769ec9b70",
+			"targetIndex" : 87,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "gmmlib-devel",
+			"destination" : "include/igdgmm",
+			"paths" : 
+			[
+				"gmmlib/Source/GmmLib"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "gmmlib-devel",
+			"destination" : "include/igdgmm",
+			"paths" : 
+			[
+				"gmmlib/Source/inc"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "gmmlib-devel",
+			"destination" : "include/igdgmm",
+			"paths" : 
+			[
+				"gmmlib/Source/util"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "gmmlib-devel",
+			"destination" : "include/igdgmm/GmmLib/Utility/CpuSwizzleBlt",
+			"paths" : 
+			[
+				"gmmlib/Source/GmmLib/Utility/CpuSwizzleBlt/CpuSwizzleBlt.c"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "gmmlib-devel",
+			"destination" : "lib64/pkgconfig",
+			"paths" : 
+			[
+				"build/igdgmm.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "gmmlib-devel",
+			"destination" : "include/igdgmm",
+			"paths" : 
+			[
+				"build/igdgmm.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/gmmlib/Source/GmmLib",
+		"source" : "gmmlib/Source/GmmLib"
+	}
+}

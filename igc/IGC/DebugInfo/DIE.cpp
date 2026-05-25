@@ -98,7 +98,7 @@ void DIEAbbrev::Emit(StreamEmitter *AP) const {
 }
 
 #ifndef NDEBUG
-void DIEAbbrev::print(raw_ostream &O) {
+void DIEAbbrev::print(raw_ostream &O) const {
   O << "Abbreviation @" << format("0x%lx", (long)(intptr_t)this) << "  "
     << dwarf::TagString(Tag) << " " << dwarf::ChildrenString(ChildrenFlag)
     << '\n';
@@ -109,7 +109,7 @@ void DIEAbbrev::print(raw_ostream &O) {
   }
 }
 
-void DIEAbbrev::dump() { print(dbgs()); }
+void DIEAbbrev::dump() const { print(dbgs()); }
 #endif
 
 //===----------------------------------------------------------------------===//
@@ -193,7 +193,7 @@ void DIE::print(raw_ostream &O, unsigned IndentCount) const {
     O << "\n";
 }
 
-void DIE::dump() { print(dbgs()); }
+void DIE::dump() const { print(dbgs()); }
 #endif
 
 #ifndef NDEBUG

@@ -1,0 +1,189 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"vc_build_bif",
+			"vc_embed_bif",
+			"add_custom_command"
+		],
+		"files" : 
+		[
+			"igc/IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake",
+			"igc/IGC/VectorCompiler/lib/BiF/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 34,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 203,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 108,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 88,
+				"parent" : 2
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "CMCLTranslatorTool::@036a7e241eb8d03655bd"
+		}
+	],
+	"id" : "VCSPIRVBuiltins64-BC::@826efced416e9ae1b400",
+	"name" : "VCSPIRVBuiltins64-BC",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "clang-tool::@47b1f9daa1a3b48292ff"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "CMCLTranslatorTool::@036a7e241eb8d03655bd"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/lib/BiF",
+		"source" : "igc/IGC/VectorCompiler/lib/BiF"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				5
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Spirv/atomic.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Spirv/assert.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Spirv/barrier.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Spirv/exec.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Spirv/math.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCSPIRVBuiltins64-BC",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCSPIRVBuiltins64-BC.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/VCSPIRVBuiltins64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Spirv/assert.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Spirv/atomic.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Spirv/barrier.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Spirv/exec.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Spirv/math.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "UTILITY"
+}

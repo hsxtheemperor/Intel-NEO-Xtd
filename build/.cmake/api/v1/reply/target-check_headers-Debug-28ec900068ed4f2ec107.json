@@ -1,0 +1,44 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"igc/visa/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 85,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"folder" : 
+	{
+		"name" : "Misc"
+	},
+	"id" : "check_headers::@48c26d128b234236a1aa",
+	"name" : "check_headers",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/visa",
+		"source" : "igc/visa"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

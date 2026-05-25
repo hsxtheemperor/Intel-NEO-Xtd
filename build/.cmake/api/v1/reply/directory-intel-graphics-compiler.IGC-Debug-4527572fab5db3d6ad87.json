@@ -1,0 +1,287 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"igc/IGC/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2114,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2116,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2118,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2119,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2120,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2121,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2122,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2132,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2140,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2141,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2143,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2145,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2146,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "igc-core",
+			"destination" : "/usr/local/lib64",
+			"paths" : 
+			[
+				"lib/libigc.so.1.0.1",
+				"lib/libigc.so.1"
+			],
+			"targetId" : "igc_dll::@47b1f9daa1a3b48292ff",
+			"targetIndex" : 85,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "igc-core",
+			"destination" : "/usr/local/lib64",
+			"paths" : 
+			[
+				"lib/libigc.so"
+			],
+			"targetId" : "igc_dll::@47b1f9daa1a3b48292ff",
+			"targetIndex" : 85,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "igc-opencl",
+			"destination" : "/usr/local/lib64",
+			"paths" : 
+			[
+				"lib/libigdfcl.so.1.0.1",
+				"lib/libigdfcl.so.1"
+			],
+			"targetId" : "fcl_dll::@47b1f9daa1a3b48292ff",
+			"targetIndex" : 84,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "igc-opencl",
+			"destination" : "/usr/local/lib64",
+			"paths" : 
+			[
+				"lib/libigdfcl.so"
+			],
+			"targetId" : "fcl_dll::@47b1f9daa1a3b48292ff",
+			"targetIndex" : 84,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "igc-opencl-devel",
+			"destination" : "/usr/local/include/igc",
+			"paths" : 
+			[
+				"igc/IGC/AdaptorOCL/ocl_igc_shared"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "igc-opencl-devel",
+			"destination" : "/usr/local/include/igc",
+			"paths" : 
+			[
+				"igc/IGC/AdaptorOCL/ocl_igc_interface"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "igc-opencl-devel",
+			"destination" : "/usr/local/include/igc",
+			"paths" : 
+			[
+				"igc/IGC/AdaptorOCL/OCLAPI"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "igc-opencl-devel",
+			"destination" : "/usr/local/include/igc",
+			"paths" : 
+			[
+				"igc/IGC/AdaptorOCL/cif"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "igc-opencl-devel",
+			"destination" : "/usr/local/include/igc/common",
+			"paths" : 
+			[
+				"igc/IGC/common/StateSaveAreaHeader.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "igc-core",
+			"type" : "code"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "igc-core",
+			"type" : "code"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "igc-core",
+			"type" : "code"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "igc-core",
+			"type" : "code"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "igc-opencl-devel",
+			"destination" : "/usr/local/lib64/pkgconfig",
+			"paths" : 
+			[
+				"build/intel-graphics-compiler/IGC/AdaptorOCL/igc-opencl.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "igc-opencl-devel",
+			"destination" : "/usr/local/include/igc",
+			"paths" : 
+			[
+				"build/intel-graphics-compiler/IGC/AdaptorOCL/igc.opencl.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "igc-core",
+			"destination" : "/usr/local/lib64/igc",
+			"paths" : 
+			[
+				"igc/IGC/../NOTICES.txt"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "igc-opencl-devel",
+			"destination" : "/usr/local/include/visa",
+			"paths" : 
+			[
+				"igc/IGC/../visa/include/RelocationInfo.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "igc-opencl-devel",
+			"destination" : "/usr/local/include/iga",
+			"paths" : 
+			[
+				{
+					"from" : "igc/IGC/../visa/iga/IGALibrary/api",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC",
+		"source" : "igc/IGC"
+	}
+}

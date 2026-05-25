@@ -12,7 +12,7 @@ SPDX-License-Identifier: MIT
 #define DEF_CONVERT_HANDLE_TO_IMAGE(DIM, INT_PARAMS, ACC_QUAL, ARRAY_DEPTH)                                                                           \
 global Img##DIM##d##ARRAY_DEPTH##_##ACC_QUAL* OVERLOADABLE __spirv_ConvertHandleToImageINTEL_RPU3AS133__spirv_Image__void_##INT_PARAMS(size_t handle) \
 {                                                                                                                                                     \
-    return __builtin_astype(handle, global Img##DIM##d##ARRAY_DEPTH##_##ACC_QUAL*);                                                                   \
+    return (global Img##DIM##d##ARRAY_DEPTH##_##ACC_QUAL*)(uintptr_t)handle;                                                                   \
 }
 
 #define DEF_CONVERT_HANDLE_TO_IMAGE_ACC_QUAL(DIM, INT_PARAMS, ARRAY_DEPTH) \
@@ -31,7 +31,7 @@ DEF_CONVERT_HANDLE_TO_IMAGE_ACC_QUAL(3, 2_0_0_0_0_0, )             // 3d
 #define DEF_CONVERT_HANDLE_TO_SAMPLED_IMAGE(DIM, INT_PARAMS, ARRAY_DEPTH)                                                                                        \
 __spirv_SampledImage_##DIM##D##ARRAY_DEPTH OVERLOADABLE __spirv_ConvertHandleToSampledImageINTEL_RPU3AS140__spirv_SampledImage__void_##INT_PARAMS(size_t handle) \
 {                                                                                                                                                                \
-    return __builtin_astype(handle, __spirv_SampledImage_##DIM##D##ARRAY_DEPTH);                                                                                 \
+    return (__spirv_SampledImage_##DIM##D##ARRAY_DEPTH)(uintptr_t)handle;                                                                                 \
 }
 
 DEF_CONVERT_HANDLE_TO_SAMPLED_IMAGE(1, 0_0_0_0_0_0_0, )             // 1d
@@ -44,6 +44,6 @@ DEF_CONVERT_HANDLE_TO_SAMPLED_IMAGE(3, 2_0_0_0_0_0_0, )             // 3d
 
 __spirv_Sampler OVERLOADABLE __spirv_ConvertHandleToSamplerINTEL(size_t handle)
 {
-    return __builtin_astype(handle, __spirv_Sampler);
+    return (__spirv_Sampler)(__constant void*)(uintptr_t)handle;
 }
 #endif // defined(__USE_KHRONOS_SPIRV_TRANSLATOR__)

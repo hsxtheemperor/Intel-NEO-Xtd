@@ -1,0 +1,78 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"SPIRV-Tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 258,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "spirv-tools-check-python-tests::@5639889913c69d5ff99e",
+	"name" : "spirv-tools-check-python-tests",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 1,
+			"id" : "Python3::Interpreter::@5639889913c69d5ff99e"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/SPIRV-Tools",
+		"source" : "SPIRV-Tools"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/external/SPIRV-Tools/CMakeFiles/spirv-tools-check-python-tests",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/external/SPIRV-Tools/CMakeFiles/spirv-tools-check-python-tests.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

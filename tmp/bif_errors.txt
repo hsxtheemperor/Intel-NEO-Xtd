@@ -1,0 +1,611 @@
+      6 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4872:1: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      6 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4872:1: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      4 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:5012:1: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      4 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:5012:1: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      4 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4990:1: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      4 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4990:1: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      2 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4951:1: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      2 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4951:1: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      2 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4932:1: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      2 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4932:1: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      2 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4901:1: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      2 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4901:1: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:98:19: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:97:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:91:8: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:90:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:84:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:83:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:77:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:76:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:70:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:69:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:63:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:62:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:56:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:55:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:49:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:48:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:42:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:41:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:35:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:343:8: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:342:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:34:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:336:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:335:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:329:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:328:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:322:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:321:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:315:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:314:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:308:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:307:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:301:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:300:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:294:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:293:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:287:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:28:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:286:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:280:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:279:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:273:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:272:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:27:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:266:18: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:265:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:259:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:258:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:252:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:251:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:245:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:244:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:238:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:237:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:231:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:230:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:224:5: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:223:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:217:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:21:6: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:216:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:210:5: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:209:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:203:5: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:202:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:20:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:196:5: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:195:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:189:5: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:188:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:182:17: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:181:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:175:9: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:174:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:168:8: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:167:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:161:8: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:160:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:154:8: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:153:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:147:8: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:146:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:14:18: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:140:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:139:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:133:8: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:132:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:13:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:126:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:125:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:119:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:118:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:112:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:111:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:105:7: error: expected ';' after top level declarator
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Languages/OpenCL/Integer/rotate.cl:104:1: error: unknown type name 'INLINE'
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:83:81: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:83:73: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:83:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:75:81: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:75:73: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:75:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:54:88: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:54:80: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:54:72: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:54:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:33:65: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:33:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3314:81: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3314:73: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3314:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3284:92: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3284:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3284:76: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3284:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3234:68: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3234:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3213:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3213:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3192:68: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3192:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3171:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3171:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3150:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3150:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3129:81: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3129:73: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3129:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3108:71: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3108:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3087:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3087:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3066:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3066:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3045:71: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3045:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3024:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3024:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3003:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:3003:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2982:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2982:76: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2982:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2961:68: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2961:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2934:63: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2934:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2913:65: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2913:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2892:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2892:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2871:63: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2871:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2850:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2850:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2829:66: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2829:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2808:63: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2808:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:280:67: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:280:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2787:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2787:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2766:63: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2766:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2715:71: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2715:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2698:71: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2698:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2697:71: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2697:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2696:71: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2696:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:267:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2663:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2663:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:266:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:265:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:264:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2642:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:264:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2642:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2621:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2621:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2600:68: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2600:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2579:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2579:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2529:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2529:75: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2529:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2522:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2522:75: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2522:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2516:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2516:75: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2516:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2510:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2510:75: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2510:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2477:80: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2477:72: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2477:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2456:75: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2456:67: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2456:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2435:67: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2435:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2414:74: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2414:66: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2414:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2393:80: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2393:72: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2393:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2372:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:236:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:235:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:234:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:233:79: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:233:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:233:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2322:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2322:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2315:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2315:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2309:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2309:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2303:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2303:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2270:77: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2270:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2270:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2249:77: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2249:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2249:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2228:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2228:77: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2228:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2228:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2207:63: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2207:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2186:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2186:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2165:63: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2165:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2144:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2144:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2123:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2123:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2073:73: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2073:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2066:73: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2066:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2060:73: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2060:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2054:73: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2054:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2021:65: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2021:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:201:77: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:201:66: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:201:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2000:68: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:2000:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1979:63: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1957:76: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1957:68: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1957:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1907:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1907:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1900:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1900:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1894:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1894:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1888:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1888:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1826:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1826:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1819:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1819:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1813:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1813:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:180:88: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1807:70: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:180:76: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1807:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:180:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:180:100: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1770:7: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1770:56: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1770:47: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1758:76: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1758:68: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1758:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1737:76: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1737:68: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1737:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1721:81: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1720:78: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1719:78: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1718:78: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1717:78: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1711:76: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1711:68: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1711:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1680:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1680:77: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1680:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1680:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1659:63: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1659:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1638:76: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1638:68: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1638:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1617:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1617:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1596:65: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:159:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1596:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:159:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1575:65: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1575:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1554:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1554:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1533:63: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1533:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1512:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1512:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1491:63: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1491:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1459:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1459:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1438:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1438:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1417:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1417:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1396:80: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1396:72: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1396:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:138:65: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:138:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1375:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1375:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1354:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1354:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1333:66: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1333:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1312:65: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1312:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1291:79: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1291:71: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1291:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1270:77: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1270:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1270:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1249:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1249:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1228:66: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1228:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1207:65: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1207:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1186:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1186:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:117:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:117:77: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:117:69: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:117:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1165:66: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1165:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1144:65: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1144:26: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1123:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv_math.h:1123:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:935:92: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:934:92: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:933:92: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:932:92: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:931:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:930:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:929:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:928:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:927:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:926:91: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:925:91: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:924:91: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:923:91: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:922:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:921:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:920:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:919:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:918:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:917:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:916:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:915:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:914:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:913:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:912:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:911:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:910:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:909:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:908:91: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:907:91: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:906:91: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:905:91: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:904:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:903:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:902:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:901:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:900:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:825:94: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:824:94: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:823:94: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:822:94: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:821:86: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:820:86: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:819:86: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:818:86: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:817:86: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:816:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:815:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:814:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:813:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:812:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:811:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:810:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:809:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:808:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:807:95: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:806:95: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:805:95: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:804:95: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:803:87: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:802:87: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:801:87: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:800:87: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:799:87: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:798:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:797:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:796:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:795:93: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:794:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:793:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:792:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:791:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:790:85: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:754:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:752:76: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:749:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:748:75: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:747:74: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:747:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:703:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:701:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:699:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:697:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:695:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:693:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:691:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:689:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:678:76: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:677:75: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:676:77: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:675:75: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:664:78: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:663:77: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:662:79: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:661:77: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:5091:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:5091:106: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:5070:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:5070:103: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:5059:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:5059:103: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:5048:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:5048:103: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4819:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4819:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4807:86: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4807:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4807:101: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4795:88: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4795:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4795:102: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4783:80: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4783:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4764:96: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4544:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4544:130: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4532:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4532:128: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4531:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4531:129: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4530:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4530:130: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4522:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4522:130: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4510:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4510:128: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4509:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4509:129: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4508:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4508:130: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4266:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4266:133: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4264:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4264:131: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4263:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4263:132: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4262:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4262:133: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4224:128: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4222:126: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4221:127: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4220:128: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4183:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4181:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4180:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4179:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4122:75: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4122:67: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4101:73: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4101:65: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4080:79: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4080:71: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4059:64: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4038:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:4017:62: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:3996:59: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:3975:60: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:3742:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:3741:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:3740:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:3739:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:3738:25: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1170:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1169:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1168:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1167:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1162:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1161:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1160:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1159:84: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1153:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1152:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1151:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1150:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1149:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1148:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1147:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1146:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1145:82: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1145:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1144:82: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1144:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1143:82: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1143:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1142:82: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1142:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1087:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1086:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1085:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1084:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1079:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1078:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1077:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1076:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1071:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1070:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1069:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1068:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1063:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1062:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1061:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1060:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1055:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1054:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1053:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1052:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1047:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1046:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1045:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1044:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1039:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1038:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1037:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1036:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1013:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1012:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1011:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/spirv.h:1010:27: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/igc_bridge_builtins.h:30:83: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/igc_bridge_builtins.h:186:1: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/igc_bridge_builtins.h:186:1: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/igc_bridge_builtins.h:161:1: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/igc_bridge_builtins.h:161:1: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/igc_bridge_builtins.h:160:1: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/igc_bridge_builtins.h:159:1: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/igc_bridge_builtins.h:158:1: error: declaring function return value of type 'half' is not allowed ; did you forget * ?
+      1 /home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/BiFModule/Headers/igc_bridge_builtins.h:157:1: error: declaring function parameter of type '__private half' is not allowed; did you forget * ?

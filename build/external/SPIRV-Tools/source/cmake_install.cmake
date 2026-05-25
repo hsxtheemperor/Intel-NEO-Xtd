@@ -1,4 +1,4 @@
-# Install script for directory: /home/harshit9745/Workspace-Code/SPIRV-Tools/source
+# Install script for directory: /home/harshit9745/SFXFolder/Workspace-Code/SPIRV-Tools/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,41 +39,41 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/opt/cmake_install.cmake")
+  include("/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/opt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/reduce/cmake_install.cmake")
+  include("/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/reduce/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/fuzz/cmake_install.cmake")
+  include("/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/fuzz/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/link/cmake_install.cmake")
+  include("/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/link/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/lint/cmake_install.cmake")
+  include("/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/lint/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/diff/cmake_install.cmake")
+  include("/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/diff/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/libSPIRV-Tools.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/libSPIRV-Tools.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -83,11 +83,11 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libSPIRV-Tools-shared.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/libSPIRV-Tools-shared.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/libSPIRV-Tools-shared.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libSPIRV-Tools-shared.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libSPIRV-Tools-shared.so")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libSPIRV-Tools-shared.so")
+      execute_process(COMMAND "/usr/bin/llvm-strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libSPIRV-Tools-shared.so")
     endif()
   endif()
 endif()
@@ -99,7 +99,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools/SPIRV-ToolsTarget.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools/SPIRV-ToolsTarget.cmake"
-         "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/CMakeFiles/Export/b590a4080437952a18883ff46da69d2d/SPIRV-ToolsTarget.cmake")
+         "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/CMakeFiles/Export/b590a4080437952a18883ff46da69d2d/SPIRV-ToolsTarget.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools/SPIRV-ToolsTarget-*.cmake")
       if(_cmake_old_config_files)
@@ -112,19 +112,19 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools" TYPE FILE FILES "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/CMakeFiles/Export/b590a4080437952a18883ff46da69d2d/SPIRV-ToolsTarget.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools" TYPE FILE FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/CMakeFiles/Export/b590a4080437952a18883ff46da69d2d/SPIRV-ToolsTarget.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools" TYPE FILE FILES "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/CMakeFiles/Export/b590a4080437952a18883ff46da69d2d/SPIRV-ToolsTarget-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools" TYPE FILE FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/CMakeFiles/Export/b590a4080437952a18883ff46da69d2d/SPIRV-ToolsTarget-debug.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools" TYPE FILE FILES "/home/harshit9745/Workspace-Code/build/SPIRV-ToolsConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SPIRV-Tools" TYPE FILE FILES "/home/harshit9745/SFXFolder/Workspace-Code/build/SPIRV-ToolsConfig.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/source/install_local_manifest.txt"
+  file(WRITE "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/source/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

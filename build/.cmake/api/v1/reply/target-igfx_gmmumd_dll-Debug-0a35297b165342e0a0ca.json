@@ -1,0 +1,1723 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "external/gmmlib/Source/GmmLib/libigdgmm.so"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install",
+			"target_link_libraries",
+			"add_compile_options",
+			"include",
+			"set_property",
+			"bs_set_extra_target_properties",
+			"add_definitions",
+			"bs_set_defines",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"gmmlib/Source/GmmLib/CMakeLists.txt",
+			"gmmlib/Source/GmmLib/Linux.cmake",
+			"gmmlib/Tools/bldsys/include/utils.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 465,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 566,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 567,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 487,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 460,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 168,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 169,
+				"parent" : 6
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 526,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 503,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 13
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 13
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 13
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 13
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 535,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 19
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 13
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 13
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 496,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 187,
+				"parent" : 23
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 186,
+				"parent" : 23
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 274,
+				"parent" : 13
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 427,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 430,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "Threads::Threads::@c6562a1d780769ec9b70"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -Wno-reorder -Wsign-promo -Wnon-virtual-dtor -Wno-invalid-offsetof -fvisibility-inlines-hidden -fno-use-cxa-atexit -fno-rtti -fexceptions -fcheck-new -std=c++11 -pthread -Werror=non-virtual-dtor -g -std=gnu++17 -fPIC"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Winit-self"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Winvalid-pch"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wpointer-arith"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-unused"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-unknown-pragmas"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-comments"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-narrowing"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-overflow"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-parentheses"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-missing-braces"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-sign-compare"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-enum-compare"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Werror=address"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Werror=format-security"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Werror=return-type"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-march=corei7"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-mpopcnt"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse2"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse3"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-mssse3"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse4"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse4.1"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse4.2"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-mfpmath=sse"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-finline-functions"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fno-short-enums"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wa,--noexecstack"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fno-strict-aliasing"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DUSE_MMX"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DUSE_SSE"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DUSE_SSE2"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DUSE_SSE3"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DUSE_SSSE3"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fstack-protector"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fmessage-length=0"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fvisibility=hidden"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fPIC"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-m64"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-O0"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-DINSTR_GTUNE_EXT"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 10,
+					"define" : "GMM_LIB_DLL"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "GMM_LIB_DLL_EXPORTS"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "GMM_UNIFIED_LIB"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "GMM_UNIFY_DAF_API"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "ISTDLIB_UMD"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "SMALL_POOL_ALLOC"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "UNUSED_ISTDLIB_MT"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "_ATL_NO_WIN_SUPPORT"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "_X64"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "__GFX_MACRO_C__"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "__GMM"
+				},
+				{
+					"backtrace" : 24,
+					"define" : "__STDC_CONSTANT_MACROS"
+				},
+				{
+					"backtrace" : 25,
+					"define" : "__STDC_LIMIT_MACROS"
+				},
+				{
+					"backtrace" : 26,
+					"define" : "__UMD"
+				},
+				{
+					"define" : "igfx_gmmumd_dll_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 27,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Utility/GmmLog"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/inc"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Utility"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/GlobalInfo"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Texture"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Resource"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Platform"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/util"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/inc"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/inc/common"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/inc/umKmInc"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/install"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIC"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Winit-self"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Winvalid-pch"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wpointer-arith"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-unused"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-unknown-pragmas"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-comments"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-narrowing"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-overflow"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-parentheses"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-missing-braces"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-sign-compare"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-enum-compare"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Werror=address"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Werror=format-security"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Werror=return-type"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-march=corei7"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-mpopcnt"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse2"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse3"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-mssse3"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse4"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse4.1"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-msse4.2"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-mfpmath=sse"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-finline-functions"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fno-short-enums"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wa,--noexecstack"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fno-strict-aliasing"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DUSE_MMX"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DUSE_SSE"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DUSE_SSE2"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DUSE_SSE3"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DUSE_SSSE3"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fstack-protector"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fmessage-length=0"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fvisibility=hidden"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fPIC"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-m64"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-O0"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-DINSTR_GTUNE_EXT"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 10,
+					"define" : "GMM_LIB_DLL"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "GMM_LIB_DLL_EXPORTS"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "GMM_UNIFIED_LIB"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "GMM_UNIFY_DAF_API"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "ISTDLIB_UMD"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "SMALL_POOL_ALLOC"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "UNUSED_ISTDLIB_MT"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "_ATL_NO_WIN_SUPPORT"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "_X64"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "__GFX_MACRO_C__"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "__GMM"
+				},
+				{
+					"backtrace" : 24,
+					"define" : "__STDC_CONSTANT_MACROS"
+				},
+				{
+					"backtrace" : 25,
+					"define" : "__STDC_LIMIT_MACROS"
+				},
+				{
+					"backtrace" : 26,
+					"define" : "__UMD"
+				},
+				{
+					"define" : "igfx_gmmumd_dll_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 27,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Utility/GmmLog"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/inc"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Utility"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/GlobalInfo"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Texture"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Resource"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/GmmLib/Platform"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/util"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/inc"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/inc/common"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/inc/umKmInc"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/gmmlib/Source/install"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				35
+			]
+		}
+	],
+	"id" : "igfx_gmmumd_dll::@c6562a1d780769ec9b70",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib64"
+			},
+			{
+				"backtrace" : 3,
+				"path" : "lib64"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "Threads::Threads::@c6562a1d780769ec9b70"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "Threads::Threads::@c6562a1d780769ec9b70"
+		}
+	],
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-shared",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-m64",
+				"role" : "flags"
+			}
+		],
+		"language" : "CXX"
+	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "Threads::Threads::@c6562a1d780769ec9b70"
+		}
+	],
+	"name" : "igfx_gmmumd_dll",
+	"nameOnDisk" : "libigdgmm.so",
+	"paths" : 
+	{
+		"build" : "external/gmmlib/Source/GmmLib",
+		"source" : "gmmlib/Source/GmmLib"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			]
+		},
+		{
+			"name" : "Source Files\\Platform",
+			"sourceIndexes" : 
+			[
+				12,
+				13,
+				14,
+				15,
+				16,
+				17
+			]
+		},
+		{
+			"name" : "Source Files\\Resource",
+			"sourceIndexes" : 
+			[
+				18,
+				19,
+				20,
+				21
+			]
+		},
+		{
+			"name" : "Source Files\\Resource\\Linux",
+			"sourceIndexes" : 
+			[
+				22
+			]
+		},
+		{
+			"name" : "Source Files\\Texture",
+			"sourceIndexes" : 
+			[
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33
+			]
+		},
+		{
+			"name" : "Source Files\\Global",
+			"sourceIndexes" : 
+			[
+				34,
+				41,
+				42
+			]
+		},
+		{
+			"name" : "Source Files\\Utility",
+			"sourceIndexes" : 
+			[
+				35,
+				36,
+				37
+			]
+		},
+		{
+			"name" : "Source Files\\TranslationTable\\Windows",
+			"sourceIndexes" : 
+			[
+				38,
+				39,
+				40
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				43,
+				45,
+				75,
+				97,
+				99,
+				100,
+				103,
+				104
+			]
+		},
+		{
+			"name" : "Source Files\\Cache Policy\\Client Files",
+			"sourceIndexes" : 
+			[
+				44,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53
+			]
+		},
+		{
+			"name" : "Header Files\\External\\Common\\Cache Policy",
+			"sourceIndexes" : 
+			[
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61
+			]
+		},
+		{
+			"name" : "Header Files\\External\\Common",
+			"sourceIndexes" : 
+			[
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				101,
+				102
+			]
+		},
+		{
+			"name" : "Header Files\\External\\Linux",
+			"sourceIndexes" : 
+			[
+				82,
+				83
+			]
+		},
+		{
+			"name" : "Header Files\\Internal\\Common\\Platform",
+			"sourceIndexes" : 
+			[
+				84,
+				85,
+				86,
+				87,
+				88
+			]
+		},
+		{
+			"name" : "Header Files\\Internal\\Common\\Texture",
+			"sourceIndexes" : 
+			[
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96
+			]
+		},
+		{
+			"name" : "Header Files\\Internal\\Common",
+			"sourceIndexes" : 
+			[
+				98
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/igdgmm.rc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/Common/AssertTracer/AssertTracer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmCachePolicy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmCachePolicyCommon.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen8CachePolicy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen9CachePolicy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen10CachePolicy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen11CachePolicy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen12CachePolicy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmXe_LPGCachePolicy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmXe2_LPGCachePolicy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen12dGPUCachePolicy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Platform/GmmGen11Platform.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Platform/GmmGen12Platform.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Platform/GmmGen8Platform.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Platform/GmmGen9Platform.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Platform/GmmGen10Platform.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Platform/GmmPlatform.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Resource/GmmResourceInfo.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Resource/GmmResourceInfoCommon.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Resource/GmmResourceInfoCommonEx.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Resource/GmmRestrictions.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Resource/Linux/GmmResourceInfoLinCWrapper.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmGen7Texture.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmGen8Texture.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmGen9Texture.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmGen10Texture.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmGen11Texture.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmGen12Texture.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmXe_LPGTexture.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmTexture.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmTextureAlloc.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmTextureSpecialCases.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Texture/GmmTextureOffset.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/GlobalInfo/GmmInfo.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "gmmlib/Source/GmmLib/Utility/CpuSwizzleBlt/CpuSwizzleBlt.c",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Utility/GmmLog/GmmLog.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/Utility/GmmUtility.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/TranslationTable/GmmAuxTable.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/TranslationTable/GmmPageTableMgr.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/TranslationTable/GmmUmdTranslationTable.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/GlobalInfo/GmmClientContext.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "gmmlib/Source/GmmLib/GlobalInfo/GmmLibDllMain.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmCachePolicyConditionals.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmCachePolicyResourceUsageDefinitions.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmCachePolicyUndefineConditionals.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen10CachePolicy.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen11CachePolicy.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen12CachePolicy.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmXe_LPGCachePolicy.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmXe2_LPGCachePolicy.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen12dGPUCachePolicy.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen8CachePolicy.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/CachePolicy/GmmGen9CachePolicy.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/CachePolicy/GmmCachePolicyGen10.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/CachePolicy/GmmCachePolicyGen11.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/CachePolicy/GmmCachePolicyGen12.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/CachePolicy/GmmCachePolicyXe_LPG.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/CachePolicy/GmmCachePolicyXe2_LPG.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/CachePolicy/GmmCachePolicyGen12dGPU.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/CachePolicy/GmmCachePolicyGen8.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/CachePolicy/GmmCachePolicyGen9.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmCachePolicy.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmCachePolicyCommon.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmCachePolicyExt.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmCommonExt.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmConst.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmDebug.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmFormatTable.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmHw.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmInfo.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmInfoExt.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmInternal.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmMemAllocator.hpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmPlatformExt.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmProto.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmResourceFlags.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmResourceInfo.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmResourceInfoCommon.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmResourceInfoExt.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmTextureExt.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmUtil.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Linux/GmmResourceInfoLin.h",
+			"sourceGroupIndex" : 12
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Linux/GmmResourceInfoLinExt.h",
+			"sourceGroupIndex" : 12
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Platform/GmmGen10Platform.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Platform/GmmGen11Platform.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Platform/GmmGen12Platform.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Platform/GmmGen8Platform.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Platform/GmmGen9Platform.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Texture/GmmGen10TextureCalc.h",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Texture/GmmGen11TextureCalc.h",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Texture/GmmGen12TextureCalc.h",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Texture/GmmXe_LPGTextureCalc.h",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Texture/GmmGen7TextureCalc.h",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Texture/GmmGen8TextureCalc.h",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Texture/GmmGen9TextureCalc.h",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/Texture/GmmTextureCalc.h",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/GmmCommonInt.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/GmmLibInc.h",
+			"sourceGroupIndex" : 15
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/GmmLib.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/Internal/Common/GmmLogger.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmPageTableMgr.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmClientContext.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmLibDll.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gmmlib/Source/GmmLib/inc/External/Common/GmmLibDllName.h",
+			"sourceGroupIndex" : 8
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

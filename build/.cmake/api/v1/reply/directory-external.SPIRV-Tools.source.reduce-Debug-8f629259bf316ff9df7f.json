@@ -1,0 +1,90 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"SPIRV-Tools/source/reduce/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 99,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 103,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 107,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib64",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/source/reduce/libSPIRV-Tools-reduce.a"
+			],
+			"targetId" : "SPIRV-Tools-reduce::@9283aa6f095013631c5c",
+			"targetIndex" : 36,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib64/cmake/SPIRV-Tools-reduce",
+			"exportName" : "SPIRV-Tools-reduceTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "SPIRV-Tools-reduce::@9283aa6f095013631c5c",
+					"index" : 36
+				}
+			],
+			"paths" : 
+			[
+				"external/SPIRV-Tools/source/reduce/CMakeFiles/Export/9ebfb042b989ee25d4cc278f11280597/SPIRV-Tools-reduceTarget.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib64/cmake/SPIRV-Tools-reduce",
+			"paths" : 
+			[
+				"build/SPIRV-Tools-reduceConfig.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/SPIRV-Tools/source/reduce",
+		"source" : "SPIRV-Tools/source/reduce"
+	}
+}

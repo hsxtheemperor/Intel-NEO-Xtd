@@ -630,8 +630,8 @@ void __builtin_IB_subgroup_block_read_prefetch_u8_m32k16v4(long baseoffset, int 
 //  Note:
 //     1. data size isn't part of payload. It is included in each read/write builtins that uses this payload.
 //        Expect payload's block dimension matches one specified in read/write builtin.
-//     2. Return type is of integer vector. For dpas, 'A' matrix's element type shall be the same as one of
-//        dpas 'A' operand (mostly short for subgroup size 16), so is B's type, which is mostly of int.
+//     2. Return type is of integer vector. For dpas, 'ASYNC_COPY' matrix's element type shall be the same as one of
+//        dpas 'ASYNC_COPY' operand (mostly short for subgroup size 16), so is B's type, which is mostly of int.
 //        The key is to match dpas's operand type.
 //     3. Not all supported builtins are listed here.
 //     4. Argument order:  width goes before height, this is to be consistent with coordinate order (x for
@@ -659,7 +659,7 @@ void __builtin_IB_subgroup_setBlock2DAddressPayloadPitch(int* addrPayload, int p
 //
 // 2d block read, expect addrPayload's block dimension to be the same as one specified
 //
-// A matrix uses short as its element type except double dpas, which uses int
+// ASYNC_COPY matrix uses short as its element type except double dpas, which uses int
 short4  __builtin_IB_subgroup_block_read_ap_u8_m4k32v1(int* addrPayload, const int immX, const int immY, enum LSC_LDCC cacheOpt);
 short8  __builtin_IB_subgroup_block_read_ap_u8_m8k32v1(int* addrPayload, const int immX, const int immY, enum LSC_LDCC cacheOpt);
 short16 __builtin_IB_subgroup_block_read_ap_u8_m16k32v1(int* addrPayload, const int immX, const int immY, enum LSC_LDCC cacheOpt);
@@ -712,7 +712,7 @@ void   __builtin_IB_subgroup_block_read_ap_prefetch_u8_m16k64v1(int* addrPayload
 //
 // 2d block read with transform
 //
-// A matrix (short as element type)
+// ASYNC_COPY matrix (short as element type)
 short4  __builtin_IB_subgroup_block_read_ap_transform_u8_m16k8v1(int* addrPayload, const int immX, const int immY, enum LSC_LDCC cacheOpt);
 short8  __builtin_IB_subgroup_block_read_ap_transform_u8_m32k8v1(int* addrPayload, const int immX, const int immY, enum LSC_LDCC cacheOpt);
 short4  __builtin_IB_subgroup_block_read_ap_transform_u16_m8k8v1(int* addrPayload, const int immX, const int immY, enum LSC_LDCC cacheOpt);
@@ -727,7 +727,7 @@ int16 __builtin_IB_subgroup_block_read_ap_transform_u16_m32k16v1(int* addrPayloa
 //
 // 2d block read with transpose
 //
-// A matrix
+// ASYNC_COPY matrix
 short4   __builtin_IB_subgroup_block_read_ap_transpose_u32_m8k4v1(int* addrPayload, const int immX, const int immY, enum LSC_LDCC cacheOpt);
 short8   __builtin_IB_subgroup_block_read_ap_transpose_u32_m8k8v1(int* addrPayload, const int immX, const int immY, enum LSC_LDCC cacheOpt);
 short16  __builtin_IB_subgroup_block_read_ap_transpose_u32_m8k16v1(int* addrPayload, const int immX, const int immY, enum LSC_LDCC cacheOpt);

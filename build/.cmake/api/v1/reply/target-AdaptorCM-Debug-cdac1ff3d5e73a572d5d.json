@@ -1,0 +1,62 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"igc/IGC/CMFE/AdaptorCM/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "AdaptorCM::@5e7ed93c10de041bf8b6",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "LLVM::@47b1f9daa1a3b48292ff"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "LLVM::@47b1f9daa1a3b48292ff"
+		}
+	],
+	"name" : "AdaptorCM",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/CMFE/AdaptorCM",
+		"source" : "igc/IGC/CMFE/AdaptorCM"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

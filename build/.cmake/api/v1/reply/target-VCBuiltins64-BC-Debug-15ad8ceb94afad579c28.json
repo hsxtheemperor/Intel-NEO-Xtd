@@ -1,0 +1,319 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"vc_build_bif",
+			"vc_embed_optimized_bif",
+			"add_custom_command"
+		],
+		"files" : 
+		[
+			"igc/IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake",
+			"igc/IGC/VectorCompiler/lib/BiF/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 59,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 218,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 108,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 88,
+				"parent" : 2
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "CMCLTranslatorTool::@036a7e241eb8d03655bd"
+		}
+	],
+	"id" : "VCBuiltins64-BC::@826efced416e9ae1b400",
+	"name" : "VCBuiltins64-BC",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "clang-tool::@47b1f9daa1a3b48292ff"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "CMCLTranslatorTool::@036a7e241eb8d03655bd"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/lib/BiF",
+		"source" : "igc/IGC/VectorCompiler/lib/BiF"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				15
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F16/fptoi.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F16/itofp.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F32/fdiv.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F32/frem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F32/fptoi.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F32/itofp.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F64/fdiv.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F64/fptoi.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F64/frem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F64/fsqrt.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/F64/itofp.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/Integer/i64divrem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/Integer/sdivrem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Math/Integer/udivrem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/Library/Atomics/Local/binop.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCBuiltins64-BC",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCBuiltins64-BC.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/VCBuiltins64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Atomics/Local/binop.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F16/fptoi.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F16/itofp.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F32/fdiv.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F32/fptoi.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F32/frem.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F32/itofp.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F64/fdiv.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F64/fptoi.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F64/frem.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F64/fsqrt.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/F64/itofp.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/Integer/i64divrem.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/Integer/sdivrem.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/Library/Math/Integer/udivrem.cpp.64.clang.bc.rule",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,50 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"igc/visa/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 479,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "igc-media",
+			"destination" : "/usr/local/bin",
+			"paths" : 
+			[
+				"intel-graphics-compiler/IGC/Release/Tools/GenX_IR"
+			],
+			"targetId" : "GenX_IR_Exe::@48c26d128b234236a1aa",
+			"targetIndex" : 20,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/visa",
+		"source" : "igc/visa"
+	}
+}

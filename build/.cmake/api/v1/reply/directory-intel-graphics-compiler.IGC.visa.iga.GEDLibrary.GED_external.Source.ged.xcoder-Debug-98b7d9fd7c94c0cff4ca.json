@@ -1,0 +1,19 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/visa/iga/GEDLibrary/GED_external/Source/ged/xcoder",
+		"source" : "igc/visa/iga/GEDLibrary/GED_external/Source/ged/xcoder"
+	}
+}

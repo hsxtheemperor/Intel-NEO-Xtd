@@ -1,0 +1,90 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"SPIRV-Tools/source/lint/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 44,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 48,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 52,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib64",
+			"paths" : 
+			[
+				"external/SPIRV-Tools/source/lint/libSPIRV-Tools-lint.a"
+			],
+			"targetId" : "SPIRV-Tools-lint::@43a1f767d02c99d0e913",
+			"targetIndex" : 34,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib64/cmake/SPIRV-Tools-lint",
+			"exportName" : "SPIRV-Tools-lintTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "SPIRV-Tools-lint::@43a1f767d02c99d0e913",
+					"index" : 34
+				}
+			],
+			"paths" : 
+			[
+				"external/SPIRV-Tools/source/lint/CMakeFiles/Export/1017d65d45cd8585b6ceeff8c131d7b6/SPIRV-Tools-lintTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib64/cmake/SPIRV-Tools-lint",
+			"paths" : 
+			[
+				"build/SPIRV-Tools-lintConfig.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/SPIRV-Tools/source/lint",
+		"source" : "SPIRV-Tools/source/lint"
+	}
+}

@@ -49,7 +49,7 @@ OUTPUT
     ${IGC_BUILD__GenISAIntrinsics_GENERATOR_OUTPUT_HEADERS}
     ${IGC_BUILD__GenISAIntrinsics_GENERATOR_OUTPUT_SOURCES}
 COMMAND
-    ${CMAKE_COMMAND} -E env "PYTHONPATH=${BS_DIR_EXTERNAL_COMPONENTS}/build-tools/python-site-packages"
+    ${CMAKE_COMMAND} -E env "PYTHONPATH=${CMAKE_SOURCE_DIR}:${BS_DIR_EXTERNAL_COMPONENTS}/build-tools/python-site-packages"
         ${PYTHON_EXECUTABLE} Intrinsic_generator.py
             "${IGC_BUILD__GenISAIntrinsics_GENERATOR_INPUT_FILES}" --output ${IGC_OPTION__OUTPUT_DIR}/${IGC_CMAKE_CFG_INTDIR}
             $<$<NOT:$<CONFIG:Release>>:"--use_comments">

@@ -1,0 +1,41 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library"
+		],
+		"files" : 
+		[
+			"igc/IGC/VectorCompiler/CMCL/include/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 9,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "CMCLInterface::@c7432b60ebc64e3282ca",
+	"name" : "CMCLInterface",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/CMCL/include",
+		"source" : "igc/IGC/VectorCompiler/CMCL/include"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

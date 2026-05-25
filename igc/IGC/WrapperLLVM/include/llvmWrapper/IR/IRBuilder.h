@@ -31,28 +31,28 @@ namespace IGCLLVM
     public:
         IRBuilder(llvm::LLVMContext &C, const T &F, InserterTyDef() I = InserterTyDef()(),
             llvm::MDNode *FPMathTag = nullptr,
-            llvm::ArrayRef<llvm::OperandBundleDef> OpBundles = std::nullopt)
+            llvm::ArrayRef<llvm::OperandBundleDef> OpBundles = {})
             : llvm::IRBuilder<T, InserterTyDef()>(C, F, I, FPMathTag, OpBundles) {}
 
         explicit IRBuilder(llvm::LLVMContext &C, llvm::MDNode *FPMathTag = nullptr,
-            llvm::ArrayRef<llvm::OperandBundleDef> OpBundles = std::nullopt)
+            llvm::ArrayRef<llvm::OperandBundleDef> OpBundles = {})
             : llvm::IRBuilder<T, InserterTyDef()>(C, FPMathTag, OpBundles) {}
 
         explicit IRBuilder(llvm::BasicBlock *TheBB, llvm::MDNode *FPMathTag = nullptr)
             : llvm::IRBuilder<T, InserterTyDef()>(TheBB, FPMathTag) {}
 
         explicit IRBuilder(llvm::Instruction *IP, llvm::MDNode *FPMathTag = nullptr,
-            llvm::ArrayRef<llvm::OperandBundleDef> OpBundles = std::nullopt)
+            llvm::ArrayRef<llvm::OperandBundleDef> OpBundles = {})
             : llvm::IRBuilder<T, InserterTyDef()>(IP, FPMathTag, OpBundles) {}
 
         IRBuilder(llvm::BasicBlock *TheBB, llvm::BasicBlock::iterator IP, const T &F,
             llvm::MDNode *FPMathTag = nullptr,
-            llvm::ArrayRef<llvm::OperandBundleDef> OpBundles = std::nullopt)
+            llvm::ArrayRef<llvm::OperandBundleDef> OpBundles = {})
             : llvm::IRBuilder<T, InserterTyDef()>(TheBB, IP, F, FPMathTag, OpBundles) {}
 
         IRBuilder(llvm::BasicBlock *TheBB, llvm::BasicBlock::iterator IP,
             llvm::MDNode *FPMathTag = nullptr,
-            llvm::ArrayRef<llvm::OperandBundleDef> OpBundles = std::nullopt)
+            llvm::ArrayRef<llvm::OperandBundleDef> OpBundles = {})
             : llvm::IRBuilder<T, InserterTyDef()>(TheBB, IP, FPMathTag, OpBundles) {}
 
         const T& getFolder() {

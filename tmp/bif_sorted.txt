@@ -1,0 +1,4 @@
+    301 declaring function parameter of type '__private half' is not allowed; did you forget * ?
+    214 declaring function return value of type 'half' is not allowed ; did you forget * ?
+     48 unknown type name 'INLINE'
+     48 expected ';' after top level declarator

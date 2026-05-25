@@ -23,30 +23,23 @@ using llvm::raw_ostream;
 #undef PREFIX
 
 static const OptTable::Info ApiInfoTable[] = {
-#define OPTION(PREFIX, NAME, ID, KIND, GROUP, ALIAS, ALIASARGS, FLAGS, PARAM,  \
-               HELPTEXT, METAVAR, VALUES)                                      \
-  {API_##PREFIX,        NAME,  HELPTEXT, METAVAR,          api::OPT_##ID,      \
-   Option::KIND##Class, PARAM, FLAGS,    api::OPT_##GROUP, api::OPT_##ALIAS,   \
-   ALIASARGS,           VALUES},
+#define OPTION(PREFIX, NAME, ID, KIND, GROUP, ALIAS, ALIASARGS, FLAGS,          \
+               VISIBILITY, PARAM, HELPTEXT, HELPTEXTSFORVARIANTS, METAVAR,    \
+               VALUES, ...)                                                    \
+  {PREFIX, NAME, HELPTEXT, HELPTEXTSFORVARIANTS, METAVAR, api::OPT_##ID,      \
+   Option::KIND##Class, PARAM, FLAGS, VISIBILITY,                              \
+   api::OPT_##GROUP, api::OPT_##ALIAS, ALIASARGS, VALUES},
 #include "igc/Options/ApiOptions.inc"
 #undef OPTION
 };
 
 static const OptTable::Info InternalInfoTable[] = {
-#define OPTION(PREFIX, NAME, ID, KIND, GROUP, ALIAS, ALIASARGS, FLAGS, PARAM,  \
-               HELPTEXT, METAVAR, VALUES)                                      \
-  {INTERNAL_##PREFIX,                                                          \
-   NAME,                                                                       \
-   HELPTEXT,                                                                   \
-   METAVAR,                                                                    \
-   internal::OPT_##ID,                                                         \
-   Option::KIND##Class,                                                        \
-   PARAM,                                                                      \
-   FLAGS,                                                                      \
-   internal::OPT_##GROUP,                                                      \
-   internal::OPT_##ALIAS,                                                      \
-   ALIASARGS,                                                                  \
-   VALUES},
+#define OPTION(PREFIX, NAME, ID, KIND, GROUP, ALIAS, ALIASARGS, FLAGS,          \
+               VISIBILITY, PARAM, HELPTEXT, HELPTEXTSFORVARIANTS, METAVAR,    \
+               VALUES, ...)                                                    \
+  {PREFIX, NAME, HELPTEXT, HELPTEXTSFORVARIANTS, METAVAR,                     \
+   internal::OPT_##ID, Option::KIND##Class, PARAM, FLAGS, VISIBILITY,         \
+   internal::OPT_##GROUP, internal::OPT_##ALIAS, ALIASARGS, VALUES},
 #include "igc/Options/InternalOptions.inc"
 #undef OPTION
 };

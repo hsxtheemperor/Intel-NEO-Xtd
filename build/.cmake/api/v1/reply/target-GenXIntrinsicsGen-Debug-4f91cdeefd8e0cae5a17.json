@@ -1,0 +1,61 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"vc-intrinsics/GenXIntrinsics/include/llvm/GenXIntrinsics/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 61,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "GenXIntrinsicDescriptionGen::@1f56caa954ab81353996"
+		}
+	],
+	"id" : "GenXIntrinsicsGen::@1f56caa954ab81353996",
+	"name" : "GenXIntrinsicsGen",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "GenXIntrinsicDescriptionGen::@1f56caa954ab81353996"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/intrbuild/include/llvm/GenXIntrinsics",
+		"source" : "vc-intrinsics/GenXIntrinsics/include/llvm/GenXIntrinsics"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

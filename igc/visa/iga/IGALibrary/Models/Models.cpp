@@ -226,7 +226,7 @@ static unsigned getBitsFromFragments(const uint64_t *qws,
     if (ff[i].length == 0) {
       break;
     }
-    auto frag = (unsigned)getBits(qws, ff[i].offset, ff[i].length);
+    auto frag = static_cast<unsigned>(iga::getBits<uint64_t>(qws[ff[i].offset / 64], ff[i].offset % 64, ff[i].length));
     bits |= frag << off;
     off += ff[i].length;
   }

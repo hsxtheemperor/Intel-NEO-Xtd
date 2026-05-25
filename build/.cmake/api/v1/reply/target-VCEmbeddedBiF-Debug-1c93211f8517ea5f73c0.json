@@ -1,0 +1,571 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCEmbeddedBiF.dir/./VCBiFPrintfOCL32.cpp.o"
+		},
+		{
+			"path" : "intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCEmbeddedBiF.dir/./VCBiFPrintfOCL64.cpp.o"
+		},
+		{
+			"path" : "intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCEmbeddedBiF.dir/./VCBiFPrintfZE32.cpp.o"
+		},
+		{
+			"path" : "intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCEmbeddedBiF.dir/./VCBiFPrintfZE64.cpp.o"
+		},
+		{
+			"path" : "intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCEmbeddedBiF.dir/./VCBuiltins64.cpp.o"
+		},
+		{
+			"path" : "intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/CMakeFiles/VCEmbeddedBiF.dir/./VCSPIRVBuiltins64.cpp.o"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_dependencies",
+			"target_link_libraries",
+			"add_compile_definitions",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"igc/IGC/VectorCompiler/lib/BiF/CMakeLists.txt",
+			"igc/IGC/VectorCompiler/include/CMakeLists.txt",
+			"igc/IGC/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 23,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 68,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1327,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1254,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1309,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1508,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1316,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1377,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1381,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1414,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1417,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1432,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1434,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1504,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1505,
+				"parent" : 5
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "VCHeaders::@d86d745eee544a58c8a5"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fexceptions -O0 -pipe -fmessage-length=0 -march=corei7 -mstackrealign -fms-extensions -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wwrite-strings -Wno-long-long -Wswitch -Wno-sign-compare -Wno-unused-result -Wno-enum-compare -Wno-type-limits -Wno-ignored-qualifiers -Wno-shadow -Wformat -Wformat-security -Wno-extra -Wno-write-strings -finline -fno-strict-aliasing -msse -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -Wno-unknown-pragmas -fPIC -Bsymbolic -finline-functions -fbracket-depth=512 -fno-rtti -fvisibility=hidden -fvisibility-inlines-hidden -g -std=gnu++17   -D_GNU_SOURCE -D_GLIBCXX_USE_CXX11_ABI=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "CL_KHR_FP64_EXT"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "ENABLE_REGISTRY_READ"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "GHAL3D=USC"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "ICBE_LINUX"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "IGC_CMAKE"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "IGC_EXPORTS=1"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "IGC_SPIRV_ENABLED"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "IGC_SPIRV_TOOLS_ENABLED"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "IGC_VC_ENABLED"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "INSIDE_PLUGIN"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "ISTDLIB_UMD"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "LINUX"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "NOMINMAX"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "STD_CALL"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "USC_DXX"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "USC_EXPORTS=1"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "USE_MMX"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "USE_SSE"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "USE_SSE2"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "USE_SSE3"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "USE_SSSE3"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "_AMD64_"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "_COMPILER_DLL_"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "_DEBUG"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "_HAS_EXCEPTIONS=0"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "_IGC_"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "_SCL_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "__STDC_CONSTANT_MACROS"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 11,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/WrapperLLVM/include"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/autogen"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/common"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/.."
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../Common"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../3d/common"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common/Compiler"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common/Compiler/API"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../visa/include"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/Release"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/AdaptorOCL/ocl_igc_shared/executable_format"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/AdaptorOCL"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/AdaptorOCL/ocl_igc_interface/impl"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/Options"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/Options/include"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/Options/include"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common/Compiler/common"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/AdaptorOCL/cif/cif/.."
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/ZEBinWriter/zebin/source"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/ZEBinWriter/zebin/source/autogen"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/../SPIRV-Tools/include"
+				},
+				{
+					"backtrace" : 18,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../SPIRV-Headers/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/VectorCompiler/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/VectorCompiler/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/VectorCompiler/include/vc/InternalIntrinsics"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "intrinsics_gen::@47b1f9daa1a3b48292ff"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "VCInternalIntrinsicsGen::@c577bb8a2c4399b02ff3"
+		},
+		{
+			"id" : "VCBiFPrintfOCL32::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfOCL64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfZE32::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfZE64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCSPIRVBuiltins64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBuiltins64::@826efced416e9ae1b400"
+		}
+	],
+	"id" : "VCEmbeddedBiF::@826efced416e9ae1b400",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "VCHeaders::@d86d745eee544a58c8a5"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "VCHeaders::@d86d745eee544a58c8a5"
+		}
+	],
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "VCHeaders::@d86d745eee544a58c8a5"
+		}
+	],
+	"name" : "VCEmbeddedBiF",
+	"orderDependencies" : 
+	[
+		{
+			"id" : "VCBiFPrintfOCL32::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfOCL64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfZE32::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBiFPrintfZE64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCSPIRVBuiltins64::@826efced416e9ae1b400"
+		},
+		{
+			"id" : "VCBuiltins64::@826efced416e9ae1b400"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/lib/BiF",
+		"source" : "igc/IGC/VectorCompiler/lib/BiF"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/VCBiFPrintfOCL32.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/VCBiFPrintfOCL64.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/VCBiFPrintfZE32.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/VCBiFPrintfZE64.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/VCBuiltins64.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/BiF/VCSPIRVBuiltins64.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

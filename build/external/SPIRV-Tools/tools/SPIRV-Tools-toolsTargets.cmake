@@ -79,61 +79,61 @@ add_executable(spirv-reduce IMPORTED)
 # Import target "spirv-as" for configuration "Debug"
 set_property(TARGET spirv-as APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(spirv-as PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-as"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-as"
   )
 
 # Import target "spirv-dis" for configuration "Debug"
 set_property(TARGET spirv-dis APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(spirv-dis PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-dis"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-dis"
   )
 
 # Import target "spirv-val" for configuration "Debug"
 set_property(TARGET spirv-val APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(spirv-val PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-val"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-val"
   )
 
 # Import target "spirv-opt" for configuration "Debug"
 set_property(TARGET spirv-opt APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(spirv-opt PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-opt"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-opt"
   )
 
 # Import target "spirv-cfg" for configuration "Debug"
 set_property(TARGET spirv-cfg APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(spirv-cfg PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-cfg"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-cfg"
   )
 
 # Import target "spirv-link" for configuration "Debug"
 set_property(TARGET spirv-link APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(spirv-link PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-link"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-link"
   )
 
 # Import target "spirv-lint" for configuration "Debug"
 set_property(TARGET spirv-lint APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(spirv-lint PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-lint"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-lint"
   )
 
 # Import target "spirv-diff" for configuration "Debug"
 set_property(TARGET spirv-diff APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(spirv-diff PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-diff"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-diff"
   )
 
 # Import target "spirv-objdump" for configuration "Debug"
 set_property(TARGET spirv-objdump APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(spirv-objdump PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-objdump"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-objdump"
   )
 
 # Import target "spirv-reduce" for configuration "Debug"
 set_property(TARGET spirv-reduce APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(spirv-reduce PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/harshit9745/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-reduce"
+  IMPORTED_LOCATION_DEBUG "/home/harshit9745/SFXFolder/Workspace-Code/build/external/SPIRV-Tools/tools/spirv-reduce"
   )
 
 # This file does not depend on other imported targets which have

@@ -250,7 +250,7 @@ function(igc_bif_build_bc)
     add_custom_command(
         OUTPUT "${_bcTempFilePath}"
         COMMAND "${CMAKE_COMMAND}" -E compare_files ${BiFModule_PREBUILD_SHA_PATH} ${BiFModule_SRC_SHA_PATH} || "${CMAKE_COMMAND}" -E make_directory "${_outBcFileDir}"
-        COMMAND "${CMAKE_COMMAND}" -E compare_files ${BiFModule_PREBUILD_SHA_PATH} ${BiFModule_SRC_SHA_PATH} || "/usr/bin/clang" -cc1 ${IGC_BUILD__OPAQUE_POINTERS_DEFAULT_ARG_CLANG} -x cl -fblocks -fpreserve-vec3-type -opencl-builtins "-triple=${_archTriple}" -w -emit-llvm-bc -discard-value-names -o "${_bcTempFilePath}" ${_pchFlags} ${_incFileFlags} ${_includeDirsFlags} ${_defineFlags} ${_options_DEFAULT} ${_options_CL} "${_srcFilePath}"
+        COMMAND "${CMAKE_COMMAND}" -E compare_files ${BiFModule_PREBUILD_SHA_PATH} ${BiFModule_SRC_SHA_PATH} || "/usr/bin/clang" -cc1 ${IGC_BUILD__OPAQUE_POINTERS_DEFAULT_ARG_CLANG} -x cl -fblocks -opencl-builtins "-triple=${_archTriple}" -w -emit-llvm-bc -discard-value-names -o "${_bcTempFilePath}" ${_pchFlags} ${_incFileFlags} ${_includeDirsFlags} ${_defineFlags} ${_options_DEFAULT} ${_options_CL} "${_srcFilePath}"
         DEPENDS clang-tool ${_pchFilePath} ${_incFilePaths} "${_srcFilePath}" ${_dependencies}
         COMMENT "BiF: \"${_outBcFileName}\": Compiling OpenCL source: \"${_srcFileName}\""
       )

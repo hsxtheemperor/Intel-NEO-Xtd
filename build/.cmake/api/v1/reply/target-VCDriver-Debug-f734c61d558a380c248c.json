@@ -1,0 +1,685 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/libVCDriver.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_dependencies",
+			"target_link_libraries",
+			"add_compile_definitions",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"igc/IGC/VectorCompiler/lib/Driver/CMakeLists.txt",
+			"igc/IGC/VectorCompiler/include/CMakeLists.txt",
+			"igc/IGC/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 23,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1327,
+				"parent" : 7
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1254,
+				"parent" : 7
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1309,
+				"parent" : 7
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1508,
+				"parent" : 7
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1316,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1377,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1381,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1414,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1417,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1432,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1434,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1504,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1505,
+				"parent" : 7
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "LLVMGenXIntrinsics::@434d78fe8ca7a2b898a5"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "IGCOptions::@3de1e290afeba372392c"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCCodeGen::@facd490f0e611d12c77e"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCSupport::@37517491b7479adde42d"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "LLVM::@47b1f9daa1a3b48292ff"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fexceptions -O0 -pipe -fmessage-length=0 -march=corei7 -mstackrealign -fms-extensions -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wwrite-strings -Wno-long-long -Wswitch -Wno-sign-compare -Wno-unused-result -Wno-enum-compare -Wno-type-limits -Wno-ignored-qualifiers -Wno-shadow -Wformat -Wformat-security -Wno-extra -Wno-write-strings -finline -fno-strict-aliasing -msse -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -Wno-unknown-pragmas -fPIC -Bsymbolic -finline-functions -fbracket-depth=512 -fno-rtti -fvisibility=hidden -fvisibility-inlines-hidden -g -std=gnu++17   -D_GNU_SOURCE -D_GLIBCXX_USE_CXX11_ABI=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 8,
+					"define" : "CL_KHR_FP64_EXT"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "ENABLE_REGISTRY_READ"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "GHAL3D=USC"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "ICBE_LINUX"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "IGA_DISABLE_ENCODER_EXCEPTIONS"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "IGC_CMAKE"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "IGC_EXPORTS=1"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "IGC_SPIRV_ENABLED"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "IGC_SPIRV_TOOLS_ENABLED"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "IGC_VC_ENABLED"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "INSIDE_PLUGIN"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "ISTDLIB_UMD"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "LINUX"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "NOMINMAX"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "STD_CALL"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USC_DXX"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USC_EXPORTS=1"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USE_MMX"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USE_SSE"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USE_SSE2"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USE_SSE3"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USE_SSSE3"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "_AMD64_"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "_COMPILER_DLL_"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "_DEBUG"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "_HAS_EXCEPTIONS=0"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "_IGC_"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "_SCL_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "__STDC_CONSTANT_MACROS"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 13,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/WrapperLLVM/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/autogen"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/common"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/.."
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../Common"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../3d/common"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common/Compiler"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common/Compiler/API"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../visa/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/Release"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/AdaptorOCL/ocl_igc_shared/executable_format"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/AdaptorOCL"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/AdaptorOCL/ocl_igc_interface/impl"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/Options"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/Options/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/Options/include"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../inc/common/Compiler/common"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/AdaptorOCL/cif/cif/.."
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/ZEBinWriter/zebin/source"
+				},
+				{
+					"backtrace" : 18,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/ZEBinWriter/zebin/source/autogen"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/../SPIRV-Tools/include"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/../SPIRV-Headers/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/vc-intrinsics/GenXIntrinsics/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/VectorCompiler/intrbuild/lib/GenXIntrinsics/../../include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/igc/IGC/VectorCompiler/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/VectorCompiler/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/harshit9745/SFXFolder/Workspace-Code/build/intel-graphics-compiler/IGC/VectorCompiler/include/vc/InternalIntrinsics"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "intrinsics_gen::@47b1f9daa1a3b48292ff"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "IGCOptions::@3de1e290afeba372392c"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "LLVMGenXIntrinsics::@434d78fe8ca7a2b898a5"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "VCInternalIntrinsicsGen::@c577bb8a2c4399b02ff3"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCTransforms::@cc68b0183b1e56cfcf21"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCCodeGen::@facd490f0e611d12c77e"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCTargetInfo::@ceefe4b9e3e9ade581b7"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCSupport::@37517491b7479adde42d"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCInternalIntrinsics::@63018a51d110c2ff352d"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCGeneralUtils::@32c1dc0fdc02abe506a3"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCGenXUtils::@aa7369422d61f1910a58"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "GenXDebugInfo::@542b7f57c43ba72c1800"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "GenX_IR::@48c26d128b234236a1aa"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "IGA_SLIB::@778a449af29eb0e05611"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "IGA_ENC_LIB::@778a449af29eb0e05611"
+		}
+	],
+	"id" : "VCDriver::@8733493b6f574f392fa7",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "LLVMGenXIntrinsics::@434d78fe8ca7a2b898a5"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "IGCOptions::@3de1e290afeba372392c"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCCodeGen::@facd490f0e611d12c77e"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCSupport::@37517491b7479adde42d"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "LLVM::@47b1f9daa1a3b48292ff"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "LLVMGenXIntrinsics::@434d78fe8ca7a2b898a5"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "IGCOptions::@3de1e290afeba372392c"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCCodeGen::@facd490f0e611d12c77e"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCSupport::@37517491b7479adde42d"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "LLVM::@47b1f9daa1a3b48292ff"
+		},
+		{
+			"backtrace" : 5,
+			"fragment" : "dl"
+		},
+		{
+			"backtrace" : 6,
+			"fragment" : "LLVMSPIRVLib"
+		}
+	],
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "LLVMGenXIntrinsics::@434d78fe8ca7a2b898a5"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "IGCOptions::@3de1e290afeba372392c"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCCodeGen::@facd490f0e611d12c77e"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "VCSupport::@37517491b7479adde42d"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "LLVM::@47b1f9daa1a3b48292ff"
+		},
+		{
+			"backtrace" : 5,
+			"fragment" : "dl"
+		},
+		{
+			"backtrace" : 6,
+			"fragment" : "LLVMSPIRVLib"
+		}
+	],
+	"name" : "VCDriver",
+	"nameOnDisk" : "libVCDriver.a",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/lib/Driver",
+		"source" : "igc/IGC/VectorCompiler/lib/Driver"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		},
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "igc/IGC/VectorCompiler/lib/Driver/Driver.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "igc/IGC/VectorCompiler/lib/Driver/SPIRVWrapper.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/Support/CMakeFiles/VCSupport.dir/GenXDiagnostic.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/Support/CMakeFiles/VCSupport.dir/Status.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/Support/CMakeFiles/VCSupport.dir/ShaderDump.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/Support/CMakeFiles/VCSupport.dir/BackendConfig.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/Support/CMakeFiles/VCSupport.dir/PassManager.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "build/intel-graphics-compiler/IGC/VectorCompiler/lib/Support/CMakeFiles/VCSupport.dir/PassPrinters.cpp.o",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

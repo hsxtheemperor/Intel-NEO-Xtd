@@ -1,0 +1,61 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"igc/IGC/VectorCompiler/include/vc/InternalIntrinsics/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 26,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "VCInternalIntrinsicDescriptionGen::@c577bb8a2c4399b02ff3"
+		}
+	],
+	"id" : "VCInternalIntrinsicsGen::@c577bb8a2c4399b02ff3",
+	"name" : "VCInternalIntrinsicsGen",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "VCInternalIntrinsicDescriptionGen::@c577bb8a2c4399b02ff3"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/include/vc/InternalIntrinsics",
+		"source" : "igc/IGC/VectorCompiler/include/vc/InternalIntrinsics"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

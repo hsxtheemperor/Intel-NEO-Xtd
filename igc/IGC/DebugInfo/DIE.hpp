@@ -164,8 +164,8 @@ public:
   void Emit(StreamEmitter *AP) const;
 
 #ifndef NDEBUG
-  void print(::llvm::raw_ostream &O);
-  void dump();
+  void print(::llvm::raw_ostream &O) const;
+  void dump() const;
 #endif
 };
 
@@ -248,7 +248,7 @@ public:
 
 #ifndef NDEBUG
   void print(::llvm::raw_ostream &O, unsigned IndentCount = 0) const;
-  void dump();
+  void dump() const;
 #endif
 };
 
@@ -579,7 +579,7 @@ public:
 
 #ifndef NDEBUG
   void print(::llvm::raw_ostream &O) const override;
-  void dump();
+  void dump() const;
 #endif
 };
 

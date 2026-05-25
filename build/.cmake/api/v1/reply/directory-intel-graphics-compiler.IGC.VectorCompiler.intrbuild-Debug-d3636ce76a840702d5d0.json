@@ -1,0 +1,130 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"vc-intrinsics/GenXIntrinsics/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 50,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 76,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 82,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "genx-intrinsics-headers",
+			"destination" : "include",
+			"paths" : 
+			[
+				"vc-intrinsics/GenXIntrinsics/include/llvm"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "genx-intrinsics-headers",
+			"destination" : "include/llvm/GenXIntrinsics",
+			"paths" : 
+			[
+				"build/intel-graphics-compiler/IGC/VectorCompiler/intrbuild/include/llvm/GenXIntrinsics/GenXIntrinsicDescription.gen"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib64",
+			"paths" : 
+			[
+				"lib/libLLVMGenXIntrinsics.a"
+			],
+			"targetId" : "LLVMGenXIntrinsics::@434d78fe8ca7a2b898a5",
+			"targetIndex" : 29,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib64/cmake/LLVMGenXIntrinsics",
+			"exportName" : "LLVMGenXIntrinsicsTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "LLVMGenXIntrinsics::@434d78fe8ca7a2b898a5",
+					"index" : 29
+				}
+			],
+			"paths" : 
+			[
+				"intel-graphics-compiler/IGC/VectorCompiler/intrbuild/CMakeFiles/Export/3b25474b1634d07f982a0f42e1f7b3fa/LLVMGenXIntrinsicsConfig.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "lib64/cmake/VCIntrinsics22",
+			"exportName" : "LLVMGenXIntrinsicsTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "LLVMGenXIntrinsics::@434d78fe8ca7a2b898a5",
+					"index" : 29
+				}
+			],
+			"paths" : 
+			[
+				"intel-graphics-compiler/IGC/VectorCompiler/intrbuild/CMakeFiles/Export/c949dd19da12d22bc701799de35a8476/VCIntrinsics22Config.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/VectorCompiler/intrbuild",
+		"source" : "vc-intrinsics/GenXIntrinsics"
+	}
+}

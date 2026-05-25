@@ -1,0 +1,65 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"igc/visa/iga/IGALibrary/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 397,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "igc-core",
+			"destination" : "/usr/local/lib64",
+			"paths" : 
+			[
+				"lib/libiga64.so.1.0.1",
+				"lib/libiga64.so.1"
+			],
+			"targetId" : "IGA_DLL::@778a449af29eb0e05611",
+			"targetIndex" : 21,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "igc-core",
+			"destination" : "/usr/local/lib64",
+			"paths" : 
+			[
+				"lib/libiga64.so"
+			],
+			"targetId" : "IGA_DLL::@778a449af29eb0e05611",
+			"targetIndex" : 21,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/visa/iga/IGALibrary",
+		"source" : "igc/visa/iga/IGALibrary"
+	}
+}

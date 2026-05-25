@@ -1,0 +1,50 @@
+{
+	"abstract" : true,
+	"artifacts" : 
+	[
+		{
+			"path" : "IGC_TARGET__TOOLS_RESOURCE_LINKER-NOTFOUND"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable"
+		],
+		"files" : 
+		[
+			"igc/IGC/ElfPackager/linux/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "IGC_TARGET__TOOLS_RESOURCE_LINKER::@0c8ca5c1f6d8f7faabd8",
+	"imported" : true,
+	"local" : true,
+	"name" : "IGC_TARGET__TOOLS_RESOURCE_LINKER",
+	"nameOnDisk" : "IGC_TARGET__TOOLS_RESOURCE_LINKER-NOTFOUND",
+	"paths" : 
+	{
+		"build" : "intel-graphics-compiler/IGC/ElfPackager/linux",
+		"source" : "igc/IGC/ElfPackager/linux"
+	},
+	"sources" : [],
+	"type" : "EXECUTABLE"
+}

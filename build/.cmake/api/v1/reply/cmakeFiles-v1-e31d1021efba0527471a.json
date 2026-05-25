@@ -1,0 +1,1275 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.3.0/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.3.0/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.3.0/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/Clang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/Clang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"path" : "gmmlib/CMakeLists.txt"
+		},
+		{
+			"path" : "gmmlib/Source/GmmLib/CMakeLists.txt"
+		},
+		{
+			"path" : "gmmlib/Tools/bldsys/bs_init.cmake"
+		},
+		{
+			"path" : "gmmlib/Tools/bldsys/include/bs_base_utils.cmake"
+		},
+		{
+			"path" : "gmmlib/Tools/bldsys/include/bs_dir_names.cmake"
+		},
+		{
+			"path" : "gmmlib/Tools/bldsys/include/bs_base_utils.cmake"
+		},
+		{
+			"path" : "gmmlib/Tools/bldsys/include/utils.cmake"
+		},
+		{
+			"path" : "gmmlib/Tools/bldsys/include/bs_base_utils.cmake"
+		},
+		{
+			"path" : "gmmlib/Tools/bldsys/include/bs_dir_names.cmake"
+		},
+		{
+			"path" : "gmmlib/Source/GmmLib/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "gmmlib/Source/GmmLib/os_release_info.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"path" : "gmmlib/Source/GmmLib/igdgmm.h.in"
+		},
+		{
+			"path" : "gmmlib/Source/GmmLib/igdgmm.pc.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CPack.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CPackComponent.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"path" : "SPIRV-Tools/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPython3.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPython/Support.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "SPIRV-Tools/external/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeDependentOption.cmake"
+		},
+		{
+			"path" : "SPIRV-Tools/source/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/source/opt/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/source/reduce/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/source/fuzz/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/source/link/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/source/lint/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/source/diff/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/tools/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/tools/lesspipe/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/tools/emacs/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/test/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "SPIRV-Tools/examples/cpp-interface/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_flags_utils.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_arch_utils.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_resource_utils.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_source_group_utils.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_llvm_utils.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_imported_tools.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_library_name.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_llvm.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVMConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVMConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/FindFFI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakePushCheckState.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/FindLibEdit.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakePushCheckState.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindZLIB.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/Findzstd.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindLibXml2.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVMExports.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVMExports-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVM-Config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/clang/ClangConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/clang/ClangConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVMConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVMConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/FindFFI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakePushCheckState.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/FindLibEdit.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakePushCheckState.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindZLIB.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/Findzstd.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindLibXml2.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVM-Config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/clang/ClangTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/clang/ClangTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/AddLLVM.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVMDistributionSupport.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVMProcessSources.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVM-Config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/DetermineGCCCompatible.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/TableGen.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/llvm/LLVMDistributionSupport.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_find_protobuf.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_find_opencl_clang.cmake"
+		},
+		{
+			"path" : "igc/IGC/Metrics/protobuf_metrics.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_pch_reuse.cmake"
+		},
+		{
+			"path" : "igc/IGC/cmake/igc_version.cmake"
+		},
+		{
+			"path" : "igc/IGC/AdaptorOCL/igc.opencl.h.in"
+		},
+		{
+			"path" : "igc/IGC/AdaptorOCL/igc-opencl.pc.in"
+		},
+		{
+			"path" : "igc/IGC/AdaptorOCL/ocl_igc_interface/impl/version_in.h"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CPack.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CPackComponent.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"path" : "igc/IGC/MDAutogen/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/AdaptorOCL/cif/cif/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/WrapperLLVM/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/ZEBinWriter/zebin/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/ZEBinWriter/zebin/source/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/PCH/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/common/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/GenISAIntrinsics/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Options/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Options/src/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Options/include/igc/Options/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/CMFE/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/CMFE/cmfe_deps.cmake"
+		},
+		{
+			"path" : "igc/IGC/CMFE/AdaptorCM/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/cmake/supported_platforms_list.cmake"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/cmake/handle_vc_intrinsics.cmake"
+		},
+		{
+			"path" : "vc-intrinsics/GenXIntrinsics/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"path" : "vc-intrinsics/GenXIntrinsics/cmake/utils.cmake"
+		},
+		{
+			"path" : "vc-intrinsics/GenXIntrinsics/include/llvm/CMakeLists.txt"
+		},
+		{
+			"path" : "vc-intrinsics/GenXIntrinsics/include/llvm/GenXIntrinsics/CMakeLists.txt"
+		},
+		{
+			"path" : "vc-intrinsics/GenXIntrinsics/lib/CMakeLists.txt"
+		},
+		{
+			"path" : "vc-intrinsics/GenXIntrinsics/lib/GenXIntrinsics/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/include/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/include/vc/InternalIntrinsics/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/GenXOpts/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/GenXCodeGen/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/GenXCodeGen/TargetInfo/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/GenXCodeGen/Utils/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/Support/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/InternalIntrinsics/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/cmake/Functions.cmake"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/BiF/builtins.conf.in"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/Driver/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/Utils/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/Utils/General/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/Utils/GenX/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/BackendPlugin/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/lib/BackendPlugin/Linux.cmake"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/igcdeps/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/igcdeps/src/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/utils/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/utils/vcb/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/CMCL/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/CMCL/include/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/CMCL/lib/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/CMCL/lib/Support/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/CMCL/tools/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VectorCompiler/CMCL/tools/Translator/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/CISACodeGen/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/DebugInfo/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Legalizer/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/MetaDataApi/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/AccuracyDecoratedCallsBiFResolution/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/AddressSpaceAliasAnalysis/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/AggregateArguments/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/AlignmentAnalysis/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/Atomics/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/BIFTransforms/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/BreakConstantExpr/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/BreakdownIntrinsic/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/CorrectlyRoundedDivSqrt/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/DeviceEnqueueFuncs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/DisableLoopUnrollOnRetry/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/DpasFuncs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/BfloatFuncs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/ErrorCheckPass/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/ExtensionFuncs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/GEPLoopStrengthReduction/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/GenericAddressResolution/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/HandleDevicelibAssert/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/Image3dToImage2darray/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/ImageFuncs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/JointMatrixFuncsResolutionPass/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/KernelArgs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/KernelFunctionCloning/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/BufferBoundsChecking/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/LSCFuncs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/Decompose2DBlockFuncs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/LocalBuffers/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/MinimumValidAddressChecking/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/NamedBarriers/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/NontemporalLoadsAndStoresInAssert/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/OpenCLPrintf/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/PoisonFP64KernelsPass/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/PrivateMemory/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/ProgramScopeConstants/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/RayTracing/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/ReplaceUnsupportedIntrinsics/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/ResourceAllocator/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/RewriteLocalSize/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/ScalarArgAsPointer/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/SetFastMathFlags/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/StackOverflowDetection/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/StatelessToStateful/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/SubGroupFuncs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/SubGroupReductionPattern/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/TransformUnmaskedFunctionsPass/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/UndefinedReferences/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/UnreachableHandling/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/WGFuncs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/OpenCLPasses/WIFuncs/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/Compiler/Optimizer/IGCInstCombiner/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/DebugInfo/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/DriverInterface/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/BiFModule/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/BiFModule/cmake/BiFModuleCache.cmake"
+		},
+		{
+			"path" : "igc/IGC/BiFModule/cmake/BiFMCConst.cmake"
+		},
+		{
+			"path" : "igc/IGC/BiFModule/cmake/BiFMCGetListFiles.cmake"
+		},
+		{
+			"path" : "igc/IGC/ElfPackager/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/ElfPackager/linux/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/OCLFE/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/OCLFE/embedder/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/IGC/VISALinkerDriver/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/Functions.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindBISON.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindFLEX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "igc/visa/iga/GEDLibrary/GED_external/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/GEDLibrary/GED_external/Source/ged/xcoder/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/GEDLibrary/GED_external/Source/common/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/GEDLibrary/GED_external/build/autogen-intel64/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/IGALibrary/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/IGALibrary/api/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/IGALibrary/Backend/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/IGALibrary/Frontend/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/IGALibrary/IR/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/IGALibrary/IR/Checker/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/IGALibrary/MemManager/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/IGALibrary/Models/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/IGALibrary/Timer/CMakeLists.txt"
+		},
+		{
+			"path" : "igc/visa/iga/IGAExe/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/harshit9745/SFXFolder/Workspace-Code/build",
+		"source" : "/home/harshit9745/SFXFolder/Workspace-Code"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}
